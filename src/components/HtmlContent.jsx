@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /**
  * HtmlContent – Client Component wrapper for raw HTML template strings.
@@ -18,7 +18,6 @@ export default function HtmlContent({ html }) {
   const pathname = usePathname();
   const router = useRouter();
   const [processedHtml, setProcessedHtml] = useState(html);
-  const containerRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -58,12 +57,12 @@ export default function HtmlContent({ html }) {
     }
   }, [html, pathname]);
 
-  // Intercept clicks on internal anchor tags and use Next.js router
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleClick = (e) => {
+  // Intercept clicks on internal anchor tags and use Next.js router.
+  // Using React's onClick on the wrapper div (event delegation via bubbling)
+  // is more reliable than a native addEventListener since React's synthetic
+  // event system is always active regardless of dangerouslySetInnerHTML updates.
+  const handleClick = useCallback(
+    (e) => {
       const anchor = e.target.closest('a');
       if (!anchor) return;
 
@@ -82,20 +81,18 @@ export default function HtmlContent({ html }) {
         return;
       }
 
-      // It's an internal link — handle with Next.js router
+      // It's an internal link — handle with Next.js router for SPA navigation
       e.preventDefault();
       router.push(href);
-    };
-
-    container.addEventListener('click', handleClick);
-    return () => container.removeEventListener('click', handleClick);
-  }, [router, processedHtml]);
+    },
+    [router]
+  );
 
   return (
     <div
-      ref={containerRef}
       suppressHydrationWarning
       dangerouslySetInnerHTML={{ __html: processedHtml }}
+      onClick={handleClick}
     />
   );
 }
