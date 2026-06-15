@@ -333,8 +333,8 @@ function ServiceSingleContent() {
                 </h1>
                 <nav className="wow fadeInUp">
                   <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="/">Home</a></li>
-                    <li className="breadcrumb-item"><a href="/services">Services</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Home</Link></li>
+                    <li className="breadcrumb-item"><Link href="/services">Services</Link></li>
                     <li className="breadcrumb-item active" aria-current="page">{svc.name}</li>
                   </ol>
                 </nav>
