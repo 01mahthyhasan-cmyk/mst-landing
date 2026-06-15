@@ -50,7 +50,6 @@ export default function Header() {
                       <li className="nav-item"><Link className="nav-link" href="/case-study-single">Case Study Details</Link></li>
                       <li className="nav-item"><Link className="nav-link" href="/team">Our Team</Link></li>
                       <li className="nav-item"><Link className="nav-link" href="/team-single">Team Details</Link></li>
-                      <li className="nav-item"><Link className="nav-link" href="/pricing">Pricing Plan</Link></li>
                       <li className="nav-item"><Link className="nav-link" href="/testimonials">Testimonials</Link></li>
                       <li className="nav-item"><Link className="nav-link" href="/image-gallery">Image Gallery</Link></li>
                       <li className="nav-item"><Link className="nav-link" href="/video-gallery">Video Gallery</Link></li>

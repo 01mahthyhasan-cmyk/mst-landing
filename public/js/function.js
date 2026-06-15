@@ -140,7 +140,13 @@ window.initTemplate = function() {
 
 	/* Init Counter */
 	if ($('.counter').length) {
-		$('.counter').counterUp({ delay: 6, time: 3000 });
+		$('.counter').each(function() {
+			var $this = $(this);
+			if (!$this.data('counterup-initialized')) {
+				$this.data('counterup-initialized', true);
+				$this.counterUp({ delay: 6, time: 3000 });
+			}
+		});
 	}
 
 	/* Image Reveal Animation */
