@@ -329,9 +329,7 @@ export default function Page() {
                                 <!-- Support CTA List Start -->
                                 <div class="support-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Saturday:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Sunday</span>Closed</li>
+                                        <li><span>Everyday:</span>06:30 AM - 08:00 PM</li>
                                     </ul>
                                 </div>
                                 <!-- Support CTA List End -->

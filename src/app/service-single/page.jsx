@@ -34,7 +34,7 @@ const SERVICES = [
       { q: 'What does an OPD consultation include?', a: 'A full medical history review, physical examination, diagnosis, and prescription if required.' },
       { q: 'Are follow-up visits included?', a: 'Follow-up consultations for the same condition are offered at a reduced fee within 7 days.' },
       { q: 'Can children visit the OPD?', a: 'Yes, our OPD caters to patients of all ages, including infants, children and the elderly.' },
-      { q: 'What are your OPD hours?', a: 'Monday–Friday: 9 AM – 7 PM, Saturday: 9 AM – 7 PM, Sunday: Emergency only.' },
+      { q: 'What are your OPD hours?', a: 'Everyday: 6:30 AM – 8:00 PM.' },
     ],
   },
   {
@@ -385,9 +385,7 @@ function ServiceSingleContent() {
                   <div className="sidebar-cta-body">
                     <div className="sidebar-cta-list">
                       <ul>
-                        <li><span>Mon to Fri:</span>9AM – 7PM</li>
-                        <li><span>Saturday:</span>9AM – 7PM</li>
-                        <li><span>Sunday:</span>Emergency Only</li>
+                        <li><span>Everyday:</span>6:30 AM – 8:00 PM</li>
                       </ul>
                     </div>
                     <div className="sidebar-cta-btn">

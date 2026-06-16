@@ -2071,10 +2071,10 @@ header.main-header .header-sticky.active{
 
 .team-social-list{
     position: absolute;
-	max-width: max-content;
+	width: 90px;
     left: 0;
     right: 0;
-    bottom: 70px;
+    bottom: 80px;
 	margin: 0 auto;
 	transform: scaleX(0);
     z-index: 2;
@@ -2089,10 +2089,14 @@ header.main-header .header-sticky.active{
 	list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .team-social-list ul li{
-	margin-bottom: 15px;
+	margin-bottom: 0;
 }
 
 .team-social-list ul li:last-child{

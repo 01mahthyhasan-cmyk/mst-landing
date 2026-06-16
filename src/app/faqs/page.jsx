@@ -59,9 +59,7 @@ export default function Page() {
                             <div class="sidebar-cta-body">
                                 <div class="sidebar-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>9AM - 7PM</li>
-                                        <li><span>Saturday:</span>9AM - 7PM</li>
-                                        <li><span>Sunday</span>Only Emergency</li>
+                                        <li><span>Everyday:</span>6:30 AM - 8:00 PM</li>
                                     </ul>
                                 </div>
                                 <div class="sidebar-cta-btn">
@@ -245,7 +243,7 @@ export default function Page() {
                                     </h2>
                                     <div id="collapse10" class="accordion-collapse collapse" role="region" aria-labelledby="heading10" data-bs-parent="#accordion1">
                                         <div class="accordion-body">
-                                            <p>Please bring your previous medical records, prescriptions, test reports, and a valid ID. If you have health insurance, carry your insurance details as well.  </p>
+                                            <p>Our clinic is open from 6:30 AM to 8:00 PM everyday, including weekends and public holidays.</p>
                                         </div>
                                     </div>
                                 </div>
