@@ -30,7 +30,7 @@ const serviceReplacements = [
 
 walkDir(SRC_APP_DIR, (filePath) => {
   if (!filePath.endsWith('.jsx') && !filePath.endsWith('.js')) return;
-  
+
   let content = fs.readFileSync(filePath, 'utf-8');
   let originalContent = content;
 
@@ -62,11 +62,11 @@ walkDir(SRC_APP_DIR, (filePath) => {
   content = content.replace(/\+\(123\) 456-789/g, '065 205 4997');
   content = content.replace(/\+123456789/g, '065 205 4997');
   content = content.replace(/\+1-234-567-890/g, '076 295 1343');
-  
+
   // Clean general contact number templates
   content = content.replace(/065 205 4997 \/ \+1-234-567-890/g, '065 205 4997 / 076 295 1343');
-  content = content.replace(/info@domain\.com/g, 'info@msthealthcare.com');
-  content = content.replace(/info@example\.com/g, 'info@msthealthcare.com');
+  content = content.replace(/info@domain\.com/g, 'contact@msthealthcare.com');
+  content = content.replace(/info@example\.com/g, 'contact@msthealthcare.com');
 
   // 4. Services replacements
   serviceReplacements.forEach(rep => {
@@ -91,7 +91,7 @@ walkDir(SRC_APP_DIR, (filePath) => {
   content = content.replace(/<h2><span className="counter">12<\/span>\+<\/h2>\s*<p>Medical Departments<\/p>/g, '<h2><span className="counter">10</span>+</h2><p>Comprehensive Care Services</p>');
   content = content.replace(/<h2><span className="counter">35<\/span>\+<\/h2>/g, '<h2><span className="counter">15</span>+</h2>');
   content = content.replace(/<li>Experienced Doctors<\/li>/g, '<li>Professional Healthcare Team</li>');
-  
+
   if (content !== originalContent) {
     fs.writeFileSync(filePath, content, 'utf-8');
     console.log(`Updated content: ${relativePath}`);
