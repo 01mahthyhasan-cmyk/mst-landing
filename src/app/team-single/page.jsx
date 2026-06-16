@@ -1,11 +1,11 @@
 import HtmlContent from '../../components/HtmlContent';
 export const metadata = {
-  title: "Our Medical Team | MST Health Care",
+    title: "Our Medical Team | MST Health Care",
 };
 
 export default function Page() {
-  return (
-    <HtmlContent html={`<!-- Page Header Section Start -->
+    return (
+        <HtmlContent html={`<!-- Page Header Section Start -->
     <div class="page-header dark-section parallaxie">
         <div class="container">
             <div class="row">
@@ -70,7 +70,7 @@ export default function Page() {
                                      </div>
                                      <div class="team-sidebar-cta-item-content">
                                          <p>E-mail Us!</p>
-                                         <h3><a href="mailto:info@msthealthcare.com">info@msthealthcare.com</a></h3>
+                                         <h3><a href="mailto:contact@msthealthcare.com">contact@msthealthcare.com</a></h3>
                                      </div>
                                  </div>
                                  <!-- Team Sidebar CTA Item End -->
@@ -313,5 +313,5 @@ export default function Page() {
         </div>
     </div>
     <!-- Page Team Single End -->`.replace(/\r\n/g, '\n')} />
-  );
+    );
 }

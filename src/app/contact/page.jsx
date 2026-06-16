@@ -1,11 +1,11 @@
 import HtmlContent from '../../components/HtmlContent';
 export const metadata = {
-  title: "Contact Us | MST Health Care",
+    title: "Contact Us | MST Health Care",
 };
 
 export default function Page() {
-  return (
-    <HtmlContent html={`<!-- Page Header Section Start -->
+    return (
+        <HtmlContent html={`<!-- Page Header Section Start -->
     <div class="page-header dark-section parallaxie">
         <div class="container">
             <div class="row">
@@ -55,6 +55,7 @@ export default function Page() {
                             <p>Call Us</p>
                             <h3><a href="tel:0652054997">065 205 4997</a></h3>
                             <h3><a href="tel:0762951343">076 295 1343</a></h3>
+                            <h3><a href="tel:0762251343">076 225 1343</a></h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->
@@ -66,7 +67,7 @@ export default function Page() {
                         </div>
                         <div class="contact-info-item-content">
                             <p>E-mail Us</p>
-                            <h3><a href="mailto:info@msthealthcare.com">info@msthealthcare.com</a></h3>
+                            <h3><a href="mailto:contact@msthealthcare.com">contact@msthealthcare.com</a></h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->
@@ -164,5 +165,5 @@ export default function Page() {
         </div>
     </div>
     <!-- Contact location Form Box End -->`.replace(/\r\n/g, '\n')} />
-  );
+    );
 }
