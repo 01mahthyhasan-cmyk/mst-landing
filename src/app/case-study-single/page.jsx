@@ -86,9 +86,7 @@ export default function Page() {
                             <div class="sidebar-cta-body">
                                 <div class="sidebar-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>9AM - 7PM</li>
-                                        <li><span>Saturday:</span>9AM - 7PM</li>
-                                        <li><span>Sunday</span>Only Emergency</li>
+                                        <li><span>Everyday:</span>6:30 AM - 8:00 PM</li>
                                     </ul>
                                 </div>
                                 <div class="sidebar-cta-btn">

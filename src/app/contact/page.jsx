@@ -106,7 +106,7 @@ export default function Page() {
 
                         <!-- Google Map Start -->
                         <div class="google-map-iframe wow fadeInUp" data-wow-delay="0.2s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63374.82988717385!2d81.63921!3d7.71720!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5b6e0df6ac72d%3A0x43bf1bc3e9e0a6e!2sBatticaloa%2C%20Sri%20Lanka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://maps.google.com/maps?q=7.729446887969971,81.6787109375&amp;z=17&amp;hl=en&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>

@@ -8,8 +8,7 @@ export default function Header() {
           <div className="container">
             {/* Logo Start */}
             <Link className="navbar-brand d-flex align-items-center" href="/">
-              <img src="/images/mst_logo.png" alt="Logo" style={{ maxHeight: '55px', marginRight: '10px' }} />
-              <span className="font-weight-bold text-white h4 mb-0" style={{ fontWeight: '700', letterSpacing: '0.5px', color: '#fff' }}>MST Health Care</span>
+              <img src="/images/mst_logo.png" alt="Logo" style={{ maxHeight: '80px', marginRight: '10px' }} />
             </Link>
             {/* Logo End */}
 

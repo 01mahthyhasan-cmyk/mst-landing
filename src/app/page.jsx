@@ -1,11 +1,11 @@
 import HtmlContent from '../components/HtmlContent';
 export const metadata = {
-  title: "MST Health Care | Compassion. Care. Comfort.",
+    title: "MST Health Care | Compassion. Care. Comfort.",
 };
 
 export default function Page() {
-  return (
-    <HtmlContent html={`<!-- Hero Section Start -->
+    return (
+        <HtmlContent html={`<!-- Hero Section Start -->
     <div class="hero dark-section parallaxie">
         <div class="container">
             <div class="row">
@@ -14,7 +14,7 @@ export default function Page() {
                     <div class="hero-content">
                         <!-- Section Title Start -->
                             <span class="section-sub-title wow fadeInUp" style="text-shadow: 0 2px 5px rgba(0,0,0,0.5); font-weight: 600; color: #fff;">Compassion. Care. Comfort.</span>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque" style="color: #ffffff; text-shadow: 0 4px 15px rgba(0,0,0,0.9); font-weight: 700;">Healthcare You Can Trust</h1>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque" style="color: #ffffff; text-shadow: 0 4px 15px rgba(0,0,0,0.9); font-weight: 700;">MST Health Care</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.2s" style="text-shadow: 0 1px 6px rgba(0,0,0,0.7); font-size: 18px; font-weight: 500; color: #f5f5f5;">Providing quality healthcare services through professional consultations, diagnostic support, home visits, elder care, laboratory services, and community medical initiatives.</p>
                         </div>
                         <!-- Section Title End -->
@@ -740,28 +740,29 @@ export default function Page() {
                 <div class="col-xl-4 col-md-6">
                     <!-- Team Item Start -->
                     <div class="team-item wow fadeInUp">
-                        <!-- Team Item Iamage Start -->
+                        <!-- Team Item Image Start -->
                         <div class="team-item-image">
-                            <a href="/team-single" data-cursor-text="View">
-                                <figure>
-                                    <img src="/images/team-1.jpg" alt="">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #0a6c74, #1a9aa0); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-doctor"></i></span>
+                                    </div>
                                 </figure>
                             </a>
                         </div>
-                        <!-- Team Item Iamage End -->
+                        <!-- Team Item Image End -->
 
                         <!-- Team Item Body Start -->
                         <div class="team-item-body">
                             <!-- Team Social List Box Start -->
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="/team-single"><img src="/images/icon-share.svg" alt=""></a>
-                                </div> 
+                                    <a href="#"><img src="/images/icon-share.svg" alt=""></a>
+                                </div>
                                 <div class="team-social-list">
                                     <ul>
                                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
@@ -770,8 +771,8 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="/team-single">Dr. David Wilson</a></h2>
-                                <p>Cardiologist</p>
+                                <h2><a href="#">Dr. Sivachelvam</a></h2>
+                                <p>Family Doctor</p>
                             </div>
                             <!-- Team Item Content End -->
                         </div>
@@ -783,28 +784,29 @@ export default function Page() {
                 <div class="col-xl-4 col-md-6">
                     <!-- Team Item Start -->
                     <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Team Item Iamage Start -->
+                        <!-- Team Item Image Start -->
                         <div class="team-item-image">
-                            <a href="/team-single" data-cursor-text="View">
-                                <figure>
-                                    <img src="/images/team-2.jpg" alt="">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #155e9b, #1e7dc0); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-doctor"></i></span>
+                                    </div>
                                 </figure>
                             </a>
                         </div>
-                        <!-- Team Item Iamage End -->
+                        <!-- Team Item Image End -->
 
                         <!-- Team Item Body Start -->
                         <div class="team-item-body">
                             <!-- Team Social List Box Start -->
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="/team-single"><img src="/images/icon-share.svg" alt=""></a>
-                                </div> 
+                                    <a href="#"><img src="/images/icon-share.svg" alt=""></a>
+                                </div>
                                 <div class="team-social-list">
                                     <ul>
                                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
@@ -813,8 +815,8 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="/team-single">Dr. Emma Roberts</a></h2>
-                                <p>Pediatric Specialist</p>
+                                <h2><a href="#">Dr. Arulanandham</a></h2>
+                                <p>Family Doctor</p>
                             </div>
                             <!-- Team Item Content End -->
                         </div>
@@ -826,28 +828,29 @@ export default function Page() {
                 <div class="col-xl-4 col-md-6">
                     <!-- Team Item Start -->
                     <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Team Item Iamage Start -->
+                        <!-- Team Item Image Start -->
                         <div class="team-item-image">
-                            <a href="/team-single" data-cursor-text="View">
-                                <figure>
-                                    <img src="/images/team-3.jpg" alt="">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #7b2d8b, #a040b8); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-nurse"></i></span>
+                                    </div>
                                 </figure>
                             </a>
                         </div>
-                        <!-- Team Item Iamage End -->
+                        <!-- Team Item Image End -->
 
                         <!-- Team Item Body Start -->
                         <div class="team-item-body">
                             <!-- Team Social List Box Start -->
                             <div class="team-social-list-box">
                                 <div class="team-social-btn">
-                                    <a href="/team-single"><img src="/images/icon-share.svg" alt=""></a>
-                                </div> 
+                                    <a href="#"><img src="/images/icon-share.svg" alt=""></a>
+                                </div>
                                 <div class="team-social-list">
                                     <ul>
                                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
                                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
@@ -856,8 +859,8 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="/team-single">Dr. Michael Johnson</a></h2>
-                                <p>Home Visit Services Surgeon</p>
+                                <h2><a href="#">Dr. Shobana</a></h2>
+                                <p>Family Doctor</p>
                             </div>
                             <!-- Team Item Content End -->
                         </div>
@@ -866,21 +869,96 @@ export default function Page() {
                     <!-- Team Item End -->
                 </div>
 
+                <!-- Team Member 4: Dr. Sujikala -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="team-item wow fadeInUp">
+                        <div class="team-item-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #1b6b3a, #27a259); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-nurse"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="team-item-body">
+                            <div class="team-social-list-box">
+                                <div class="team-social-btn"><a href="#"><img src="/images/icon-share.svg" alt=""></a></div>
+                                <div class="team-social-list"><ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul></div>
+                            </div>
+                            <div class="team-item-content">
+                                <h2><a href="#">Dr. Sujikala</a></h2>
+                                <p>Psychiatrist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5: Dr. Raj -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #8b4513, #c0622c); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-doctor"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="team-item-body">
+                            <div class="team-social-list-box">
+                                <div class="team-social-btn"><a href="#"><img src="/images/icon-share.svg" alt=""></a></div>
+                                <div class="team-social-list"><ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul></div>
+                            </div>
+                            <div class="team-item-content">
+                                <h2><a href="#">Dr. Raj</a></h2>
+                                <p>Physiotherapist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6: Dr. Murugananthamoorthy -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure style="background:#f0f4f8; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1; width:100%;">
+                                    <div style="width:160px; height:160px; border-radius:50%; background:linear-gradient(135deg, #1a237e, #283593); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                        <span style="font-size:70px; color:rgba(255,255,255,0.9);"><i class="fa-solid fa-user-tie"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="team-item-body">
+                            <div class="team-social-list-box">
+                                <div class="team-social-btn"><a href="#"><img src="/images/icon-share.svg" alt=""></a></div>
+                                <div class="team-social-list"><ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul></div>
+                            </div>
+                            <div class="team-item-content">
+                                <h2><a href="#">Dr. Murugananthamoorthy</a></h2>
+                                <p>Vice President</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Satisfy Client Images Start -->
-                        <div class="satisfy-client-images">
-                            <div class="satisfy-client-image">
-                                <figure class="image-anime">
-                                    <img src="/images/author-1.jpg" alt="">
-                                </figure>
-                            </div>
-                            <div class="satisfy-client-image add-more">
-                                <img src="/images/icon-phone-white.svg" alt="">
-                            </div>
-                        </div>
-                        <!-- Satisfy Client Images End -->    
                         <p>Helping You Move from Concern to Confidence with Expert Medical Care. - <a href="/contact"> Contact Us Today!</a></p>
                     </div>
                     <!-- Section Footer Text End -->
@@ -929,9 +1007,7 @@ export default function Page() {
                                 <!-- Support CTA List Start -->
                                 <div class="support-cta-list">
                                     <ul>
-                                        <li><span>Mon to Fri:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Saturday:</span>09:00 AM - 07:00 PM</li>
-                                        <li><span>Sunday</span>Closed</li>
+                                        <li><span>Everyday:</span>06:30 AM - 08:00 PM</li>
                                     </ul>
                                 </div>
                                 <!-- Support CTA List End -->
@@ -1297,7 +1373,7 @@ export default function Page() {
 
                         <!-- Google Map Start -->
                         <div class="google-map-iframe wow fadeInUp" data-wow-delay="0.2s">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63374.82988717385!2d81.63921!3d7.71720!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5b6e0df6ac72d%3A0x43bf1bc3e9e0a6e!2sBatticaloa%2C%20Sri%20Lanka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://maps.google.com/maps?q=7.729446887969971,81.6787109375&amp;z=17&amp;hl=en&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <!-- Google Map End -->
                     </div>
@@ -1476,5 +1552,5 @@ export default function Page() {
         </div>
     </div>
     <!-- Our Blog Section End -->`.replace(/\r\n/g, '\n')} />
-  );
+    );
 }
