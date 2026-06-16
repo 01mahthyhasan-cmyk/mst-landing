@@ -55,6 +55,7 @@ export default function Page() {
                             <p>Call Us</p>
                             <h3><a href="tel:0652054997">065 205 4997</a></h3>
                             <h3><a href="tel:0762951343">076 295 1343</a></h3>
+                            <h3><a href="tel:0762251343">076 225 1343</a></h3>
                         </div>
                     </div>
                     <!-- Contact Info Item End -->
