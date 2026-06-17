@@ -337,37 +337,42 @@ window.initTemplate = function() {
 	$contactform.validator({focus: false}).on("submit", function (event) {
 		if (!event.isDefaultPrevented()) {
 			event.preventDefault();
-			submitForm();
+			submitContactForm();
 		}
 	});
 
-	function submitForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-process.php",
-			data: $contactform.serialize(),
-			success : function(text){
-				if (text === "success"){
-					formSuccess();
-				} else {
-					submitMSG(false,text);
-				}
+	function submitContactForm(){
+		var $btn = $contactform.find('button[type="submit"]');
+		$btn.prop('disabled', true).text('Sending…');
+
+		fetch('/api/contact', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: $contactform.serialize()
+		})
+		.then(function(res) {
+			return res.text().then(function(text) {
+				return { ok: res.ok, text: text };
+			});
+		})
+		.then(function(result) {
+			if (result.ok && result.text === 'success') {
+				$contactform[0].reset();
+				contactSubmitMSG(true, '✅ Message sent successfully! We\'ll reply to your email shortly.');
+			} else {
+				contactSubmitMSG(false, '❌ ' + (result.text || 'Something went wrong. Please try again.'));
 			}
+		})
+		.catch(function() {
+			contactSubmitMSG(false, '❌ Network error. Please check your connection and try again.');
+		})
+		.finally(function() {
+			$btn.prop('disabled', false).text('Submit Message');
 		});
 	}
 
-	function formSuccess(){
-		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
-	}
-
-	function submitMSG(valid, msg){
-		if(valid){
-			var msgClasses = "h4 text-success";
-		} else {
-			var msgClasses = "h4 text-danger";
-		}
+	function contactSubmitMSG(valid, msg){
+		var msgClasses = valid ? "h4 text-success" : "h4 text-danger";
 		$("#formsubmit").removeClass().addClass(msgClasses).text(msg);
 	}
 	/* Contact form validation end */

@@ -3096,8 +3096,13 @@ header.main-header .header-sticky.active{
     color: inherit;
 }
 
+.page-header-box ol{
+    --bs-breadcrumb-divider: "/";
+}
+
 .page-header-box ol .breadcrumb-item+.breadcrumb-item::before{
     color: var(--white-color);
+    content: var(--bs-breadcrumb-divider, "/");
 }
 
 .our-approach{
