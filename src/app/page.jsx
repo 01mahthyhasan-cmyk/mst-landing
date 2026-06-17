@@ -771,7 +771,7 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="#">Dr. Sivachelvam</a></h2>
+                                <h2><a href="#">Dr. Sivaselvan</a></h2>
                                 <p>Family Doctor</p>
                             </div>
                             <!-- Team Item Content End -->
@@ -815,8 +815,8 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="#">Dr. Arulanandham</a></h2>
-                                <p>Family Doctor</p>
+                                <h2><a href="#">Prof.K. Arulanandem</a></h2>
+                                <p>Consultant Family physician</p>
                             </div>
                             <!-- Team Item Content End -->
                         </div>
@@ -859,8 +859,8 @@ export default function Page() {
 
                             <!-- Team Item Content Start -->
                             <div class="team-item-content">
-                                <h2><a href="#">Dr. Shobana</a></h2>
-                                <p>Family Doctor</p>
+                                <h2><a href="#">Dr. N. Shobana</a></h2>
+                                <p>Family physician</p>
                             </div>
                             <!-- Team Item Content End -->
                         </div>
@@ -927,7 +927,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <!-- Team Member 6: Dr. Murugananthamoorthy -->
+                <!-- Team Member 6: Dr. M. Murugamoorthy -->
                 <div class="col-xl-4 col-md-6">
                     <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="team-item-image">
@@ -949,7 +949,7 @@ export default function Page() {
                                 </ul></div>
                             </div>
                             <div class="team-item-content">
-                                <h2><a href="#">Dr. Murugananthamoorthy</a></h2>
+                                <h2><a href="#">Dr. M. Murugamoorthy</a></h2>
                                 <p>Vice President</p>
                             </div>
                         </div>
