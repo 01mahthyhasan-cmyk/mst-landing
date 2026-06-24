@@ -1,0 +1,455 @@
+{
+  "aboutPage": {
+    "approach": {
+      "ctaButton": "24/7 Services for Emergancy",
+      "ctaText": "We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.",
+      "heading": "The values that guide every care decision we make",
+      "items": {
+        "compassion": {
+          "description": "We treat every patient with empathy, dignity, and respect. Patient well-being remains our highest priority in every decision we make.",
+          "title": "Compassion & Care"
+        },
+        "integrity": {
+          "description": "Maintaining honesty, professionalism, and ethical standards while working together to improve public health and community well-being.",
+          "title": "Integrity & Community"
+        }
+      },
+      "subTitle": "Our Core Values"
+    },
+    "breadcrumb": {
+      "current": "About us",
+      "home": "home"
+    },
+    "expertise": {
+      "description": "With years of hands-on experience and deep medical expertise, we provide care you can trust at every step our skilled professionals are committed.",
+      "emergencyCall": "Emergency Call",
+      "emergencyPhone": "065 205 4997",
+      "heading": "Experience and expertise you can trust always",
+      "items": {
+        "generalMedicine": {
+          "description": "Our General Medicine and Primary Care services focus on patients.",
+          "title": "General Medicine And Primary Care"
+        },
+        "homeVisit": {
+          "description": "Our General Medicine and Primary Care services focus on patients.",
+          "title": "Home Visit Services And Bone Treatments"
+        }
+      },
+      "subTitle": "Medical Expertise"
+    },
+    "heading": "About us",
+    "hero": {
+      "authorName": "MST Health Care",
+      "authorTagline": "Compassion. Care. Comfort.",
+      "contactButton": "Contact us now",
+      "description": "At MST Health Care, we are a community-focused healthcare provider dedicated to delivering accessible, affordable, and compassionate medical services. We improve community health through outpatient care, diagnostic services, preventive healthcare, home-based medical support, elder care, and emergency assistance.",
+      "heading": "Dedicated to Better Community Health",
+      "imageTitle": "Healthcare",
+      "mission": {
+        "description": "To provide comprehensive, patient-centered healthcare services that enhance quality of life through compassion, excellence, and accessibility.",
+        "title": "Our Mission"
+      },
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "About MST Health Care",
+      "vision": {
+        "description": "To become one of the most trusted healthcare providers by delivering reliable medical services and promoting preventive healthcare for healthier generations.",
+        "title": "Our Vision"
+      }
+    },
+    "metaTitle": "About Us | MST Health Care",
+    "whatWeDo": {
+      "bookButton": "Book Appointment",
+      "description": "MST Health Care provides a comprehensive range of outpatient and community healthcare services designed to bring quality medical care directly to patients and their families across Batticaloa.",
+      "emergencyCall": "Emergency Call",
+      "emergencyPhone": "065 205 4997",
+      "heading": "Community healthcare services delivered with compassion",
+      "listItems": {
+        "ambulance": "Ambulance & Emergency Support",
+        "communityCamps": "Community Medical Camps",
+        "ecgLab": "ECG & Laboratory Services",
+        "homeElder": "Home Visit & Elder Care",
+        "opdClinic": "OPD & Clinic Services",
+        "physiotherapy": "Physiotherapy & Rehabilitation"
+      },
+      "subTitle": "What We Do",
+      "yearsExperience": "Years of Experience"
+    }
+  },
+  "bookAppointmentPage": {
+    "breadcrumb": {
+      "current": "Book appointment",
+      "home": "Home"
+    },
+    "heading": "Book appointment",
+    "metaTitle": "Book an Appointment | MST Health Care",
+    "subTitle": "Book an Appointment"
+  },
+  "common": {
+    "appointmentForm": {
+      "emailPlaceholder": "Email Address",
+      "fullNamePlaceholder": "Full Name",
+      "heading": "Book an appointment",
+      "messagePlaceholder": "Write Message Here...",
+      "phoneNumberPlaceholder": "Phone Number",
+      "sectionHeading": "Book your appointment for better health today",
+      "sectionSubTitle": "Book an Appointment",
+      "selectServicePlaceholder": "Select Service",
+      "services": {
+        "ambulance": "Ambulance Services",
+        "clinicServices": "Clinic Services",
+        "ecg": "ECG",
+        "elderscare": "Elders Care",
+        "homeVisit": "Home Visit Services",
+        "laboratoryServices": "Laboratory Services",
+        "nebulizerServices": "Nebulizer Services",
+        "opd": "OPD (Outpatient Department)",
+        "physiotherapy": "Physiotherapy",
+        "specialistChannelling": "Specialist Channelling"
+      },
+      "submitButton": "Submit Message"
+    },
+    "coreFeatures": {
+      "contactButton": "Contact Us",
+      "description": "Our medical services are designed to provide reliable, high-quality care with a strong focus on patient comfort and safety",
+      "heading": "Core features of our healthcare services",
+      "items": {
+        "advancedDiagnostic": "Advanced Diagnostic Technology",
+        "emergencySupport": "24/7 Emergency Support",
+        "experiencedProfessionals": "Experienced Medical Professionals",
+        "fastAccurate": "Fast and Accurate Test Results",
+        "modernFacilities": "Modern Medical Facilities",
+        "personalizedCare": "Personalized Patient Care",
+        "qualityTreatment": "Quality Medical Treatment",
+        "safeEnvironment": "Safe and Comfortable Environment"
+      },
+      "subTitle": "Core Feature"
+    },
+    "emergencySupport": {
+      "ctaButton": "24/7 Services for Emergancy",
+      "description": "Our emergency department is available around the clock to provide immediate medical assistance and life-saving care when you need it most.",
+      "heading": "24/7 emergency support",
+      "scheduleHeading": "Schedule a hours:",
+      "scheduleHours": "06:30 AM - 08:00 PM",
+      "scheduleLabel": "Everyday:",
+      "subTitle": "Emergency Care"
+    },
+    "faqSection": {
+      "ctaButton": "View all Questions",
+      "ctaDescription": "If you have any questions about our medical services, appointments, or treatments, our team is here to help. We are committed to providing clear information and friendly support to ensure you receive the care and guidance you need.",
+      "ctaHeading": "Have a any Questions !",
+      "heading": "Your questions answered about our medical services",
+      "items": {
+        "q1": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "1. How can I book an appointment with a doctor?"
+        },
+        "q2": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "2. Do you provide emergency medical services?"
+        },
+        "q3": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "3. What medical services do you provide?"
+        },
+        "q4": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "4. How early should I arrive for my appointment?"
+        },
+        "q5": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "5. What should I bring to my medical appointment?"
+        }
+      },
+      "subTitle": "Frequently Asked Questions"
+    },
+    "factStatistics": {
+      "emergencySupport": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Emergency Support"
+      },
+      "heading": "Key statistics that reflect our medical excellence",
+      "medicalDepartments": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Medical Departments"
+      },
+      "professionalTeam": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Professional Healthcare Team"
+      },
+      "servicesFooter": "Browse all professional healthcare services available for you and family",
+      "subTitle": "Fact / Statistics",
+      "trustedUsers": "Trusted By {{count}} Users"
+    },
+    "reviewBadge": "More Than 2500 Reviews"
+  },
+  "contactPage": {
+    "address": "Trinco Road, Periya Urani, Batticaloa, Sri Lanka",
+    "breadcrumb": {
+      "current": "Contact us",
+      "home": "home"
+    },
+    "callUs": "Call Us",
+    "contactForm": {
+      "emailPlaceholder": "E-mail Address*",
+      "firstNamePlaceholder": "First Name*",
+      "formDescription": "Reach out to our healthcare experts today for trusted guidance and personalized care.",
+      "lastNamePlaceholder": "Last Name*",
+      "messagePlaceholder": "Write Message Here...",
+      "phoneNumberPlaceholder": "Phone Number*",
+      "submitButton": "Submit Message"
+    },
+    "contactInfoHeading": "Reach out to our healthcare experts today",
+    "description": "Reach out to MST Health Care for expert medical consultations, appointments, home visits, or emergency support. Our compassionate team is ready to assist you every step of the way.",
+    "email": "contact@msthealthcare.com",
+    "emailUs": "E-mail Us",
+    "heading": "Contact us",
+    "locationLabel": "Our Location",
+    "mapSubTitle": "Contact Us",
+    "metaTitle": "Contact Us | MST Health Care",
+    "phones": {
+      "phone1": "065 205 4997",
+      "phone2": "076 295 1343",
+      "phone3": "076 225 1343"
+    },
+    "subTitle": "Get In Touch",
+    "title": "We're here whenever you need us"
+  },
+  "footer": {
+    "address": "Trinco Road, Periya Urani, Batticaloa, Sri Lanka",
+    "contactInfo": {
+      "heading": "Contact Info",
+      "phone1": "065 205 4997",
+      "phone2": "076 295 1343"
+    },
+    "copyright": "Copyright © 2025 MST Health Care. All Rights Reserved.",
+    "getInTouch": "Get in Touch",
+    "letsTalk": "Let's Talk",
+    "medicalServices": {
+      "heading": "Medical Services",
+      "homeVisit": "Home Visit Services",
+      "laboratory": "Laboratory Services",
+      "opd": "OPD Consultation",
+      "physiotherapy": "Physiotherapy"
+    },
+    "quickLinks": {
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "heading": "Quick Links",
+      "home": "Home",
+      "ourServices": "Our Services"
+    }
+  },
+  "homePage": {
+    "about": {
+      "author": {
+        "name": "Devon Lane",
+        "title": "Internal Medicine Specialist"
+      },
+      "description": "At MST Health Care, we are committed to improving the health and well-being of our communities through accessible, affordable, and compassionate healthcare services. Our experienced healthcare professionals work tirelessly to ensure that every patient receives quality care with dignity and respect.",
+      "heading": "Dedicated to Better Community Health",
+      "imageTitle": "Healthcare",
+      "items": {
+        "patientFocused": {
+          "description": "We prioritize every personalized care, clear communication.",
+          "title": "Patient Focused Care"
+        },
+        "qualityTreatment": {
+          "description": "We prioritize every personalized care, clear communication.",
+          "title": "Quality Medical Treatment"
+        }
+      },
+      "learnMoreButton": "Learn More About",
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "About Us"
+    },
+    "blog": {
+      "heading": "Latest articles and insights on healthcare trends",
+      "posts": {
+        "post1": {
+          "category": "General Health",
+          "readMore": "Read More",
+          "title": "10 Early Warning Signs You Should Never Ignore"
+        },
+        "post2": {
+          "category": "Cardiology",
+          "readMore": "Read More",
+          "title": "Heart Health 101 Simple Habits for a Stronger Heart"
+        },
+        "post3": {
+          "category": "Pediatrics",
+          "readMore": "Read More",
+          "title": "Children's Health Guide for Growing Families"
+        }
+      },
+      "subTitle": "Latest Article"
+    },
+    "caseStudy": {
+      "description": "Discover inspiring stories from patients who trusted our medical expertise and experienced successful recoveries these real-life cases highlight our commitment.",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "Real patient success stories",
+      "items": {
+        "elderscare": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "Elders Care Skin Treatment"
+        },
+        "heartHealth": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "Heart Health Recovery"
+        },
+        "opd": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "OPD (Outpatient Department) Improvement"
+        }
+      },
+      "subTitle": "Case Study's",
+      "viewAllLink": "View all Case study"
+    },
+    "hero": {
+      "bookAppointmentButton": "Book an Appointment",
+      "contactButton": "Contact Us",
+      "description": "Providing quality healthcare services through professional consultations, diagnostic support, home visits, elder care, laboratory services, and community medical initiatives.",
+      "heading": "MST Health Care",
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "Compassion. Care. Comfort."
+    },
+    "metaTitle": "MST Health Care | Compassion. Care. Comfort.",
+    "services": {
+      "ctaTitle": "Your Health Starts With One Call",
+      "footerText": "Browse all professional healthcare services available for you and family",
+      "heading": "Expert healthcare services for better living",
+      "items": {
+        "clinicServices": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "Clinic Services",
+          "viewDetails": "View Details"
+        },
+        "ecg": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "ECG",
+          "viewDetails": "View Details"
+        },
+        "opd": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "OPD (Outpatient Department)",
+          "viewDetails": "View Details"
+        }
+      },
+      "subTitle": "Our Services",
+      "trustedUsers": "Trusted By {{count}} Users"
+    },
+    "team": {
+      "contactFooterLink": "Contact Us Today!",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "Our skilled medical team serving patients with care",
+      "members": {
+        "arulanandem": {
+          "name": "Prof.K. Arulanandem",
+          "role": "Consultant Family physician"
+        },
+        "murugamoorthy": {
+          "name": "Dr. M. Murugamoorthy",
+          "role": "Vice President"
+        },
+        "raj": {
+          "name": "Dr. Raj",
+          "role": "Physiotherapist"
+        },
+        "shobana": {
+          "name": "Dr. N. Shobana",
+          "role": "Family physician"
+        },
+        "sivaselvan": {
+          "name": "Dr. Sivaselvan",
+          "role": "Family Doctor"
+        },
+        "sujikala": {
+          "name": "Dr. Sujikala",
+          "role": "Psychiatrist"
+        }
+      },
+      "subTitle": "Our Team"
+    },
+    "testimonials": {
+      "description": "Hear from our patients about their experiences with our dedicated medical team and quality healthcare services their feedback reflects our commitment.",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "What our patients are saying",
+      "items": {
+        "testimonial1": {
+          "authorName": "John Peterson",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "\u201cThe doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.\u201d"
+        },
+        "testimonial2": {
+          "authorName": "Maria Gonzalez",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "\u201cThe doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.\u201d"
+        },
+        "testimonial3": {
+          "authorName": "David Robinson",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "\u201cThe doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.\u201d"
+        },
+        "testimonial4": {
+          "authorName": "Savannah Nguyen",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "\u201cThe doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.\u201d"
+        }
+      },
+      "subTitle": "Patients Testimonials",
+      "viewAllLink": "View our All reviews"
+    },
+    "whyChooseUs": {
+      "description": "Our experienced medical team focuses on accurate diagnosis, effective treatment, and personalized care to ensure the best outcomes for every patient.",
+      "emergencySupport": "Emergency Support",
+      "heading": "Why choose us for quality healthcare services",
+      "medicalDepartments": "Medical Departments",
+      "subTitle": "Why Choose Us",
+      "yearsExperience": "Years Experience"
+    }
+  },
+  "nav": {
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "bookAppointment": "Book Appointment",
+    "contactUs": "Contact Us",
+    "home": "Home",
+    "pages": {
+      "blogDetails": "Blog Details",
+      "caseStudy": "Case Study",
+      "caseStudyDetails": "Case Study Details",
+      "error404": "404",
+      "faqs": "FAQs",
+      "imageGallery": "Image Gallery",
+      "label": "Pages",
+      "ourTeam": "Our Team",
+      "serviceDetails": "Service Details",
+      "teamDetails": "Team Details",
+      "testimonials": "Testimonials",
+      "videoGallery": "Video Gallery"
+    },
+    "services": {
+      "ambulance": "Ambulance Services",
+      "clinic": "Clinic Services",
+      "ecg": "ECG monitoring",
+      "elderscare": "Elders Care",
+      "homeVisit": "Home Visit Services",
+      "label": "Services",
+      "laboratory": "Laboratory Services",
+      "nebulizer": "Nebulizer Services",
+      "opd": "OPD (Outpatient)",
+      "physiotherapy": "Physiotherapy",
+      "specialist": "Specialist Channelling"
+    }
+  },
+  "notFoundPage": {
+    "backButton": "Back to Homepage",
+    "breadcrumb": {
+      "current": "404 Error page",
+      "home": "Home"
+    },
+    "description": "The page you are looking for does not exist.",
+    "heading": "Page not found",
+    "metaTitle": "MST Health Care | Compassion. Care. Comfort.",
+    "subHeading": "Oops! page not found"
+  }
+}

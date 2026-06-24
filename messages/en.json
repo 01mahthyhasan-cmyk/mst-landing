@@ -1,0 +1,1501 @@
+{
+  "aboutPage": {
+    "approach": {
+      "ctaButton": "24/7 Services for Emergancy",
+      "ctaText": "We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.",
+      "heading": "The values that guide every care decision we make",
+      "items": {
+        "compassion": {
+          "description": "We treat every patient with empathy, dignity, and respect. Patient well-being remains our highest priority in every decision we make.",
+          "title": "Compassion & Care"
+        },
+        "integrity": {
+          "description": "Maintaining honesty, professionalism, and ethical standards while working together to improve public health and community well-being.",
+          "title": "Integrity & Community"
+        }
+      },
+      "subTitle": "Our Core Values"
+    },
+    "breadcrumb": {
+      "current": "About us",
+      "home": "home"
+    },
+    "expertise": {
+      "description": "With years of hands-on experience and deep medical expertise, we provide care you can trust at every step our skilled professionals are committed.",
+      "emergencyCall": "Emergency Call",
+      "emergencyPhone": "065 205 4997",
+      "heading": "Experience and expertise you can trust always",
+      "items": {
+        "generalMedicine": {
+          "description": "Our General Medicine and Primary Care services focus on patients.",
+          "title": "General Medicine And Primary Care"
+        },
+        "homeVisit": {
+          "description": "Our General Medicine and Primary Care services focus on patients.",
+          "title": "Home Visit Services And Bone Treatments"
+        }
+      },
+      "subTitle": "Medical Expertise"
+    },
+    "heading": "About us",
+    "hero": {
+      "authorName": "MST Health Care",
+      "authorTagline": "Compassion. Care. Comfort.",
+      "contactButton": "Contact us now",
+      "description": "At MST Health Care, we are a community-focused healthcare provider dedicated to delivering accessible, affordable, and compassionate medical services. We improve community health through outpatient care, diagnostic services, preventive healthcare, home-based medical support, elder care, and emergency assistance.",
+      "heading": "Dedicated to Better Community Health",
+      "imageTitle": "Healthcare",
+      "mission": {
+        "description": "To provide comprehensive, patient-centered healthcare services that enhance quality of life through compassion, excellence, and accessibility.",
+        "title": "Our Mission"
+      },
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "About MST Health Care",
+      "vision": {
+        "description": "To become one of the most trusted healthcare providers by delivering reliable medical services and promoting preventive healthcare for healthier generations.",
+        "title": "Our Vision"
+      }
+    },
+    "metaTitle": "About Us | MST Health Care",
+    "whatWeDo": {
+      "bookButton": "Book Appointment",
+      "description": "MST Health Care provides a comprehensive range of outpatient and community healthcare services designed to bring quality medical care directly to patients and their families across Batticaloa.",
+      "emergencyCall": "Emergency Call",
+      "emergencyPhone": "065 205 4997",
+      "heading": "Community healthcare services delivered with compassion",
+      "listItems": {
+        "ambulance": "Ambulance & Emergency Support",
+        "communityCamps": "Community Medical Camps",
+        "ecgLab": "ECG & Laboratory Services",
+        "homeElder": "Home Visit & Elder Care",
+        "opdClinic": "OPD & Clinic Services",
+        "physiotherapy": "Physiotherapy & Rehabilitation"
+      },
+      "subTitle": "What We Do",
+      "yearsExperience": "Years of Experience"
+    }
+  },
+  "bookAppointmentPage": {
+    "breadcrumb": {
+      "current": "Book appointment",
+      "home": "Home"
+    },
+    "heading": "Book appointment",
+    "metaTitle": "Book an Appointment | MST Health Care",
+    "subTitle": "Book an Appointment"
+  },
+  "common": {
+    "appointmentForm": {
+      "emailPlaceholder": "Email Address",
+      "fullNamePlaceholder": "Full Name",
+      "heading": "Book an appointment",
+      "messagePlaceholder": "Write Message Here...",
+      "phoneNumberPlaceholder": "Phone Number",
+      "sectionHeading": "Book your appointment for better health today",
+      "sectionSubTitle": "Book an Appointment",
+      "selectServicePlaceholder": "Select Service",
+      "services": {
+        "ambulance": "Ambulance Services",
+        "clinicServices": "Clinic Services",
+        "ecg": "ECG",
+        "elderscare": "Elders Care",
+        "homeVisit": "Home Visit Services",
+        "laboratoryServices": "Laboratory Services",
+        "nebulizerServices": "Nebulizer Services",
+        "opd": "OPD (Outpatient Department)",
+        "physiotherapy": "Physiotherapy",
+        "specialistChannelling": "Specialist Channelling"
+      },
+      "submitButton": "Submit Message"
+    },
+    "coreFeatures": {
+      "contactButton": "Contact Us",
+      "description": "Our medical services are designed to provide reliable, high-quality care with a strong focus on patient comfort and safety",
+      "heading": "Core features of our healthcare services",
+      "items": {
+        "advancedDiagnostic": "Advanced Diagnostic Technology",
+        "emergencySupport": "24/7 Emergency Support",
+        "experiencedProfessionals": "Experienced Medical Professionals",
+        "fastAccurate": "Fast and Accurate Test Results",
+        "modernFacilities": "Modern Medical Facilities",
+        "personalizedCare": "Personalized Patient Care",
+        "qualityTreatment": "Quality Medical Treatment",
+        "safeEnvironment": "Safe and Comfortable Environment"
+      },
+      "subTitle": "Core Feature"
+    },
+    "emergencySupport": {
+      "ctaButton": "24/7 Services for Emergancy",
+      "description": "Our emergency department is available around the clock to provide immediate medical assistance and life-saving care when you need it most.",
+      "heading": "24/7 emergency support",
+      "scheduleHeading": "Schedule a hours:",
+      "scheduleHours": "06:30 AM - 08:00 PM",
+      "scheduleLabel": "Everyday:",
+      "subTitle": "Emergency Care"
+    },
+    "faqSection": {
+      "ctaButton": "View all Questions",
+      "ctaDescription": "If you have any questions about our medical services, appointments, or treatments, our team is here to help. We are committed to providing clear information and friendly support to ensure you receive the care and guidance you need.",
+      "ctaHeading": "Have a any Questions !",
+      "heading": "Your questions answered about our medical services",
+      "items": {
+        "q1": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "1. How can I book an appointment with a doctor?"
+        },
+        "q2": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "2. Do you provide emergency medical services?"
+        },
+        "q3": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "3. What medical services do you provide?"
+        },
+        "q4": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "4. How early should I arrive for my appointment?"
+        },
+        "q5": {
+          "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests.",
+          "question": "5. What should I bring to my medical appointment?"
+        }
+      },
+      "subTitle": "Frequently Asked Questions"
+    },
+    "factStatistics": {
+      "emergencySupport": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Emergency Support"
+      },
+      "heading": "Key statistics that reflect our medical excellence",
+      "medicalDepartments": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Medical Departments"
+      },
+      "professionalTeam": {
+        "description": "Our team of experienced doctor dedicated to providing expert medical care with.",
+        "label": "Professional Healthcare Team"
+      },
+      "servicesFooter": "Browse all professional healthcare services available for you and family",
+      "subTitle": "Fact / Statistics",
+      "trustedUsers": "Trusted By {{count}} Users"
+    },
+    "reviewBadge": "More Than 2500 Reviews"
+  },
+  "contactPage": {
+    "address": "Trinco Road, Periya Urani, Batticaloa, Sri Lanka",
+    "breadcrumb": {
+      "current": "Contact us",
+      "home": "home"
+    },
+    "callUs": "Call Us",
+    "contactForm": {
+      "emailPlaceholder": "E-mail Address*",
+      "firstNamePlaceholder": "First Name*",
+      "formDescription": "Reach out to our healthcare experts today for trusted guidance and personalized care.",
+      "lastNamePlaceholder": "Last Name*",
+      "messagePlaceholder": "Write Message Here...",
+      "phoneNumberPlaceholder": "Phone Number*",
+      "submitButton": "Submit Message"
+    },
+    "contactInfoHeading": "Reach out to our healthcare experts today",
+    "description": "Reach out to MST Health Care for expert medical consultations, appointments, home visits, or emergency support. Our compassionate team is ready to assist you every step of the way.",
+    "email": "contact@msthealthcare.com",
+    "emailUs": "E-mail Us",
+    "heading": "Contact us",
+    "locationLabel": "Our Location",
+    "mapSubTitle": "Contact Us",
+    "metaTitle": "Contact Us | MST Health Care",
+    "phones": {
+      "phone1": "065 205 4997",
+      "phone2": "076 295 1343",
+      "phone3": "076 225 1343"
+    },
+    "subTitle": "Get In Touch",
+    "title": "We're here whenever you need us"
+  },
+  "footer": {
+    "address": "Trinco Road, Periya Urani, Batticaloa, Sri Lanka",
+    "contactInfo": {
+      "heading": "Contact Info",
+      "phone1": "065 205 4997",
+      "phone2": "076 295 1343"
+    },
+    "copyright": "Copyright © 2025 MST Health Care. All Rights Reserved.",
+    "getInTouch": "Get in Touch",
+    "letsTalk": "Let's Talk",
+    "medicalServices": {
+      "heading": "Medical Services",
+      "homeVisit": "Home Visit Services",
+      "laboratory": "Laboratory Services",
+      "opd": "OPD Consultation",
+      "physiotherapy": "Physiotherapy"
+    },
+    "quickLinks": {
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "heading": "Quick Links",
+      "home": "Home",
+      "ourServices": "Our Services"
+    }
+  },
+  "homePage": {
+    "about": {
+      "author": {
+        "name": "Devon Lane",
+        "title": "Internal Medicine Specialist"
+      },
+      "description": "At MST Health Care, we are committed to improving the health and well-being of our communities through accessible, affordable, and compassionate healthcare services. Our experienced healthcare professionals work tirelessly to ensure that every patient receives quality care with dignity and respect.",
+      "heading": "Dedicated to Better Community Health",
+      "imageTitle": "Healthcare",
+      "items": {
+        "patientFocused": {
+          "description": "We prioritize every personalized care, clear communication.",
+          "title": "Patient Focused Care"
+        },
+        "qualityTreatment": {
+          "description": "We prioritize every personalized care, clear communication.",
+          "title": "Quality Medical Treatment"
+        }
+      },
+      "learnMoreButton": "Learn More About",
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "About Us"
+    },
+    "blog": {
+      "heading": "Latest articles and insights on healthcare trends",
+      "posts": {
+        "post1": {
+          "category": "General Health",
+          "readMore": "Read More",
+          "title": "10 Early Warning Signs You Should Never Ignore"
+        },
+        "post2": {
+          "category": "Cardiology",
+          "readMore": "Read More",
+          "title": "Heart Health 101 Simple Habits for a Stronger Heart"
+        },
+        "post3": {
+          "category": "Pediatrics",
+          "readMore": "Read More",
+          "title": "Children's Health Guide for Growing Families"
+        }
+      },
+      "subTitle": "Latest Article"
+    },
+    "caseStudy": {
+      "description": "Discover inspiring stories from patients who trusted our medical expertise and experienced successful recoveries these real-life cases highlight our commitment.",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "Real patient success stories",
+      "items": {
+        "elderscare": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "Elders Care Skin Treatment"
+        },
+        "heartHealth": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "Heart Health Recovery"
+        },
+        "opd": {
+          "description": "A patient experiencing severe as diagnosed with a cardiac condition.",
+          "title": "OPD (Outpatient Department) Improvement"
+        }
+      },
+      "subTitle": "Case Study's",
+      "viewAllLink": "View all Case study"
+    },
+    "hero": {
+      "bookAppointmentButton": "Book an Appointment",
+      "contactButton": "Contact Us",
+      "description": "Providing quality healthcare services through professional consultations, diagnostic support, home visits, elder care, laboratory services, and community medical initiatives.",
+      "heading": "MST Health Care",
+      "reviewCount": "More Than 2500 Reviews",
+      "subTitle": "Compassion. Care. Comfort."
+    },
+    "metaTitle": "MST Health Care | Compassion. Care. Comfort.",
+    "services": {
+      "ctaTitle": "Your Health Starts With One Call",
+      "footerText": "Browse all professional healthcare services available for you and family",
+      "heading": "Expert healthcare services for better living",
+      "items": {
+        "clinicServices": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "Clinic Services",
+          "viewDetails": "View Details"
+        },
+        "ecg": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "ECG",
+          "viewDetails": "View Details"
+        },
+        "opd": {
+          "description": "Compassionate and professional medical care for outpatient consultation, diagnosis, and recovery.",
+          "title": "OPD (Outpatient Department)",
+          "viewDetails": "View Details"
+        }
+      },
+      "subTitle": "Our Services",
+      "trustedUsers": "Trusted By {{count}} Users"
+    },
+    "team": {
+      "contactFooterLink": "Contact Us Today!",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "Our skilled medical team serving patients with care",
+      "members": {
+        "arulanandem": {
+          "name": "Prof.K. Arulanandem",
+          "role": "Consultant Family physician"
+        },
+        "murugamoorthy": {
+          "name": "Dr. M. Murugamoorthy",
+          "role": "Vice President"
+        },
+        "raj": {
+          "name": "Dr. Raj",
+          "role": "Physiotherapist"
+        },
+        "shobana": {
+          "name": "Dr. N. Shobana",
+          "role": "Family physician"
+        },
+        "sivaselvan": {
+          "name": "Dr. Sivaselvan",
+          "role": "Family Doctor"
+        },
+        "sujikala": {
+          "name": "Dr. Sujikala",
+          "role": "Psychiatrist"
+        }
+      },
+      "subTitle": "Our Team"
+    },
+    "testimonials": {
+      "description": "Hear from our patients about their experiences with our dedicated medical team and quality healthcare services their feedback reflects our commitment.",
+      "footerText": "Helping You Move from Concern to Confidence with Expert Medical Care.",
+      "heading": "What our patients are saying",
+      "items": {
+        "testimonial1": {
+          "authorName": "John Peterson",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”"
+        },
+        "testimonial2": {
+          "authorName": "Maria Gonzalez",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”"
+        },
+        "testimonial3": {
+          "authorName": "David Robinson",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”"
+        },
+        "testimonial4": {
+          "authorName": "Savannah Nguyen",
+          "authorRole": "Internal Medicine Specialist",
+          "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”"
+        }
+      },
+      "subTitle": "Patients Testimonials",
+      "viewAllLink": "View our All reviews"
+    },
+    "whyChooseUs": {
+      "description": "Our experienced medical team focuses on accurate diagnosis, effective treatment, and personalized care to ensure the best outcomes for every patient.",
+      "emergencySupport": "Emergency Support",
+      "heading": "Why choose us for quality healthcare services",
+      "medicalDepartments": "Medical Departments",
+      "subTitle": "Why Choose Us",
+      "yearsExperience": "Years Experience"
+    }
+  },
+  "nav": {
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "bookAppointment": "Book Appointment",
+    "contactUs": "Contact Us",
+    "home": "Home",
+    "pages": {
+      "blogDetails": "Blog Details",
+      "caseStudy": "Case Study",
+      "caseStudyDetails": "Case Study Details",
+      "error404": "404",
+      "faqs": "FAQs",
+      "imageGallery": "Image Gallery",
+      "label": "Pages",
+      "ourTeam": "Our Team",
+      "serviceDetails": "Service Details",
+      "teamDetails": "Team Details",
+      "testimonials": "Testimonials",
+      "videoGallery": "Video Gallery"
+    },
+    "services": {
+      "ambulance": "Ambulance Services",
+      "clinic": "Clinic Services",
+      "ecg": "ECG monitoring",
+      "elderscare": "Elders Care",
+      "homeVisit": "Home Visit Services",
+      "label": "Services",
+      "laboratory": "Laboratory Services",
+      "nebulizer": "Nebulizer Services",
+      "opd": "OPD (Outpatient)",
+      "physiotherapy": "Physiotherapy",
+      "specialist": "Specialist Channelling"
+    }
+  },
+  "faqsPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "FAQ's"
+    },
+    "heading": "Frequently asked questions",
+    "metaTitle": "FAQs | MST Health Care",
+    "sidebar": {
+      "scheduleHeading": "Schedule a hours:",
+      "scheduleHours": "6:30 AM - 8:00 PM",
+      "scheduleLabel": "Everyday:",
+      "bookButton": "Book An Appointment",
+      "categories": {
+        "general": "General Questions",
+        "appointment": "Appointment & consultation",
+        "services": "Services & treatment",
+        "payments": "Payments & pricing",
+        "emergency": "Emergency & support"
+      }
+    },
+    "sections": {
+      "general": {
+        "heading": "General questions",
+        "items": {
+          "q1": {
+            "question": "1. How can I book an appointment with a doctor?",
+            "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests."
+          },
+          "q2": {
+            "question": "2. Do you provide emergency medical services?",
+            "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests."
+          },
+          "q3": {
+            "question": "3. What medical services do you provide?",
+            "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests."
+          },
+          "q4": {
+            "question": "4. How early should I arrive for my appointment?",
+            "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests."
+          },
+          "q5": {
+            "question": "5. What should I bring to my medical appointment?",
+            "answer": "We provide a wide range of services including general checkups, cardiology, pediatrics, orthopedics, dermatology, and diagnostic tests."
+          }
+        }
+      },
+      "appointment": {
+        "heading": "Appointment & consultation",
+        "items": {
+          "q1": {
+            "question": "1. How can I book an appointment?",
+            "answer": "Please bring your previous medical records, prescriptions, test reports, and a valid ID."
+          },
+          "q2": {
+            "question": "2. Can I choose a specific doctor?",
+            "answer": "Please bring your previous medical records, prescriptions, test reports, and a valid ID."
+          },
+          "q3": {
+            "question": "3. What should I bring to my appointment?",
+            "answer": "Please bring your previous medical records, prescriptions, test reports, and a valid ID."
+          },
+          "q4": {
+            "question": "4. Do I need an appointment before visiting?",
+            "answer": "Please bring your previous medical records, prescriptions, test reports, and a valid ID."
+          },
+          "q5": {
+            "question": "5. What are your clinic working hours?",
+            "answer": "Our clinic is open from 6:30 AM to 8:00 PM everyday, including weekends and public holidays."
+          }
+        }
+      },
+      "services": {
+        "heading": "Services & treatment",
+        "items": {
+          "q1": {
+            "question": "1. What medical services do you provide?",
+            "answer": "Yes, we offer a full range of laboratory and diagnostic services at our clinic."
+          },
+          "q2": {
+            "question": "2. Do you provide full body checkups?",
+            "answer": "Yes, we offer a full range of laboratory and diagnostic services at our clinic."
+          },
+          "q3": {
+            "question": "3. Are laboratory tests available at your clinic?",
+            "answer": "Yes, we offer a full range of laboratory and diagnostic services at our clinic."
+          },
+          "q4": {
+            "question": "4. How can I book an appointment?",
+            "answer": "Yes, we offer a full range of laboratory and diagnostic services at our clinic."
+          },
+          "q5": {
+            "question": "5. What should I bring to my appointment?",
+            "answer": "Yes, we offer a full range of laboratory and diagnostic services at our clinic."
+          }
+        }
+      },
+      "payments": {
+        "heading": "Payments & pricing",
+        "items": {
+          "q1": {
+            "question": "1. What payment methods do you accept?",
+            "answer": "Yes, we accept selected health insurance plans."
+          },
+          "q2": {
+            "question": "2. Are your services affordable?",
+            "answer": "Yes, we accept selected health insurance plans."
+          },
+          "q3": {
+            "question": "3. Do you offer insurance support?",
+            "answer": "Yes, we accept selected health insurance plans."
+          },
+          "q4": {
+            "question": "4. What medical services do you provide?",
+            "answer": "Yes, we accept selected health insurance plans."
+          },
+          "q5": {
+            "question": "5. Are laboratory tests available at your clinic?",
+            "answer": "Yes, we accept selected health insurance plans."
+          }
+        }
+      },
+      "emergency": {
+        "heading": "Emergency & support",
+        "items": {
+          "q1": {
+            "question": "1. Do you provide emergency services?",
+            "answer": "We offer a wide range of healthcare services including general consultation, diagnostic testing, and emergency care."
+          },
+          "q2": {
+            "question": "2. How can I contact you in case of emergency?",
+            "answer": "We offer a wide range of healthcare services including general consultation, diagnostic testing, and emergency care."
+          },
+          "q3": {
+            "question": "3. What medical services do you provide?",
+            "answer": "We offer a wide range of healthcare services including general consultation, diagnostic testing, and emergency care."
+          },
+          "q4": {
+            "question": "4. Do you offer insurance support?",
+            "answer": "We offer a wide range of healthcare services including general consultation, diagnostic testing, and emergency care."
+          },
+          "q5": {
+            "question": "5. Can I choose my preferred doctor?",
+            "answer": "We offer a wide range of healthcare services including general consultation, diagnostic testing, and emergency care."
+          }
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "breadcrumb": {
+      "home": "home",
+      "current": "services"
+    },
+    "heading": "Our services",
+    "metaTitle": "Our Services | MST Health Care",
+    "approach": {
+      "subTitle": "Our Approach",
+      "heading": "Our patient first approach to quality healthcare",
+      "reviewBadge": "More Than 2500 Reviews",
+      "ctaText": "We prioritize comfort, trust, and treatment to ensure the best possible health outcomes for every patient.",
+      "ctaButton": "24/7 Services for Emergancy",
+      "item1Title": "Your Health Our Priority",
+      "item1Desc": "Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey.",
+      "item2Title": "Vision For Better Healthcare",
+      "item2Desc": "Your health is at the heart of everything we do. We are committed to high-quality care tailored to your journey."
+    },
+    "items": {
+      "opd": {
+        "title": "OPD (Outpatient Department)",
+        "description": "Compassionate and professional medical care for outpatient consultation, primary diagnosis, and fast recovery.",
+        "viewDetails": "View Details"
+      },
+      "clinic": {
+        "title": "Clinic Services",
+        "description": "Regular clinical checks, minor treatments, and consultations for various chronic and acute conditions.",
+        "viewDetails": "View Details"
+      },
+      "ecg": {
+        "title": "ECG",
+        "description": "Electrocardiogram monitoring for quick, accurate cardiac checks and cardiovascular health tracking.",
+        "viewDetails": "View Details"
+      },
+      "physiotherapy": {
+        "title": "Physiotherapy",
+        "description": "Professional therapeutic services to restore movement, manage physical pain, and recover from injuries.",
+        "viewDetails": "View Details"
+      },
+      "specialist": {
+        "title": "Specialist Channelling",
+        "description": "Channelling options with leading medical consultants and doctors across a wide range of specialties.",
+        "viewDetails": "View Details"
+      },
+      "laboratory": {
+        "title": "Laboratory Services",
+        "description": "Accurate clinical tests and diagnostic reports backed by modern lab technologies and skilled pathologists.",
+        "viewDetails": "View Details"
+      },
+      "nebulizer": {
+        "title": "Nebulizer Services",
+        "description": "Prompt nebulization therapy and breathing support for pediatric and adult respiratory needs.",
+        "viewDetails": "View Details"
+      },
+      "elders": {
+        "title": "Elders Care",
+        "description": "Dedicated physical and emotional healthcare solutions focusing on the health and comfort of seniors.",
+        "viewDetails": "View Details"
+      },
+      "homevisit": {
+        "title": "Home Visit Services",
+        "description": "Bringing quality medical consults, nursing care, and health monitoring right to your doorstep.",
+        "viewDetails": "View Details"
+      },
+      "ambulance": {
+        "title": "Ambulance Services",
+        "description": "24/7 responsive emergency ambulance transport and on-board clinical support for patient safety.",
+        "viewDetails": "View Details"
+      }
+    }
+  },
+  "teamPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Team"
+    },
+    "heading": "Our team",
+    "metaTitle": "Our Medical Team | MST Health Care",
+    "members": {
+      "arulanandem": {
+        "name": "Prof.K. Arulanandem",
+        "role": "Consultant Family physician"
+      },
+      "murugamoorthy": {
+        "name": "Dr. M. Murugamoorthy",
+        "role": "Vice President"
+      },
+      "sivaselvan": {
+        "name": "Dr. Sivaselvan",
+        "role": "Family Doctor"
+      },
+      "shobana": {
+        "name": "Dr. N. Shobana",
+        "role": "Family physician"
+      },
+      "raj": {
+        "name": "Dr. Raj",
+        "role": "Physiotherapist"
+      },
+      "sujikala": {
+        "name": "Dr. Sujikala",
+        "role": "Psychiatrist"
+      }
+    }
+  },
+  "testimonialsPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Testimonials"
+    },
+    "heading": "Our testimonials",
+    "metaTitle": "Testimonials | MST Health Care",
+    "items": {
+      "t1": {
+        "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”",
+        "name": "John Peterson",
+        "role": "Internal Medicine Specialist"
+      },
+      "t2": {
+        "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”",
+        "name": "Maria Gonzalez",
+        "role": "Internal Medicine Specialist"
+      },
+      "t3": {
+        "quote": "“The doctors and staff were incredibly supportive throughout my treatment. Their expertise and care helped me recover expected.”",
+        "name": "David Robinson",
+        "role": "Internal Medicine Specialist"
+      },
+      "t4": {
+        "quote": "“The doctors and staff were extremely professional and caring. They explained my treatment clearly and made me feel comfortable throughout”",
+        "name": "Savannah Nguyen",
+        "role": "Internal Medicine Specialist"
+      },
+      "t5": {
+        "quote": "“I had a great experience with the medical team. The clinic is very clean and well-organized, and the doctors are very knowledgeable”",
+        "name": "Guy Hawkins",
+        "role": "Internal Medicine Specialist"
+      },
+      "t6": {
+        "quote": "“The level of care I received was outstanding. The doctors listened carefully to my concerns and provided the best treatment.”",
+        "name": "Bessie Cooper",
+        "role": "Internal Medicine Specialist"
+      }
+    }
+  },
+  "notFoundPage": {
+    "backButton": "Back to Homepage",
+    "breadcrumb": {
+      "current": "404 Error page",
+      "home": "Home"
+    },
+    "description": "The page you are looking for does not exist.",
+    "heading": "Page not found",
+    "metaTitle": "MST Health Care | Compassion. Care. Comfort.",
+    "subHeading": "Oops! page not found"
+  },
+  "blogPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Blog"
+    },
+    "heading": "Our blog",
+    "metaTitle": "Latest Blog & News | MST Health Care",
+    "readMore": "Read More",
+    "posts": {
+      "post1": {
+        "category": "General Health",
+        "title": "10 Early Warning Signs You Should Never Ignore"
+      },
+      "post2": {
+        "category": "Cardiology",
+        "title": "Heart Health 101 Simple Habits for a Stronger Heart"
+      },
+      "post3": {
+        "category": "Pediatrics",
+        "title": "Essential Vaccinations Every Child Should Receive"
+      },
+      "post4": {
+        "category": "Health Tips",
+        "title": "Importance Of Regular Health Checkups"
+      },
+      "post5": {
+        "category": "Medical News",
+        "title": "How To Boost Your Immune System Naturally"
+      },
+      "post6": {
+        "category": "Wellness Guide",
+        "title": "Signs You Should Visit A Doctor Immediately"
+      }
+    }
+  },
+  "blogSinglePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Blog Details"
+    },
+    "heading": "10 Early Warning Signs ...",
+    "metaTitle": "Blog Details | MST Health Care",
+    "author": "Admin",
+    "date": "18 March, 2026",
+    "tagsLabel": "Tags:",
+    "tags": {
+      "healthTips": "Health Tips",
+      "medicalCare": "Medical Care",
+      "wellnessGuide": "Wellness Guide"
+    },
+    "body": {
+      "p1": "Your body constantly communicates with you, often sending subtle signals when something is not right. While some symptoms may seem minor or temporary, ignoring them can sometimes lead to serious health complications. Early detection plays a crucial role in preventing diseases and ensuring timely treatment, which can significantly improve outcomes and overall well-being.",
+      "p2": "Many people tend to overlook warning signs such as unusual fatigue, persistent pain, or sudden changes in their body, assuming they will resolve on their own. However, these symptoms can be early indicators of underlying medical conditions that require attention. By being aware of these signals and taking prompt action, you can protect your health and avoid more complex issues in the future.",
+      "quote": "Understanding your body's warning signs not only helps in early diagnosis but also empowers you to make informed healthcare decisions. Regular health checkups, maintaining a healthy lifestyle, and consulting medical professionals when needed are essential steps toward long-term wellness.",
+      "p3": "Your health is your most valuable asset, and your body often gives early warning signs when something may be wrong. These signs can range from mild discomfort to noticeable physical changes that should not be overlooked. Ignoring these symptoms may delay diagnosis and lead to more serious health complications over time.",
+      "subHeading": "Importance of regular health checkups",
+      "p4": "This article provides valuable insights into early warning signs that your body should not ignore. Understanding these symptoms can help you take timely action, seek proper medical care, and prevent serious health complications.",
+      "li1": "Recognize Early Warning Signs To Prevent Serious Health Issues",
+      "li2": "Seek Timely Medical Attention For Better Treatment Outcomes",
+      "li3": "Do Not Ignore Persistent Or Unusual Body Symptoms",
+      "li4": "Early Diagnosis Helps In Effective And Faster Recovery",
+      "li5": "Regular Health Checkups Improve Overall Health And Wellbeing",
+      "p5": "This blog provides in-depth information about important early warning signs that your body should never ignore. Understanding these symptoms can help you take timely action and seek proper medical attention before conditions become serious."
+    }
+  },
+  "caseStudyPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Case Study"
+    },
+    "heading": "Case study",
+    "metaTitle": "Case Studies | MST Health Care",
+    "items": {
+      "cs1": {
+        "title": "Heart Health Recovery",
+        "desc": "A patient experiencing severe as diagnosed with a cardiac condition."
+      },
+      "cs2": {
+        "title": "OPD (Outpatient Department) Improvement",
+        "desc": "A patient experiencing severe as diagnosed with a cardiac condition."
+      },
+      "cs3": {
+        "title": "Elders Care Skin Treatment",
+        "desc": "A patient experiencing severe as diagnosed with a cardiac condition."
+      },
+      "cs4": {
+        "title": "Successful Heart Treatment",
+        "desc": "Our cardiology team performed advanced diagnostic tests followed."
+      },
+      "cs5": {
+        "title": "Home Visit Services Recovery",
+        "desc": "A combination of surgical treatment and physiotherapy was provided."
+      },
+      "cs6": {
+        "title": "OPD (Outpatient Department) Success",
+        "desc": "The child was frequently experiencing breathing problems."
+      }
+    }
+  },
+  "caseStudySinglePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Case Study Details"
+    },
+    "heading": "Heart Health Recovery",
+    "metaTitle": "Case Study Details | MST Health Care"
+  },
+  "imageGalleryPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Gallery"
+    },
+    "heading": "Our gallery",
+    "metaTitle": "Image Gallery | MST Health Care"
+  },
+  "videoGalleryPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Video"
+    },
+    "heading": "Our video",
+    "metaTitle": "Video Gallery | MST Health Care"
+  },
+  "pricingPage": {
+    "breadcrumb": {
+      "home": "home",
+      "current": "Pricing plan"
+    },
+    "heading": "Pricing plan",
+    "metaTitle": "Pricing Plan | MST Health Care",
+    "choosePlan": "Choose This Plan",
+    "perMonth": "/Month",
+    "benefitItems": {
+      "trial": "Get 30 day free trial",
+      "noHiddenFee": "No any hidden fee pay",
+      "cancel": "You can cancel anytime"
+    },
+    "plans": {
+      "basic": {
+        "name": "Basic Care",
+        "desc": "Ideal for individuals seeking medical check - ups and consultations.",
+        "price": "$49.00",
+        "features": [
+          "2 General Consultations",
+          "Basic Lab Tests",
+          "Online Health Portal Access",
+          "Prescriptions Services"
+        ]
+      },
+      "advanced": {
+        "name": "Advanced Care",
+        "desc": "Ideal for individuals seeking medical check - ups and consultations.",
+        "price": "$69.00",
+        "features": [
+          "2 General Consultations",
+          "Basic Lab Tests",
+          "Online Health Portal Access",
+          "Prescriptions Services"
+        ]
+      },
+      "premium": {
+        "name": "Premium Care",
+        "desc": "Ideal for individuals seeking medical check - ups and consultations.",
+        "price": "$99.00",
+        "features": [
+          "2 General Consultations",
+          "Basic Lab Tests",
+          "Online Health Portal Access",
+          "Prescriptions Services"
+        ]
+      }
+    }
+  },
+  "serviceSinglePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Service Details"
+    },
+    "heading": "Service details",
+    "metaTitle": "Service Details | MST Health Care",
+    "discoverServices": "Discover Our Services",
+    "scheduleVisit": "Schedule a visit:",
+    "bookAppointment": "Book An Appointment",
+    "benefitsTitle": "Who can benefit",
+    "benefitsDesc": "This service is designed to support a wide range of patients. Below are the primary groups who benefit most.",
+    "faqTitle": "Frequently Asked Questions",
+    "processDesc": "Our structured care process is designed to make your experience smooth, transparent, and effective from start to finish.",
+    "processSuffix": "process",
+    "whyChoosePoint1Desc": "We invest in the best equipment and expertise to ensure you receive care that meets the highest clinical standards.",
+    "whyChoosePoint2Desc": "Patient comfort and outcome are at the heart of everything we do — delivering results you can trust.",
+    "trustedBy": "Trusted By",
+    "patients": "Patients",
+    "services": {
+      "opd": {
+        "name": "OPD (Outpatient Department)",
+        "tagline": "Comprehensive outpatient care for all ages",
+        "desc1": "Our Outpatient Department (OPD) provides comprehensive medical consultations and diagnostic support for patients of all ages. Our experienced doctors conduct thorough examinations, accurate diagnoses, and personalised treatment plans — all without requiring hospital admission.",
+        "desc2": "We handle a wide range of acute and chronic conditions, ensuring every patient receives the attention and care they deserve in a comfortable and safe clinic environment.",
+        "whyTitle": "Why choose our OPD services",
+        "whyDesc": "Our OPD combines expert medical professionals with modern diagnostic tools to deliver efficient, patient-centred care. Walk-in and scheduled appointments are both welcome.",
+        "whyPoint1": "Experienced General Practitioners",
+        "whyPoint2": "Short Waiting Times & Accurate Diagnosis",
+        "process": [
+          {
+            "step": "01",
+            "title": "Registration",
+            "desc": "Quick and easy patient registration at the front desk or online."
+          },
+          {
+            "step": "02",
+            "title": "Consultation",
+            "desc": "Meet with a qualified doctor for a detailed physical examination."
+          },
+          {
+            "step": "03",
+            "title": "Diagnosis & Prescription",
+            "desc": "Receive a personalised diagnosis, prescription and treatment plan."
+          }
+        ],
+        "benefits": [
+          "Individuals of All Age Groups",
+          "General Health Patients",
+          "Preventive Care Seekers",
+          "Chronic Condition Management"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need an appointment for OPD?",
+            "a": "Walk-ins are welcome, but booking an appointment helps reduce your waiting time significantly."
+          },
+          {
+            "q": "What does an OPD consultation include?",
+            "a": "A full medical history review, physical examination, diagnosis, and prescription if required."
+          },
+          {
+            "q": "Are follow-up visits included?",
+            "a": "Follow-up consultations for the same condition are offered at a reduced fee within 7 days."
+          },
+          {
+            "q": "Can children visit the OPD?",
+            "a": "Yes, our OPD caters to patients of all ages, including infants, children and the elderly."
+          },
+          {
+            "q": "What are your OPD hours?",
+            "a": "Everyday: 6:30 AM – 8:00 PM."
+          }
+        ]
+      },
+      "clinic": {
+        "name": "Clinic Services",
+        "tagline": "Holistic clinical care under one roof",
+        "desc1": "Clinic Services at MST Health Care provide a broad spectrum of clinical examinations and treatments for everyday health conditions. From general wellness checks to targeted clinical procedures, our qualified team ensures thorough and compassionate care.",
+        "desc2": "Our approach goes beyond treating symptoms. We emphasise preventive care, early detection, and patient education to help individuals make informed decisions about their long-term health.",
+        "whyTitle": "Why choose our clinic services",
+        "whyDesc": "Choosing the right healthcare provider is essential for long-term well-being. Our clinic services are built on trust, experience, and personalised care tailored to your unique needs.",
+        "whyPoint1": "Modern Medical Facilities & Technology",
+        "whyPoint2": "Compassionate & Experienced Clinical Staff",
+        "process": [
+          {
+            "step": "01",
+            "title": "Check-In",
+            "desc": "Register and share your health concerns with our friendly front-desk team."
+          },
+          {
+            "step": "02",
+            "title": "Examination",
+            "desc": "Our clinicians conduct a thorough clinical examination tailored to your needs."
+          },
+          {
+            "step": "03",
+            "title": "Treatment & Follow-Up",
+            "desc": "Receive a treatment plan and schedule follow-up visits as needed."
+          }
+        ],
+        "benefits": [
+          "Patients Seeking General Treatment",
+          "Post-Hospitalisation Recovery",
+          "Chronic Disease Management",
+          "Health Monitoring Patients"
+        ],
+        "faqs": [
+          {
+            "q": "What conditions do clinic services cover?",
+            "a": "We cover a wide range including fever, infections, wound care, chronic disease management, and general health checks."
+          },
+          {
+            "q": "Do I need a referral to access clinic services?",
+            "a": "No referral is required for most clinic services. Simply walk in or book an appointment."
+          },
+          {
+            "q": "Is the clinic equipped for minor procedures?",
+            "a": "Yes, we are equipped for minor clinical procedures such as wound dressing, injections, and IV therapy."
+          },
+          {
+            "q": "How long does a clinic visit typically take?",
+            "a": "Most clinic visits take between 20–40 minutes depending on the nature of your condition."
+          },
+          {
+            "q": "Is there a separate area for children?",
+            "a": "Yes, we have a dedicated paediatric zone to ensure a comfortable experience for children."
+          }
+        ]
+      },
+      "ecg": {
+        "name": "ECG Monitoring",
+        "tagline": "Precise cardiac monitoring for your heart health",
+        "desc1": "Electrocardiogram (ECG) Monitoring at MST Health Care provides a fast and non-invasive way to assess your heart's electrical activity. Our modern ECG equipment accurately detects irregularities such as arrhythmias, ischemia, and other cardiac conditions.",
+        "desc2": "Early detection of cardiac conditions is life-saving. Whether you experience chest pain, palpitations, or shortness of breath, our skilled technicians and physicians ensure a prompt and accurate evaluation.",
+        "whyTitle": "Why choose our ECG services",
+        "whyDesc": "Our ECG monitoring is carried out using hospital-grade equipment operated by trained technicians under doctor supervision, providing reliable and immediate results.",
+        "whyPoint1": "Hospital-Grade ECG Equipment",
+        "whyPoint2": "Immediate Results with Doctor Interpretation",
+        "process": [
+          {
+            "step": "01",
+            "title": "Preparation",
+            "desc": "A brief preparation where our technician explains the procedure and positions electrodes."
+          },
+          {
+            "step": "02",
+            "title": "Recording",
+            "desc": "A painless 12-lead ECG recording is completed in under 10 minutes."
+          },
+          {
+            "step": "03",
+            "title": "Interpretation & Report",
+            "desc": "A doctor reviews the trace and provides a detailed written report."
+          }
+        ],
+        "benefits": [
+          "Patients with Chest Pain or Palpitations",
+          "Individuals with Family Cardiac History",
+          "Pre-Surgery Cardiac Assessment",
+          "Routine Heart Health Screening"
+        ],
+        "faqs": [
+          {
+            "q": "Is an ECG painful?",
+            "a": "No. An ECG is entirely painless. Small electrode patches are placed on the skin to record electrical signals."
+          },
+          {
+            "q": "How long does an ECG take?",
+            "a": "The actual recording takes about 5–10 minutes. With preparation and report, expect around 20–30 minutes."
+          },
+          {
+            "q": "Do I need to fast before an ECG?",
+            "a": "No fasting is required before a standard ECG."
+          },
+          {
+            "q": "What conditions can an ECG detect?",
+            "a": "ECG can detect arrhythmias, heart attacks, heart enlargement, and electrical conduction problems."
+          },
+          {
+            "q": "When will I receive my ECG report?",
+            "a": "In most cases, your report is ready on the same day and interpreted by our doctor."
+          }
+        ]
+      },
+      "physiotherapy": {
+        "name": "Physiotherapy",
+        "tagline": "Restore movement, relieve pain, regain life",
+        "desc1": "Our Physiotherapy department offers professional therapeutic services to restore movement, manage physical pain, and support recovery from injuries, surgeries, and neurological conditions. Our certified physiotherapists design personalised rehabilitation programmes for every patient.",
+        "desc2": "From sports injuries to post-stroke rehabilitation, we utilise evidence-based techniques including manual therapy, electrotherapy, and guided exercise to achieve the best possible outcomes for each individual.",
+        "whyTitle": "Why choose our physiotherapy services",
+        "whyDesc": "Our physiotherapists hold recognised qualifications and use the latest rehabilitation technologies. We focus on restoring your functional independence and improving quality of life.",
+        "whyPoint1": "Certified & Experienced Physiotherapists",
+        "whyPoint2": "Evidence-Based Rehabilitation Techniques",
+        "process": [
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "A comprehensive physical assessment to understand your condition and functional limitations."
+          },
+          {
+            "step": "02",
+            "title": "Treatment Plan",
+            "desc": "A personalised rehabilitation plan using manual therapy, exercises and electrotherapy."
+          },
+          {
+            "step": "03",
+            "title": "Progress & Discharge",
+            "desc": "Regular progress reviews with goal-setting until full recovery is achieved."
+          }
+        ],
+        "benefits": [
+          "Sports Injury Patients",
+          "Post-Surgery Rehabilitation",
+          "Chronic Pain Sufferers",
+          "Neurological & Stroke Patients"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need a doctor's referral for physiotherapy?",
+            "a": "You can visit our physiotherapy department directly without a referral in most cases."
+          },
+          {
+            "q": "How many sessions will I need?",
+            "a": "The number of sessions varies by condition. Your physiotherapist will provide a clear treatment timeline after assessment."
+          },
+          {
+            "q": "Is physiotherapy painful?",
+            "a": "Some techniques may cause mild discomfort, but our therapists work within your comfort level at all times."
+          },
+          {
+            "q": "What equipment do you use?",
+            "a": "We use ultrasound therapy, TENS machines, traction units, exercise equipment, and manual therapy tools."
+          },
+          {
+            "q": "Can elderly patients receive physiotherapy?",
+            "a": "Absolutely. We offer specialised geriatric physiotherapy programmes for senior patients."
+          }
+        ]
+      },
+      "specialist": {
+        "name": "Specialist Channelling",
+        "tagline": "Access top specialists — all in one place",
+        "desc1": "MST Health Care offers Specialist Channelling services that connect patients with qualified specialist doctors across multiple disciplines. Whether you need a cardiologist, neurologist, orthopaedic surgeon, or gynaecologist, we facilitate prompt appointments with leading specialists.",
+        "desc2": "Our channelling service eliminates the hassle of long waiting times and navigating multiple hospitals. We coordinate your specialist appointments, ensuring continuity of care and seamless communication between our general practitioners and specialists.",
+        "whyTitle": "Why choose our specialist channelling",
+        "whyDesc": "We maintain a panel of experienced, board-certified specialists from leading hospitals. Our coordination team ensures your appointments are confirmed quickly and your medical records are prepared in advance.",
+        "whyPoint1": "Board-Certified Specialists Across Disciplines",
+        "whyPoint2": "Seamless Appointment Coordination & Records Transfer",
+        "process": [
+          {
+            "step": "01",
+            "title": "Referral or Request",
+            "desc": "A GP referral or direct specialist request is raised at our front desk."
+          },
+          {
+            "step": "02",
+            "title": "Appointment Booking",
+            "desc": "Our team confirms the earliest available slot with your chosen specialist."
+          },
+          {
+            "step": "03",
+            "title": "Consultation & Follow-up",
+            "desc": "Attend your specialist visit with full medical history prepared. Follow-up care is coordinated back with us."
+          }
+        ],
+        "benefits": [
+          "Patients Requiring Specialist Opinion",
+          "Complex & Rare Medical Conditions",
+          "Second Opinion Seekers",
+          "Pre-Surgical Specialist Review"
+        ],
+        "faqs": [
+          {
+            "q": "Which specialist disciplines do you channel?",
+            "a": "We channel specialists in cardiology, neurology, orthopaedics, gynaecology, paediatrics, ENT, dermatology, and more."
+          },
+          {
+            "q": "How quickly can I get a specialist appointment?",
+            "a": "Routine appointments are typically available within 2–5 days. Urgent cases are prioritised."
+          },
+          {
+            "q": "Will my GP be informed of the specialist findings?",
+            "a": "Yes, specialist reports are shared with your treating GP to ensure coordinated care."
+          },
+          {
+            "q": "Can I choose my preferred specialist?",
+            "a": "Yes, patients may request a specific specialist or seek guidance from our team for the most suitable option."
+          },
+          {
+            "q": "Is channelling available for out-of-town specialists?",
+            "a": "We coordinate with specialists from major hospitals in the region and can arrange telemedicine consultations when needed."
+          }
+        ]
+      },
+      "laboratory": {
+        "name": "Laboratory Services",
+        "tagline": "Accurate diagnostics for informed healthcare decisions",
+        "desc1": "MST Health Care's Laboratory Services offer a comprehensive range of diagnostic tests including blood work, urinalysis, microbiological cultures, and biochemical panels. Our state-of-the-art laboratory delivers fast, precise results that physicians rely on for accurate diagnoses.",
+        "desc2": "Our laboratory adheres to strict quality control standards, ensuring every test result is reliable. Patients can access their results digitally or collect them directly from our centre, with doctor interpretation available on request.",
+        "whyTitle": "Why choose our laboratory services",
+        "whyDesc": "Our certified laboratory technicians operate advanced analysers that deliver results with high accuracy and fast turnaround. Quality assurance protocols are rigorously maintained.",
+        "whyPoint1": "State-of-the-Art Diagnostic Analysers",
+        "whyPoint2": "Fast Turnaround & Reliable Accuracy",
+        "process": [
+          {
+            "step": "01",
+            "title": "Test Request",
+            "desc": "Receive a lab request from your doctor or request a standard health panel directly."
+          },
+          {
+            "step": "02",
+            "title": "Sample Collection",
+            "desc": "Samples are collected by trained phlebotomists in a hygienic, patient-friendly environment."
+          },
+          {
+            "step": "03",
+            "title": "Results & Interpretation",
+            "desc": "Results are ready within the agreed timeframe and can be reviewed with a doctor."
+          }
+        ],
+        "benefits": [
+          "Routine Health Screening",
+          "Disease Diagnosis & Monitoring",
+          "Pre-Surgery Investigations",
+          "Pregnancy & Hormonal Panels"
+        ],
+        "faqs": [
+          {
+            "q": "Do I need to fast before a blood test?",
+            "a": "Fasting is required for tests like blood glucose and lipid profiles (8–12 hours). Your doctor will advise you."
+          },
+          {
+            "q": "How long do results take?",
+            "a": "Most routine tests are available within 4–8 hours. Some specialised tests may take 24–48 hours."
+          },
+          {
+            "q": "Can I get my results online?",
+            "a": "Yes, we provide digital reports that can be accessed or emailed to you directly."
+          },
+          {
+            "q": "Is sample collection available at home?",
+            "a": "We offer home sample collection as part of our Home Visit Services. Contact us to arrange this."
+          },
+          {
+            "q": "What tests are available?",
+            "a": "We offer FBC, LFT, RFT, lipid profiles, thyroid function, HbA1c, cultures, urine analysis, and many more."
+          }
+        ]
+      },
+      "nebulizer": {
+        "name": "Nebulizer Services",
+        "tagline": "Effective respiratory relief when you need it most",
+        "desc1": "Our Nebulizer Services provide immediate respiratory relief for patients suffering from asthma, bronchitis, COPD, and other respiratory conditions. Nebulization delivers medication directly into the airways for fast and effective symptom relief.",
+        "desc2": "Our clinic is equipped with medical-grade nebulizers and stocked with bronchodilators and corticosteroids prescribed by our doctors. Patients experiencing breathing difficulties can receive prompt treatment in a monitored clinical environment.",
+        "whyTitle": "Why choose our nebulizer services",
+        "whyDesc": "Our nebulizer treatments are administered under direct medical supervision, ensuring the right medication dosage and monitoring your oxygen saturation and respiratory response throughout.",
+        "whyPoint1": "Medical-Grade Nebulizers & Medications",
+        "whyPoint2": "Supervised Treatment with Oxygen Monitoring",
+        "process": [
+          {
+            "step": "01",
+            "title": "Assessment",
+            "desc": "A doctor assesses your breathing, oxygen levels, and respiratory symptoms."
+          },
+          {
+            "step": "02",
+            "title": "Nebulization",
+            "desc": "Prescribed bronchodilator medication is administered via nebulizer over 10–15 minutes."
+          },
+          {
+            "step": "03",
+            "title": "Post-Treatment Review",
+            "desc": "Oxygen saturation and symptom response are reviewed before discharge with home care advice."
+          }
+        ],
+        "benefits": [
+          "Asthma Patients",
+          "COPD & Bronchitis Sufferers",
+          "Paediatric Respiratory Cases",
+          "Acute Breathing Difficulty"
+        ],
+        "faqs": [
+          {
+            "q": "What is nebulization?",
+            "a": "Nebulization converts liquid medication into a fine mist inhaled directly into the lungs for fast-acting relief."
+          },
+          {
+            "q": "Is nebulization safe for children?",
+            "a": "Yes, nebulization is commonly used and safe for children. We use paediatric-appropriate masks and dosages."
+          },
+          {
+            "q": "How long does a nebulizer session take?",
+            "a": "A typical session lasts 10–15 minutes, followed by a short observation period."
+          },
+          {
+            "q": "Do I need a prescription?",
+            "a": "Our doctor will assess your condition and prescribe the appropriate nebulizer medication during your visit."
+          },
+          {
+            "q": "Can I bring my own nebulizer?",
+            "a": "Yes, if your doctor has prescribed a specific medication, you may bring your own device for self-administration in our facility."
+          }
+        ]
+      },
+      "elders": {
+        "name": "Elders Care",
+        "tagline": "Dignified, compassionate care for our senior citizens",
+        "desc1": "MST Health Care's Elders Care programme is specially designed to support the health, dignity, and well-being of senior citizens. Our geriatric care team provides comprehensive health monitoring, chronic disease management, and daily assistance tailored to the unique needs of elderly patients.",
+        "desc2": "We understand that older adults often face multiple health challenges simultaneously. Our holistic approach addresses physical health, medication management, cognitive monitoring, and emotional well-being — ensuring seniors enjoy a healthy and fulfilling life.",
+        "whyTitle": "Why choose our elders care services",
+        "whyDesc": "Our elders care team includes experienced geriatricians, nurses, and physiotherapists who are specially trained to manage the complex healthcare needs of older adults with empathy and professionalism.",
+        "whyPoint1": "Specialised Geriatric Care Team",
+        "whyPoint2": "Holistic Health & Emotional Well-Being Support",
+        "process": [
+          {
+            "step": "01",
+            "title": "Geriatric Assessment",
+            "desc": "A comprehensive health and functional assessment tailored to the elderly patient's needs."
+          },
+          {
+            "step": "02",
+            "title": "Personalised Care Plan",
+            "desc": "A custom care plan covering medication, nutrition, mobility, and follow-up schedules."
+          },
+          {
+            "step": "03",
+            "title": "Ongoing Monitoring",
+            "desc": "Regular health checks, medication reviews, and family communication to ensure continued well-being."
+          }
+        ],
+        "benefits": [
+          "Senior Citizens (60+)",
+          "Patients with Multiple Chronic Conditions",
+          "Post-Hospitalisation Recovery",
+          "Families Seeking Assisted Care"
+        ],
+        "faqs": [
+          {
+            "q": "What age qualifies for elders care services?",
+            "a": "Our elders care programme is designed for individuals aged 60 and above, though younger patients with age-related conditions may also be eligible."
+          },
+          {
+            "q": "Can family members be involved in the care plan?",
+            "a": "Absolutely. We encourage family involvement and provide regular updates to designated family members."
+          },
+          {
+            "q": "Do you offer home-based elder care?",
+            "a": "Yes, our Home Visit Services include dedicated elder care visits for mobility-challenged seniors."
+          },
+          {
+            "q": "What chronic conditions do you manage for elderly patients?",
+            "a": "We manage hypertension, diabetes, arthritis, COPD, heart conditions, cognitive decline, and more."
+          },
+          {
+            "q": "Is memory care (dementia support) available?",
+            "a": "We offer baseline cognitive assessments and can coordinate referrals to specialist memory care services as needed."
+          }
+        ]
+      },
+      "homevisit": {
+        "name": "Home Visit Services",
+        "tagline": "Quality healthcare delivered to your doorstep",
+        "desc1": "MST Health Care's Home Visit Services bring professional medical care directly to patients in the comfort of their homes. Ideal for individuals who are homebound, elderly, post-operative, or simply prefer the convenience of in-home healthcare, our doctors and nurses travel to you.",
+        "desc2": "Our home visit team is equipped to conduct clinical examinations, administer medications, collect lab samples, perform wound care, and provide health monitoring. Comprehensive care — without leaving home.",
+        "whyTitle": "Why choose our home visit services",
+        "whyDesc": "Our home visit team is highly experienced in managing patients in home settings, equipped with portable medical devices and medicines to ensure the same standard of care as our clinic.",
+        "whyPoint1": "Experienced Doctors & Nurses Who Come to You",
+        "whyPoint2": "Portable Medical Equipment & Lab Sample Collection",
+        "process": [
+          {
+            "step": "01",
+            "title": "Booking",
+            "desc": "Call or WhatsApp our team to schedule a home visit at a time that suits you."
+          },
+          {
+            "step": "02",
+            "title": "Visit & Examination",
+            "desc": "Our doctor or nurse arrives at your home and conducts a thorough clinical assessment."
+          },
+          {
+            "step": "03",
+            "title": "Treatment & Plan",
+            "desc": "Treatment is administered on-site and a follow-up care plan is shared with the patient and family."
+          }
+        ],
+        "benefits": [
+          "Elderly & Homebound Patients",
+          "Post-Surgery Recovery at Home",
+          "Paediatric Home Visits",
+          "Chronic Disease Monitoring"
+        ],
+        "faqs": [
+          {
+            "q": "How do I book a home visit?",
+            "a": "Call our clinic or send a WhatsApp message. Our team will confirm a convenient time slot within your area."
+          },
+          {
+            "q": "What medical services can be done at home?",
+            "a": "Consultations, IV drips, wound dressing, injections, blood pressure monitoring, ECG, and lab sample collection are all available."
+          },
+          {
+            "q": "How soon can I get a home visit?",
+            "a": "Same-day and next-day home visits are available based on our team's schedule and your location."
+          },
+          {
+            "q": "Is there an additional charge for home visits?",
+            "a": "Yes, a nominal home visit fee applies. Contact us for current rates in your area."
+          },
+          {
+            "q": "What areas do you cover?",
+            "a": "We currently serve Batticaloa and surrounding areas. Contact us to confirm coverage in your location."
+          }
+        ]
+      },
+      "ambulance": {
+        "name": "Ambulance Services",
+        "tagline": "24/7 emergency transport & pre-hospital care",
+        "desc1": "MST Health Care provides reliable Ambulance Services for emergency medical transport and non-emergency patient transfers. Our well-equipped ambulances are staffed by trained paramedics to deliver pre-hospital care during transport to hospital or our clinic.",
+        "desc2": "Time is critical in medical emergencies. Our ambulance team responds swiftly, providing life-saving interventions en route and ensuring patients arrive at the hospital in the most stable condition possible.",
+        "whyTitle": "Why choose our ambulance services",
+        "whyDesc": "Our ambulances are equipped with advanced life-support equipment and staffed by trained emergency medical technicians available around the clock for your peace of mind.",
+        "whyPoint1": "Advanced Life-Support Equipment On Board",
+        "whyPoint2": "24/7 Availability with Rapid Response Times",
+        "process": [
+          {
+            "step": "01",
+            "title": "Emergency Call",
+            "desc": "Call our emergency line and provide the patient's location and condition."
+          },
+          {
+            "step": "02",
+            "title": "Rapid Dispatch",
+            "desc": "Our nearest available ambulance is dispatched immediately with trained paramedics."
+          },
+          {
+            "step": "03",
+            "title": "Pre-Hospital Care & Transfer",
+            "desc": "Paramedics provide stabilising care en route and safely transfer the patient to the appropriate facility."
+          }
+        ],
+        "benefits": [
+          "Medical Emergency Cases",
+          "Patient Transfers Between Facilities",
+          "Post-Discharge Hospital-to-Home Transport",
+          "Event Medical Standby"
+        ],
+        "faqs": [
+          {
+            "q": "Is your ambulance service available 24/7?",
+            "a": "Yes, our ambulance service operates 24 hours a day, 7 days a week, including public holidays."
+          },
+          {
+            "q": "What equipment is in the ambulance?",
+            "a": "Our ambulances carry oxygen, defibrillators, ECG monitors, IV supplies, and essential medications."
+          },
+          {
+            "q": "Can I request a non-emergency ambulance transfer?",
+            "a": "Yes, we provide non-emergency patient transport for hospital transfers and post-discharge returns home."
+          },
+          {
+            "q": "How quickly can you respond?",
+            "a": "Response times vary by location, but our goal is to dispatch within minutes of receiving your call."
+          },
+          {
+            "q": "What is the cost of ambulance services?",
+            "a": "Costs depend on the type of transfer and distance. Contact us for specific pricing information."
+          }
+        ]
+      }
+    }
+  },
+  "teamSinglePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Team Details"
+    },
+    "heading": "Team details",
+    "metaTitle": "Team Details | MST Health Care"
+  }
+}
