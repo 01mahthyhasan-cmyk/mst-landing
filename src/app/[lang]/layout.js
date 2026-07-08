@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import ScriptsLoader from "../../components/ScriptsLoader";
 import LanguageToggle from "../../components/LanguageToggle";
 import { getDictionary } from "../../lib/getDictionary";
+import Script from "next/script";
 
 export const metadata = {
   title: "MST Health Care | Compassion. Care. Comfort.",
@@ -50,28 +51,28 @@ export default async function LocaleLayout({ children, params }) {
         <link rel="stylesheet" href="/css/magnific-popup.css" />
         <link rel="stylesheet" href="/css/mousecursor.css" />
         <link href="/css/custom.css" rel="stylesheet" media="screen" />
-
-        {/* JS scripts served sequentially */}
-        <script src="/js/jquery-3.7.1.min.js" defer></script>
-        <script src="/js/circle-progress.min.js" defer></script>
-        <script src="/js/bootstrap.min.js" defer></script>
-        <script src="/js/validator.min.js" defer></script>
-        <script src="/js/jquery.slicknav.js" defer></script>
-        <script src="/js/swiper-bundle.min.js" defer></script>
-        <script src="/js/jquery.waypoints.min.js" defer></script>
-        <script src="/js/jquery.counterup.min.js" defer></script>
-        <script src="/js/jquery.magnific-popup.min.js" defer></script>
-        <script src="/js/SmoothScroll.js" defer></script>
-        <script src="/js/parallaxie.js" defer></script>
-        <script src="/js/gsap.min.js" defer></script>
-        <script src="/js/magiccursor.js" defer></script>
-        <script src="/js/SplitText.min.js" defer></script>
-        <script src="/js/ScrollTrigger.min.js" defer></script>
-        <script src="/js/jquery.mb.YTPlayer.min.js" defer></script>
-        <script src="/js/wow.min.js" defer></script>
-        <script src="/js/function.js" defer></script>
       </head>
       <body>
+        {/* JS scripts served sequentially using next/script */}
+        <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
+        <Script src="/js/circle-progress.min.js" strategy="beforeInteractive" />
+        <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script src="/js/validator.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery.slicknav.js" strategy="beforeInteractive" />
+        <Script src="/js/swiper-bundle.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery.waypoints.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery.counterup.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery.magnific-popup.min.js" strategy="beforeInteractive" />
+        <Script src="/js/SmoothScroll.js" strategy="beforeInteractive" />
+        <Script src="/js/parallaxie.js" strategy="beforeInteractive" />
+        <Script src="/js/gsap.min.js" strategy="beforeInteractive" />
+        <Script src="/js/magiccursor.js" strategy="beforeInteractive" />
+        <Script src="/js/SplitText.min.js" strategy="beforeInteractive" />
+        <Script src="/js/ScrollTrigger.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery.mb.YTPlayer.min.js" strategy="beforeInteractive" />
+        <Script src="/js/wow.min.js" strategy="beforeInteractive" />
+        <Script src="/js/function.js" strategy="beforeInteractive" />
+
         {/* Preloader Start */}
         <div className="preloader">
           <div className="loading-container">

@@ -27,6 +27,7 @@ const ServiceSchema = new mongoose.Schema(
       match: [/^[a-z0-9-_]+$/, 'Slug must be lowercase alphanumeric with hyphens/underscores'],
       index: true,
     },
+    tagline: { ...LocalizedString },
     iconClass: { type: String, default: '' },         // FontAwesome class
     listingIcon: { type: String, default: '' },       // Media library ID or path
     heroImage: { type: String, default: '' },         // Media library ID or path

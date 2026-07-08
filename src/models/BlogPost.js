@@ -19,7 +19,7 @@ const BlogPostSchema = new mongoose.Schema(
     image: { type: String, default: '' },             // media ID or path
     author: { ...LocalizedString },
     publishDate: { type: Date, default: null },
-    content: { ...LocalizedString },                  // rich text / markdown
+    content: { type: mongoose.Schema.Types.Mixed, default: {} },                  // string or structured
     tags: {
       en: { type: [String], default: [] },
       ta: { type: [String], default: [] },

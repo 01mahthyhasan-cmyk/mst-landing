@@ -51,6 +51,24 @@ export async function verifyRefreshToken(token) {
   }
 }
 
+export async function signPreviewToken(payload) {
+  return new SignJWT(payload)
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setExpirationTime('300s') // 5 minutes
+    .sign(ACCESS_SECRET);
+}
+
+export async function verifyPreviewToken(token) {
+  try {
+    const { payload } = await jwtVerify(token, ACCESS_SECRET);
+    return { valid: true, payload };
+  } catch (err) {
+    return { valid: false, error: err.message };
+  }
+}
+
+
 // ─── Cookie Helpers ─────────────────────────────────────────────────────────
 
 export function buildAccessCookie(token) {
