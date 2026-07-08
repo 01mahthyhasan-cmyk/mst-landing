@@ -1,6 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+// ─── Top Level Sections Definition ───────────────────────────────────────────
+const SECTIONS = [
+  { id: 'brand', label: 'Brand Identity', icon: '🏷️' },
+  { id: 'contact', label: 'Contact Info', icon: '📞' },
+  { id: 'social', label: 'Social Links', icon: '🔗' },
+  { id: 'address', label: 'Address Info', icon: '📍' },
+  { id: 'clinicHours', label: 'Clinic Hours', icon: '🕒' },
+  { id: 'copyright', label: 'Copyright Info', icon: '📝' },
+  { id: 'navigation', label: 'Navigation Links', icon: '🧭' },
+  { id: 'footer', label: 'Footer Layout', icon: '👣' },
+  { id: 'sharedBlocks', label: 'Shared Blocks', icon: '📦' }
+];
 
 // ─── Module-level helpers (stable references = no focus loss on re-render) ────
 
@@ -18,6 +31,131 @@ function isLongField(path) {
   return p.includes('desc') || p.includes('overview') || p.includes('bio') ||
     p.includes('quote') || p.includes('answer') || p.includes('content') ||
     p.includes('address') || p.includes('copyright') || p.includes('hours');
+}
+
+// Collapsible nested section component for depth > 0
+function CollapsibleSubSection({ label, children, depth }) {
+  const [expanded, setExpanded] = useState(true);
+
+  return (
+    <div className="sub-section-group" style={{
+      borderLeft: `3px solid rgba(0, 168, 188, ${Math.max(0.2, 1 - depth * 0.15)})`,
+      paddingLeft: '12px',
+      marginLeft: `${depth > 1 ? 8 : 0}px`,
+      marginBottom: '12px'
+    }}>
+      <div className="sub-section-header" onClick={() => setExpanded(!expanded)} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none' }}>
+        <h4 className="sub-section-title" style={{ margin: 0, fontSize: '13px', fontWeight: '800', color: '#00A8BC', textTransform: 'uppercase' }}>{label}</h4>
+        <span className="collapse-chevron" style={{ fontSize: '10px', color: '#64748B' }}>{expanded ? '▼' : '▶'}</span>
+      </div>
+      {expanded && <div className="sub-section-body" style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>{children}</div>}
+    </div>
+  );
+}
+
+// Collapsible top-level section container
+function CollapsibleSection({ id, title, icon, isExpanded, onToggle, isDirty, children }) {
+  return (
+    <section id={`section-${id}`} className={`form-section-card card-panel ${isExpanded ? 'is-expanded' : 'is-collapsed'}`}>
+      <div className="section-header-row" onClick={onToggle} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none' }}>
+        <h3 className="section-title-header" style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span className="section-icon">{icon}</span>
+          <span className="section-title-text">{title}</span>
+          {isDirty && <span className="dirty-dot" title="Unsaved changes" style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444', display: 'inline-block' }} />}
+        </h3>
+        <span className="collapse-chevron" style={{ fontSize: '14px', color: '#64748B' }}>{isExpanded ? '▼' : '▲'}</span>
+      </div>
+      {isExpanded && (
+        <div className="section-fields-container" style={{ marginTop: '16px' }}>
+          {children}
+        </div>
+      )}
+    </section>
+  );
+}
+
+// Collapsible RepeaterCard with Drag and Drop capabilities
+function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, totalItems }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const getSummary = () => {
+    if (!item) return `Item #${index + 1}`;
+    const labelVal = item.label || item.title || item.name || item.heading;
+    let labelText = '';
+    if (typeof labelVal === 'object' && labelVal !== null) {
+      labelText = labelVal.en || labelVal.ta || '';
+    } else if (typeof labelVal === 'string') {
+      labelText = labelVal;
+    }
+    const hrefVal = item.href || item.link || item.url || '';
+    let summary = labelText ? `"${labelText}"` : `Item #${index + 1}`;
+    if (hrefVal) {
+      summary += ` ➔ ${hrefVal}`;
+    }
+    return summary;
+  };
+
+  const hrefVal = item?.href || item?.link || item?.url || '';
+
+  return (
+    <div 
+      className={`repeater-card ${isExpanded ? 'is-expanded' : 'is-collapsed'}`}
+      draggable
+      onDragStart={(e) => {
+        e.dataTransfer.setData('text/plain', String(index));
+        e.dataTransfer.effectAllowed = 'move';
+      }}
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={(e) => {
+        const fromIndex = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        if (!isNaN(fromIndex) && fromIndex !== index) {
+          onMove(fromIndex, index);
+        }
+      }}
+      style={{
+        border: '1px solid #E2E8F0',
+        borderRadius: '8px',
+        marginBottom: '8px',
+        backgroundColor: '#ffffff'
+      }}
+    >
+      <div className="repeater-card-header" style={{ display: 'flex', alignItems: 'center', padding: '10px 14px', backgroundColor: '#F8FAFC', borderBottom: isExpanded ? '1px solid #E2E8F0' : 'none', borderRadius: isExpanded ? '8px 8px 0 0' : '8px' }}>
+        <div className="drag-handle" title="Drag to reorder" style={{ cursor: 'grab', marginRight: '10px', color: '#94A3B8', fontSize: '16px', userSelect: 'none' }}>☰</div>
+        <div className="summary-text" onClick={() => setIsExpanded(!isExpanded)} style={{ flex: 1, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', userSelect: 'none' }}>
+          <span className="index-badge" style={{ fontSize: '11px', fontWeight: '800', backgroundColor: '#EDF9FC', color: '#00A8BC', padding: '2px 6px', borderRadius: '4px' }}>#{index + 1}</span>
+          <span className="summary-label" style={{ fontSize: '13px', fontWeight: '600', color: '#334155' }}>{getSummary()}</span>
+        </div>
+        <div className="repeater-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {hrefVal && typeof hrefVal === 'string' && (
+            <a 
+              href={hrefVal.startsWith('http') ? hrefVal : `https://${hrefVal}`} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-visit-link" 
+              title="Visit Link"
+              style={{ textDecoration: 'none', padding: '4px 6px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '12px' }}
+            >
+              🔗
+            </a>
+          )}
+          <button type="button" onClick={() => setIsExpanded(!isExpanded)} className="btn-expand-card" style={{ padding: '4px 8px', border: '1px solid #CBD5E1', borderRadius: '4px', backgroundColor: '#ffffff', fontSize: '11px', fontWeight: '700', cursor: 'pointer' }}>
+            {isExpanded ? 'Collapse' : 'Expand'}
+          </button>
+          <button type="button" onClick={onDuplicate} className="btn-duplicate-card" title="Duplicate" style={{ padding: '4px 8px', border: '1px solid #CBD5E1', borderRadius: '4px', backgroundColor: '#ffffff', fontSize: '11px', fontWeight: '700', cursor: 'pointer', color: '#0F172A' }}>
+            👯 Duplicate
+          </button>
+          <button type="button" onClick={onRemove} className="btn-remove-card" title="Delete" style={{ padding: '4px 8px', border: '1px solid #FCA5A5', borderRadius: '4px', backgroundColor: '#FFF5F5', fontSize: '11px', fontWeight: '700', cursor: 'pointer', color: '#EF4444' }}>
+            ❌ Remove
+          </button>
+        </div>
+      </div>
+      {isExpanded && (
+        <div className="repeater-card-body" style={{ padding: '14px' }}>
+          <FormNode path="" value={item} onChange={onChange} depth={0} />
+        </div>
+      )}
+    </div>
+  );
 }
 
 // Stable RepeaterField component
@@ -47,7 +185,26 @@ function RepeaterField({ label, value, onChange }) {
   };
 
   const handleRemove = (i) => onChange(items.filter((_, idx) => idx !== i));
-  const handleChange = (i, v) => { const u = [...items]; u[i] = v; onChange(u); };
+  
+  const handleDuplicate = (i) => {
+    const newItems = [...items];
+    const duplicated = JSON.parse(JSON.stringify(items[i]));
+    newItems.splice(i + 1, 0, duplicated);
+    onChange(newItems);
+  };
+
+  const handleChange = (i, v) => {
+    const u = [...items];
+    u[i] = v;
+    onChange(u);
+  };
+
+  const handleMove = (fromIndex, toIndex) => {
+    const newItems = [...items];
+    const [dragged] = newItems.splice(fromIndex, 1);
+    newItems.splice(toIndex, 0, dragged);
+    onChange(newItems);
+  };
 
   return (
     <div className="repeater-field-container">
@@ -57,15 +214,16 @@ function RepeaterField({ label, value, onChange }) {
       </div>
       <div className="repeater-list">
         {items.map((item, idx) => (
-          <div key={idx} className="repeater-card">
-            <div className="repeater-item-header">
-              <span className="repeater-item-index">Item #{idx + 1}</span>
-              <button type="button" onClick={() => handleRemove(idx)} className="btn-remove-item">Remove</button>
-            </div>
-            <div className="repeater-item-body">
-              <FormNode path="" value={item} onChange={(v) => handleChange(idx, v)} />
-            </div>
-          </div>
+          <RepeaterCard
+            key={idx}
+            item={item}
+            index={idx}
+            onRemove={() => handleRemove(idx)}
+            onDuplicate={() => handleDuplicate(idx)}
+            onChange={(v) => handleChange(idx, v)}
+            onMove={handleMove}
+            totalItems={items.length}
+          />
         ))}
         {items.length === 0 && (
           <div className="repeater-empty-state">No items yet. Click "Add Entry" to begin.</div>
@@ -76,7 +234,7 @@ function RepeaterField({ label, value, onChange }) {
 }
 
 // Stable FormNode component
-function FormNode({ path, value, onChange }) {
+function FormNode({ path, value, onChange, depth = 0 }) {
   if (value === null || value === undefined) return null;
 
   // ── A. Object node ─────────────────────────────────────────────────────────
@@ -107,6 +265,7 @@ function FormNode({ path, value, onChange }) {
                     en: { ...(enVal || {}), [fk]: newFVal.en },
                     ta: { ...(taVal || {}), [fk]: newFVal.ta },
                   })}
+                  depth={depth}
                 />
               );
             })}
@@ -117,9 +276,18 @@ function FormNode({ path, value, onChange }) {
       // A2. Localized arrays: {en: [...], ta: [...]}
       if (Array.isArray(enVal)) {
         const label = formatLabel(path);
+        const enMissing = !enVal || enVal.length === 0;
+        const taMissing = !taVal || taVal.length === 0;
         return (
           <div className="form-group localized-group">
-            {label && <label className="field-label">{label}</label>}
+            <div className="field-label-row">
+              {label && <label className="field-label">{label}</label>}
+              {(enMissing || taMissing) && (
+                <span className="missing-badge">
+                  ⚠️ Missing {enMissing && taMissing ? 'EN & TA' : enMissing ? 'EN' : 'TA'}
+                </span>
+              )}
+            </div>
             <div className="locale-fields-grid">
               <div className="locale-input-wrapper">
                 <span className="locale-badge en-badge">EN</span>
@@ -140,12 +308,21 @@ function FormNode({ path, value, onChange }) {
 
       // A3. Primitive localized leaf: {en: "string", ta: "string"}
       const label = formatLabel(path);
+      const enMissing = !enVal || (typeof enVal === 'string' && enVal.trim() === '');
+      const taMissing = !taVal || (typeof taVal === 'string' && taVal.trim() === '');
       const long = isLongField(path) ||
         (typeof enVal === 'string' && enVal.length > 80) ||
         (typeof taVal === 'string' && taVal.length > 80);
       return (
         <div className="form-group localized-group">
-          {label && <label className="field-label">{label}</label>}
+          <div className="field-label-row">
+            {label && <label className="field-label">{label}</label>}
+            {(enMissing || taMissing) && (
+              <span className="missing-badge">
+                ⚠️ Missing {enMissing && taMissing ? 'EN & TA' : enMissing ? 'EN' : 'TA'}
+              </span>
+            )}
+          </div>
           <div className="locale-fields-grid">
             <div className="locale-input-wrapper">
               <span className="locale-badge en-badge">EN</span>
@@ -173,30 +350,22 @@ function FormNode({ path, value, onChange }) {
     }
 
     // ── A4. Regular nested object ──────────────────────────────────────────
-    const depth = path ? path.split('.').length : 0;
     const children = keys.map(k => (
       <FormNode
         key={k}
         path={path ? `${path}.${k}` : k}
         value={value[k]}
         onChange={(nv) => onChange({ ...value, [k]: nv })}
+        depth={depth + 1}
       />
     ));
 
     if (depth === 0) return <div className="nested-fields-wrapper">{children}</div>;
-    if (depth === 1) {
-      return (
-        <div className="form-section-card card-panel">
-          <h3 className="section-title-header">{formatLabel(path)}</h3>
-          <div className="section-fields-container">{children}</div>
-        </div>
-      );
-    }
+    
     return (
-      <div className="sub-section-group">
-        <h4 className="sub-section-title">{formatLabel(path)}</h4>
-        <div className="sub-section-body">{children}</div>
-      </div>
+      <CollapsibleSubSection label={formatLabel(path)} depth={depth}>
+        {children}
+      </CollapsibleSubSection>
     );
   }
 
@@ -215,18 +384,46 @@ function FormNode({ path, value, onChange }) {
   );
 }
 
+// ─── Main Component ──────────────────────────────────────────────────────────
+
 export default function SiteSettingsPage() {
   const [settings, setSettings] = useState(null);
+  const [initialSettings, setInitialSettings] = useState(null); // Dirty checks
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
-  // Active Tab: 'form' or 'json'
+  
+  // Tab layout state
   const [activeTab, setActiveTab] = useState('form');
   const [settingsJson, setSettingsJson] = useState('{}');
+  const [jsonError, setJsonError] = useState(null);
 
-  // Helper to read CSRF token
+  // Collapsible settings state
+  const [expandedSections, setExpandedSections] = useState({
+    brand: true,
+    contact: true,
+    social: false,
+    address: false,
+    clinicHours: false,
+    copyright: false,
+    navigation: false,
+    footer: false,
+    sharedBlocks: false
+  });
+
+  // Toasts state
+  const [toasts, setToasts] = useState([]);
+
+  // Active section track (Scrollspy)
+  const [activeSection, setActiveSection] = useState('brand');
+
+  const addToast = (message, type = 'success') => {
+    const id = Date.now() + Math.random();
+    setToasts(prev => [...prev, { id, message, type }]);
+    setTimeout(() => {
+      setToasts(prev => prev.filter(t => t.id !== id));
+    }, 4000);
+  };
+
   const getCsrfToken = () => {
     if (typeof document === 'undefined') return '';
     const match = document.cookie.match(/mst_csrf=([^;]+)/);
@@ -235,20 +432,20 @@ export default function SiteSettingsPage() {
 
   const fetchSettings = async () => {
     setLoading(true);
-    setError('');
-    setSuccess('');
     try {
       const res = await fetch('/api/admin/site-settings');
       if (!res.ok) throw new Error('Failed to fetch settings');
       const data = await res.json();
       const sData = data.settings || {};
-      setSettings(sData);
       
-      // Clean internal fields for JSON editing
+      setSettings(sData);
+      setInitialSettings(JSON.parse(JSON.stringify(sData)));
+      
       const { _id, __v, singletonKey, createdAt, updatedAt, ...cleanData } = sData;
       setSettingsJson(JSON.stringify(cleanData, null, 2));
+      setJsonError(null);
     } catch (err) {
-      setError(err.message);
+      addToast(err.message, 'error');
     } finally {
       setLoading(false);
     }
@@ -257,6 +454,50 @@ export default function SiteSettingsPage() {
   useEffect(() => {
     fetchSettings();
   }, []);
+
+  // Dirty checks
+  const isDirty = initialSettings && JSON.stringify(settings) !== JSON.stringify(initialSettings);
+
+  // Tab close prevention
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (isDirty) {
+        e.preventDefault();
+        e.returnValue = 'You have unsaved changes. Are you sure you want to leave?';
+        return e.returnValue;
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [isDirty]);
+
+  // Scrollspy observer
+  useEffect(() => {
+    if (activeTab !== 'form' || loading) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id.replace('section-', '');
+            setActiveSection(id);
+          }
+        });
+      },
+      { root: null, rootMargin: '-10% 0px -70% 0px' }
+    );
+
+    SECTIONS.forEach(sec => {
+      const el = document.getElementById(`section-${sec.id}`);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      SECTIONS.forEach(sec => {
+        const el = document.getElementById(`section-${sec.id}`);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [activeTab, loading]);
 
   const handleFieldChange = (field, val, subfield = null) => {
     setSettings(prev => {
@@ -281,22 +522,79 @@ export default function SiteSettingsPage() {
         ...prev,
         ...parsed
       }));
+      setJsonError(null);
     } catch (e) {
-      // Ignore invalid JSON while typing
+      setJsonError(e.message);
+    }
+  };
+
+  const handlePrettifyJson = () => {
+    try {
+      const parsed = JSON.parse(settingsJson);
+      setSettingsJson(JSON.stringify(parsed, null, 2));
+      setJsonError(null);
+      addToast('JSON prettified', 'info');
+    } catch (e) {
+      setJsonError('Cannot format: ' + e.message);
+      addToast('Prettify failed: invalid JSON syntax', 'error');
+    }
+  };
+
+  const handleCopyJson = () => {
+    navigator.clipboard.writeText(settingsJson);
+    addToast('JSON copied to clipboard', 'info');
+  };
+
+  const handleDiscard = () => {
+    if (window.confirm('Discard all unsaved changes and reset form?')) {
+      setSettings(JSON.parse(JSON.stringify(initialSettings)));
+      const { _id, __v, singletonKey, createdAt, updatedAt, ...cleanData } = initialSettings;
+      setSettingsJson(JSON.stringify(cleanData, null, 2));
+      setJsonError(null);
+      addToast('Changes discarded', 'info');
+    }
+  };
+
+  const toggleSection = (id) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const handleExpandAll = () => {
+    const next = {};
+    SECTIONS.forEach(sec => { next[sec.id] = true; });
+    setExpandedSections(next);
+  };
+
+  const handleCollapseAll = () => {
+    const next = {};
+    SECTIONS.forEach(sec => { next[sec.id] = false; });
+    setExpandedSections(next);
+  };
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(`section-${id}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setExpandedSections(prev => ({ ...prev, [id]: true }));
     }
   };
 
   const handleSave = async (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
-    setSaving(true);
+    if (activeTab === 'json' && jsonError) {
+      addToast('Cannot save: please fix JSON errors first', 'error');
+      return;
+    }
 
+    setSaving(true);
     let payload = {};
     try {
       payload = JSON.parse(settingsJson);
     } catch (err) {
-      setError('Invalid JSON content: ' + err.message);
+      addToast('Invalid JSON content: ' + err.message, 'error');
       setSaving(false);
       return;
     }
@@ -316,23 +614,30 @@ export default function SiteSettingsPage() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.message || 'Failed to save settings');
+        throw new Error(data.message || 'Failed to save site settings');
       }
 
-      setSuccess('Global site settings updated successfully!');
+      addToast('Global site settings updated successfully!');
       fetchSettings();
     } catch (err) {
-      setError(err.message);
+      addToast(err.message, 'error');
     } finally {
       setSaving(false);
     }
   };
 
+  const isSectionDirty = (sectionId) => {
+    if (!initialSettings || !settings) return false;
+    let keys = [];
+    if (sectionId === 'brand') keys = ['siteTitle', 'siteDescription', 'logo', 'favicon'];
+    else if (sectionId === 'contact') keys = ['phone1', 'phone2', 'phone3', 'email'];
+    else if (sectionId === 'social') keys = ['facebookLink', 'instagramLink', 'whatsappLink', 'twitterLink'];
+    else keys = [sectionId];
+
+    return keys.some(k => JSON.stringify(settings[k]) !== JSON.stringify(initialSettings[k]));
+  };
 
   if (loading) return <div className="loading-state">Loading global settings...</div>;
-
-  // Destructure clean data to build forms
-  const { _id, __v, singletonKey, createdAt, updatedAt, ...formFields } = settings;
 
   return (
     <div className="settings-container">
@@ -344,9 +649,6 @@ export default function SiteSettingsPage() {
       </div>
 
       <div className="card-panel">
-        {error && <div className="alert alert-error">{error}</div>}
-        {success && <div className="alert alert-success">{success}</div>}
-
         <div className="editor-tabs">
           <button 
             onClick={() => setActiveTab('form')} 
@@ -364,162 +666,294 @@ export default function SiteSettingsPage() {
 
         <form onSubmit={handleSave} className="settings-form">
           {activeTab === 'form' ? (
-            <div className="form-builder-area">
-              {/* Brand & Main Configs */}
-              <div className="form-section-card card-panel">
-                <h3 className="section-title-header">Brand Identity</h3>
-                <div className="form-group">
-                  <label className="field-label">Site Title</label>
-                  <input
-                    type="text"
-                    value={settings?.siteTitle || ''}
-                    onChange={(e) => handleFieldChange('siteTitle', e.target.value)}
-                    required
+            <div className="settings-layout-grid">
+              {/* Sticky Sidebar Navigation */}
+              <aside className="sidebar-nav-container">
+                <nav className="sidebar-nav">
+                  <div className="sidebar-header-row">
+                    <span className="sidebar-header-title">Navigation</span>
+                  </div>
+                  <ul className="sidebar-list">
+                    {SECTIONS.map(sec => {
+                      const dirty = isSectionDirty(sec.id);
+                      const active = activeSection === sec.id;
+                      return (
+                        <li key={sec.id}>
+                          <button
+                            type="button"
+                            onClick={() => scrollToSection(sec.id)}
+                            className={`sidebar-item ${active ? 'active' : ''}`}
+                          >
+                            <span className="item-icon">{sec.icon}</span>
+                            <span className="item-label">{sec.label}</span>
+                            {dirty && <span className="dirty-dot-indicator" />}
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <div className="sidebar-global-controls">
+                    <button type="button" onClick={handleExpandAll} className="btn-sidebar-action">Expand All</button>
+                    <button type="button" onClick={handleCollapseAll} className="btn-sidebar-action">Collapse All</button>
+                  </div>
+                </nav>
+              </aside>
+
+              {/* Main Form Fields Container */}
+              <div className="form-builder-area">
+                {/* Brand Section */}
+                <CollapsibleSection
+                  id="brand"
+                  title="Brand Identity"
+                  icon="🏷️"
+                  isExpanded={expandedSections.brand}
+                  onToggle={() => toggleSection('brand')}
+                  isDirty={isSectionDirty('brand')}
+                >
+                  <div className="form-group">
+                    <label className="field-label">Site Title</label>
+                    <input
+                      type="text"
+                      value={settings?.siteTitle || ''}
+                      onChange={(e) => handleFieldChange('siteTitle', e.target.value)}
+                      required
+                    />
+                  </div>
+                  <FormNode
+                    path="siteDescription"
+                    value={settings?.siteDescription}
+                    onChange={(newVal) => handleFieldChange('siteDescription', newVal)}
+                    depth={0}
                   />
-                </div>
-                <FormNode
-                  path="siteDescription"
-                  value={settings?.siteDescription}
-                  onChange={(newVal) => handleFieldChange('siteDescription', newVal)}
-                />
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="field-label">Logo Asset Path</label>
-                    <input
-                      type="text"
-                      value={settings?.logo || ''}
-                      onChange={(e) => handleFieldChange('logo', e.target.value)}
-                    />
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label className="field-label">Logo Asset Path</label>
+                      <input
+                        type="text"
+                        value={settings?.logo || ''}
+                        onChange={(e) => handleFieldChange('logo', e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="field-label">Favicon Asset Path</label>
+                      <input
+                        type="text"
+                        value={settings?.favicon || ''}
+                        onChange={(e) => handleFieldChange('favicon', e.target.value)}
+                      />
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <label className="field-label">Favicon Asset Path</label>
-                    <input
-                      type="text"
-                      value={settings?.favicon || ''}
-                      onChange={(e) => handleFieldChange('favicon', e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
+                </CollapsibleSection>
 
-              {/* Direct Contact Numbers */}
-              <div className="form-section-card card-panel">
-                <h3 className="section-title-header">Direct Contact Info</h3>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="field-label">Primary Phone</label>
-                    <input
-                      type="text"
-                      value={settings?.phone1 || ''}
-                      onChange={(e) => handleFieldChange('phone1', e.target.value)}
-                    />
+                {/* Contact Info Section */}
+                <CollapsibleSection
+                  id="contact"
+                  title="Direct Contact Info"
+                  icon="📞"
+                  isExpanded={expandedSections.contact}
+                  onToggle={() => toggleSection('contact')}
+                  isDirty={isSectionDirty('contact')}
+                >
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label className="field-label">Primary Phone</label>
+                      <input
+                        type="text"
+                        value={settings?.phone1 || ''}
+                        onChange={(e) => handleFieldChange('phone1', e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="field-label">Secondary Phone</label>
+                      <input
+                        type="text"
+                        value={settings?.phone2 || ''}
+                        onChange={(e) => handleFieldChange('phone2', e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="field-label">Tertiary Phone</label>
+                      <input
+                        type="text"
+                        value={settings?.phone3 || ''}
+                        onChange={(e) => handleFieldChange('phone3', e.target.value)}
+                      />
+                    </div>
                   </div>
                   <div className="form-group">
-                    <label className="field-label">Secondary Phone</label>
+                    <label className="field-label">Support Email</label>
                     <input
-                      type="text"
-                      value={settings?.phone2 || ''}
-                      onChange={(e) => handleFieldChange('phone2', e.target.value)}
+                      type="email"
+                      value={settings?.email || ''}
+                      onChange={(e) => handleFieldChange('email', e.target.value)}
                     />
                   </div>
-                  <div className="form-group">
-                    <label className="field-label">Tertiary Phone</label>
-                    <input
-                      type="text"
-                      value={settings?.phone3 || ''}
-                      onChange={(e) => handleFieldChange('phone3', e.target.value)}
-                    />
+                </CollapsibleSection>
+
+                {/* Social Links Section */}
+                <CollapsibleSection
+                  id="social"
+                  title="Social Media Links"
+                  icon="🔗"
+                  isExpanded={expandedSections.social}
+                  onToggle={() => toggleSection('social')}
+                  isDirty={isSectionDirty('social')}
+                >
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label className="field-label">Facebook Profile</label>
+                      <input
+                        type="text"
+                        value={settings?.facebookLink || ''}
+                        onChange={(e) => handleFieldChange('facebookLink', e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="field-label">Instagram Link</label>
+                      <input
+                        type="text"
+                        value={settings?.instagramLink || ''}
+                        onChange={(e) => handleFieldChange('instagramLink', e.target.value)}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="form-group">
-                  <label className="field-label">Support Email</label>
-                  <input
-                    type="email"
-                    value={settings?.email || ''}
-                    onChange={(e) => handleFieldChange('email', e.target.value)}
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label className="field-label">WhatsApp Number / API Link</label>
+                      <input
+                        type="text"
+                        value={settings?.whatsappLink || ''}
+                        onChange={(e) => handleFieldChange('whatsappLink', e.target.value)}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="field-label">Twitter Link</label>
+                      <input
+                        type="text"
+                        value={settings?.twitterLink || ''}
+                        onChange={(e) => handleFieldChange('twitterLink', e.target.value)}
+                      />
+                    </div>
+                  </div>
+                </CollapsibleSection>
+
+                {/* Address Section */}
+                <CollapsibleSection
+                  id="address"
+                  title="Address Info"
+                  icon="📍"
+                  isExpanded={expandedSections.address}
+                  onToggle={() => toggleSection('address')}
+                  isDirty={isSectionDirty('address')}
+                >
+                  <FormNode
+                    path="address"
+                    value={settings?.address}
+                    onChange={(newVal) => handleFieldChange('address', newVal)}
+                    depth={0}
                   />
-                </div>
-              </div>
+                </CollapsibleSection>
 
-              {/* Social Channels */}
-              <div className="form-section-card card-panel">
-                <h3 className="section-title-header">Social Media Links</h3>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="field-label">Facebook Profile</label>
-                    <input
-                      type="text"
-                      value={settings?.facebookLink || ''}
-                      onChange={(e) => handleFieldChange('facebookLink', e.target.value)}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label className="field-label">Instagram Link</label>
-                    <input
-                      type="text"
-                      value={settings?.instagramLink || ''}
-                      onChange={(e) => handleFieldChange('instagramLink', e.target.value)}
-                    />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="field-label">WhatsApp Number / API Link</label>
-                    <input
-                      type="text"
-                      value={settings?.whatsappLink || ''}
-                      onChange={(e) => handleFieldChange('whatsappLink', e.target.value)}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label className="field-label">Twitter Link</label>
-                    <input
-                      type="text"
-                      value={settings?.twitterLink || ''}
-                      onChange={(e) => handleFieldChange('twitterLink', e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
+                {/* Clinic Hours */}
+                <CollapsibleSection
+                  id="clinicHours"
+                  title="Clinic Hours"
+                  icon="🕒"
+                  isExpanded={expandedSections.clinicHours}
+                  onToggle={() => toggleSection('clinicHours')}
+                  isDirty={isSectionDirty('clinicHours')}
+                >
+                  <FormNode
+                    path="clinicHours"
+                    value={settings?.clinicHours}
+                    onChange={(newVal) => handleFieldChange('clinicHours', newVal)}
+                    depth={0}
+                  />
+                </CollapsibleSection>
 
-              {/* Recursive Form Builder for Nested Items (menus, footer columns, blocks) */}
-              <FormNode
-                path="address"
-                value={settings?.address}
-                onChange={(newVal) => handleFieldChange('address', newVal)}
-              />
-              <FormNode
-                path="clinicHours"
-                value={settings?.clinicHours}
-                onChange={(newVal) => handleFieldChange('clinicHours', newVal)}
-              />
-              <FormNode
-                path="copyright"
-                value={settings?.copyright}
-                onChange={(newVal) => handleFieldChange('copyright', newVal)}
-              />
-              <FormNode
-                path="navigation"
-                value={settings?.navigation}
-                onChange={(newVal) => handleFieldChange('navigation', newVal)}
-              />
-              <FormNode
-                path="footer"
-                value={settings?.footer}
-                onChange={(newVal) => handleFieldChange('footer', newVal)}
-              />
-              <FormNode
-                path="sharedBlocks"
-                value={settings?.sharedBlocks}
-                onChange={(newVal) => handleFieldChange('sharedBlocks', newVal)}
-              />
+                {/* Copyright */}
+                <CollapsibleSection
+                  id="copyright"
+                  title="Copyright Info"
+                  icon="📝"
+                  isExpanded={expandedSections.copyright}
+                  onToggle={() => toggleSection('copyright')}
+                  isDirty={isSectionDirty('copyright')}
+                >
+                  <FormNode
+                    path="copyright"
+                    value={settings?.copyright}
+                    onChange={(newVal) => handleFieldChange('copyright', newVal)}
+                    depth={0}
+                  />
+                </CollapsibleSection>
+
+                {/* Navigation Links */}
+                <CollapsibleSection
+                  id="navigation"
+                  title="Navigation Links"
+                  icon="🧭"
+                  isExpanded={expandedSections.navigation}
+                  onToggle={() => toggleSection('navigation')}
+                  isDirty={isSectionDirty('navigation')}
+                >
+                  <FormNode
+                    path="navigation"
+                    value={settings?.navigation}
+                    onChange={(newVal) => handleFieldChange('navigation', newVal)}
+                    depth={0}
+                  />
+                </CollapsibleSection>
+
+                {/* Footer Layout */}
+                <CollapsibleSection
+                  id="footer"
+                  title="Footer Layout"
+                  icon="👣"
+                  isExpanded={expandedSections.footer}
+                  onToggle={() => toggleSection('footer')}
+                  isDirty={isSectionDirty('footer')}
+                >
+                  <FormNode
+                    path="footer"
+                    value={settings?.footer}
+                    onChange={(newVal) => handleFieldChange('footer', newVal)}
+                    depth={0}
+                  />
+                </CollapsibleSection>
+
+                {/* Shared Blocks */}
+                <CollapsibleSection
+                  id="sharedBlocks"
+                  title="Shared Blocks"
+                  icon="📦"
+                  isExpanded={expandedSections.sharedBlocks}
+                  onToggle={() => toggleSection('sharedBlocks')}
+                  isDirty={isSectionDirty('sharedBlocks')}
+                >
+                  <FormNode
+                    path="sharedBlocks"
+                    value={settings?.sharedBlocks}
+                    onChange={(newVal) => handleFieldChange('sharedBlocks', newVal)}
+                    depth={0}
+                  />
+                </CollapsibleSection>
+              </div>
             </div>
           ) : (
             <div className="json-editor-area">
+              <div className="json-controls-bar">
+                <button type="button" onClick={handlePrettifyJson} className="btn-json-action">✨ Format & Prettify</button>
+                <button type="button" onClick={handleCopyJson} className="btn-json-action">📋 Copy JSON</button>
+                {jsonError ? (
+                  <span className="json-status json-status-invalid">❌ Invalid JSON: {jsonError}</span>
+                ) : (
+                  <span className="json-status json-status-valid">✓ Valid JSON Syntax</span>
+                )}
+              </div>
               <div className="form-group">
-                <label className="field-label">Raw Site Settings Catalog (JSON)</label>
                 <textarea
-                  className="json-textarea"
+                  className={`json-textarea ${jsonError ? 'has-error' : ''}`}
                   rows={25}
                   value={settingsJson}
                   onChange={(e) => handleJsonChange(e.target.value)}
@@ -528,12 +962,40 @@ export default function SiteSettingsPage() {
             </div>
           )}
 
+          {/* Sticky Bottom Actions Bar */}
           <div className="form-submit-bar">
-            <button type="submit" disabled={saving} className="btn-primary btn-save-action">
+            {isDirty && (
+              <span className="unsaved-changes-badge">
+                ⚠️ Unsaved Changes Detected
+              </span>
+            )}
+            <button 
+              type="button" 
+              onClick={handleDiscard} 
+              disabled={saving || !isDirty} 
+              className="btn-discard-action"
+            >
+              🔄 Discard Changes
+            </button>
+            <button 
+              type="submit" 
+              disabled={saving || (activeTab === 'json' && !!jsonError)} 
+              className="btn-primary btn-save-action"
+            >
               {saving ? 'Saving Settings...' : '💾 Save Site Settings'}
             </button>
           </div>
         </form>
+      </div>
+
+      {/* Floating toast notifications anchor */}
+      <div className="toasts-container">
+        {toasts.map(t => (
+          <div key={t.id} className={`toast toast-${t.type}`}>
+            <span className="toast-message">{t.message}</span>
+            <button type="button" className="toast-close" onClick={() => setToasts(prev => prev.filter(x => x.id !== t.id))}>×</button>
+          </div>
+        ))}
       </div>
 
       <style jsx>{`
@@ -579,23 +1041,6 @@ export default function SiteSettingsPage() {
           color: #00A8BC;
           border-bottom-color: #00A8BC;
         }
-        .alert {
-          padding: 12px 16px;
-          border-radius: 8px;
-          margin-bottom: 20px;
-          font-size: 14px;
-          font-weight: 500;
-        }
-        .alert-error {
-          background-color: #FEE2E2;
-          color: #991B1B;
-          border: 1px solid #FCA5A5;
-        }
-        .alert-success {
-          background-color: #DCFCE7;
-          color: #15803D;
-          border: 1px solid #86EFAC;
-        }
         .loading-state {
           text-align: center;
           padding: 60px;
@@ -607,26 +1052,133 @@ export default function SiteSettingsPage() {
           flex-direction: column;
           gap: 24px;
         }
+        
+        /* Layout Grid */
+        .settings-layout-grid {
+          display: grid;
+          grid-template-columns: 260px 1fr;
+          gap: 24px;
+          align-items: start;
+        }
+        
+        /* Sticky Sidebar Navigation */
+        .sidebar-nav-container {
+          position: sticky;
+          top: 80px;
+        }
+        .sidebar-nav {
+          background-color: #F8FAFC;
+          border: 1px solid #E2E8F0;
+          border-radius: 12px;
+          padding: 14px;
+        }
+        .sidebar-header-row {
+          margin-bottom: 12px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #E2E8F0;
+        }
+        .sidebar-header-title {
+          font-size: 11px;
+          font-weight: 800;
+          color: #64748B;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        .sidebar-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+        .sidebar-item {
+          width: 100%;
+          text-align: left;
+          background: transparent;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 6px;
+          font-size: 13px;
+          font-weight: 600;
+          color: #475569;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: all 0.2s;
+          position: relative;
+        }
+        .sidebar-item:hover {
+          background-color: #F1F5F9;
+          color: #00A8BC;
+        }
+        .sidebar-item.active {
+          background-color: #EDF9FC;
+          color: #00A8BC;
+          font-weight: 700;
+        }
+        .dirty-dot-indicator {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #EF4444;
+        }
+        .sidebar-global-controls {
+          display: flex;
+          gap: 8px;
+          margin-top: 14px;
+          border-top: 1px solid #E2E8F0;
+          padding-top: 12px;
+        }
+        .btn-sidebar-action {
+          flex: 1;
+          background-color: #ffffff;
+          border: 1px solid #CBD5E1;
+          border-radius: 6px;
+          padding: 6px;
+          font-size: 11px;
+          font-weight: 700;
+          color: #475569;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-sidebar-action:hover {
+          background-color: #F1F5F9;
+          border-color: #94A3B8;
+        }
+
+        /* Collapsible Top Level Cards */
         .form-section-card {
           margin-bottom: 20px;
           padding: 20px;
           border: 1px solid #E2E8F0;
           border-radius: 12px;
           background-color: #ffffff;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .section-header-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
         .section-title-header {
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 800;
           color: #0F172A;
           text-transform: uppercase;
           letter-spacing: 0.5px;
-          margin-bottom: 16px;
-          padding-bottom: 8px;
-          border-bottom: 1px solid #F1F5F9;
+          display: flex;
+          align-items: center;
+          gap: 8px;
         }
         .form-row {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           gap: 16px;
           margin-bottom: 16px;
         }
@@ -636,12 +1188,27 @@ export default function SiteSettingsPage() {
           gap: 6px;
           margin-bottom: 14px;
         }
+        .field-label-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 4px;
+        }
         .field-label {
           font-size: 12px;
           font-weight: 700;
           color: #475569;
           text-transform: uppercase;
           letter-spacing: 0.2px;
+        }
+        .missing-badge {
+          font-size: 10px;
+          font-weight: 700;
+          background-color: #FFF5F5;
+          color: #E53E3E;
+          border: 1px solid #FEB2B2;
+          padding: 2px 6px;
+          border-radius: 4px;
         }
         .form-group input, .form-group textarea {
           padding: 10px 12px;
@@ -669,30 +1236,9 @@ export default function SiteSettingsPage() {
           flex-direction: column;
           gap: 10px;
         }
-        .sub-section-group {
-          margin-bottom: 16px;
-          padding: 14px;
-          background-color: #FAFAFA;
-          border: 1px solid #E2E8F0;
-          border-radius: 10px;
-          border-left: 3px solid #00A8BC;
-        }
-        .sub-section-title {
-          font-size: 12px;
-          font-weight: 800;
-          color: #00A8BC;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          margin-bottom: 12px;
-        }
-        .sub-section-body {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
         .locale-fields-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
           gap: 12px;
         }
         .locale-input-wrapper {
@@ -734,6 +1280,67 @@ export default function SiteSettingsPage() {
         .locale-input-wrapper textarea {
           resize: vertical;
         }
+
+        /* Sub-sections */
+        .sub-section-group {
+          transition: all 0.2s;
+          background-color: #FAFAFA;
+          border: 1px solid #E2E8F0;
+          border-radius: 10px;
+        }
+        .sub-section-header {
+          padding: 8px 12px;
+          background-color: #F1F5F9;
+          border-bottom: 1px solid #E2E8F0;
+          border-radius: 8px 8px 0 0;
+        }
+        .sub-section-title {
+          font-size: 12px;
+          font-weight: 800;
+          color: #00A8BC;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        .sub-section-body {
+          padding: 12px;
+        }
+
+        /* JSON Editor */
+        .json-controls-bar {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 14px;
+        }
+        .btn-json-action {
+          background-color: #ffffff;
+          border: 1px solid #CBD5E1;
+          padding: 8px 14px;
+          font-size: 13px;
+          font-weight: 700;
+          color: #475569;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-json-action:hover {
+          background-color: #F1F5F9;
+          border-color: #94A3B8;
+        }
+        .json-status {
+          font-size: 12px;
+          font-weight: 700;
+          padding: 4px 10px;
+          border-radius: 20px;
+        }
+        .json-status-valid {
+          background-color: #DCFCE7;
+          color: #15803D;
+        }
+        .json-status-invalid {
+          background-color: #FEE2E2;
+          color: #B91C1C;
+        }
         .json-textarea {
           font-family: 'Fira Code', 'Courier New', Courier, monospace;
           font-size: 13px;
@@ -742,7 +1349,15 @@ export default function SiteSettingsPage() {
           color: #38BDF8 !important;
           border-color: #1E293B !important;
           border-radius: 8px;
+          width: 100%;
+          padding: 16px;
         }
+        .json-textarea.has-error {
+          border: 2px solid #EF4444 !important;
+          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+        }
+
+        /* Repeater Controls */
         .repeater-field-container {
           background-color: #F1F5F9;
           padding: 16px;
@@ -777,35 +1392,13 @@ export default function SiteSettingsPage() {
           background-color: #EDF9FC;
         }
         .repeater-card {
-          background-color: #ffffff;
-          padding: 14px;
-          border-radius: 8px;
-          margin-bottom: 12px;
-          border: 1px solid #E2E8F0;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-        .repeater-item-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 10px;
-          padding-bottom: 6px;
-          border-bottom: 1px solid #F1F5F9;
-        }
-        .repeater-item-index {
-          font-size: 12px;
-          font-weight: 800;
-          color: #64748B;
-        }
-        .btn-remove-item {
-          background: transparent;
-          border: none;
-          color: #EF4444;
-          font-size: 11px;
-          font-weight: 700;
-          cursor: pointer;
-        }
-        .btn-remove-item:hover {
-          text-decoration: underline;
+        .repeater-card:active {
+          cursor: grabbing;
+          transform: scale(0.99);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
         .repeater-empty-state {
           text-align: center;
@@ -814,16 +1407,50 @@ export default function SiteSettingsPage() {
           font-size: 13px;
           font-style: italic;
         }
+
+        /* Sticky Bottom Bar */
         .form-submit-bar {
           position: sticky;
           bottom: 0;
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(8px);
-          padding: 16px 0;
+          padding: 16px 20px;
           border-top: 1px solid #E2E8F0;
           display: flex;
+          align-items: center;
           justify-content: flex-end;
+          gap: 16px;
           z-index: 10;
+          border-radius: 0 0 12px 12px;
+        }
+        .unsaved-changes-badge {
+          margin-right: auto;
+          font-size: 12px;
+          font-weight: 800;
+          color: #D97706;
+          background-color: #FEF3C7;
+          padding: 6px 12px;
+          border-radius: 20px;
+          border: 1px solid #FCD34D;
+        }
+        .btn-discard-action {
+          padding: 12px 20px;
+          font-size: 14px;
+          font-weight: 700;
+          border-radius: 8px;
+          border: 1px solid #CBD5E1;
+          background-color: #ffffff;
+          color: #475569;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .btn-discard-action:hover:not(:disabled) {
+          background-color: #F8FAFC;
+          border-color: #94A3B8;
+        }
+        .btn-discard-action:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
         }
         .btn-save-action {
           padding: 12px 24px;
@@ -837,8 +1464,98 @@ export default function SiteSettingsPage() {
           transition: all 0.2s;
           box-shadow: 0 4px 6px -1px rgba(0, 168, 188, 0.25);
         }
-        .btn-save-action:hover {
+        .btn-save-action:hover:not(:disabled) {
           background-color: #008E9F;
+        }
+        .btn-save-action:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+
+        /* Floating Toasts */
+        .toasts-container {
+          position: fixed;
+          bottom: 80px;
+          right: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          z-index: 1000;
+          max-width: 320px;
+        }
+        .toast {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 16px;
+          border-radius: 8px;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          font-size: 13px;
+          font-weight: 600;
+          color: #ffffff;
+          animation: slideIn 0.2s ease-out;
+        }
+        .toast-success {
+          background-color: #10B981;
+        }
+        .toast-error {
+          background-color: #EF4444;
+        }
+        .toast-info {
+          background-color: #3B82F6;
+        }
+        .toast-close {
+          background: transparent;
+          border: none;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-left: 12px;
+          opacity: 0.8;
+        }
+        .toast-close:hover {
+          opacity: 1;
+        }
+
+        @keyframes slideIn {
+          from { transform: translateY(10px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Layout Breakpoints */
+        @media (max-width: 768px) {
+          .settings-layout-grid {
+            grid-template-columns: 1fr;
+          }
+          .sidebar-nav-container {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+          }
+          .sidebar-list {
+            flex-direction: row;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-behavior: smooth;
+          }
+          .sidebar-item {
+            white-space: nowrap;
+            width: auto;
+            flex-shrink: 0;
+          }
+          .sidebar-global-controls {
+            display: none;
+          }
+          .form-submit-bar {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .unsaved-changes-badge {
+            margin-right: 0;
+            text-align: center;
+          }
         }
       `}</style>
     </div>
