@@ -127,14 +127,19 @@ export function generateSignedUrl(report) {
     return `https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf`;
   }
 
-  return cloudinary.url(report.cloudinaryPublicId, {
+  // For 'raw' resources (PDFs): append the extension directly to the public_id
+  // so the URL path ends in .pdf. Passing format as an SDK option appends .pdf
+  // as a Cloudinary transformation which is unsupported for raw → 404.
+  // For 'image' resources: format is a normal delivery transformation — pass as option.
+  const publicIdForUrl = report.cloudinaryResourceType === 'raw'
+    ? `${report.cloudinaryPublicId}.${report.cloudinaryFormat}`
+    : report.cloudinaryPublicId;
+
+  return cloudinary.url(publicIdForUrl, {
     resource_type: report.cloudinaryResourceType,
     type: 'authenticated',
     sign_url: true,
     ...(report.cloudinaryVersion ? { version: report.cloudinaryVersion } : {}),
-    // For 'raw' resources, DO NOT pass format — Cloudinary raw assets have no
-    // extension in their public_id. Appending .pdf creates a non-existent path → 404.
-    // For 'image' resources, format IS needed (it's a delivery transformation).
     ...(report.cloudinaryResourceType !== 'raw' ? { format: report.cloudinaryFormat } : {}),
     expires_at: Math.floor(Date.now() / 1000) + 600, // 10-minute window
   });
