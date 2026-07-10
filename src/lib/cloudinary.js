@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from 'cloudinary';
+import crypto from 'crypto';
 
 const isConfigured = !!(
   process.env.CLOUDINARY_CLOUD_NAME &&
@@ -21,15 +22,18 @@ if (isConfigured) {
  * @returns {Promise<object>} Cloudinary upload result
  */
 export function uploadToCloudinary(fileBuffer, folder) {
+  const uniqueName = `report_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
+
   if (!isConfigured) {
     console.log(`\n--- [MOCK CLOUDINARY UPLOAD] ---`);
     console.log(`Folder: ${folder}`);
+    console.log(`Public ID Name: ${uniqueName}`);
     console.log(`Buffer Size: ${fileBuffer.length} bytes`);
     console.log(`---------------------------------\n`);
     
     // Simulate a successful Cloudinary response
     return Promise.resolve({
-      public_id: `reports/mock_cloudinary_public_id_${Date.now()}`,
+      public_id: `${folder}/${uniqueName}`,
       resource_type: 'raw',
       format: 'pdf',
     });
@@ -41,8 +45,57 @@ export function uploadToCloudinary(fileBuffer, folder) {
         resource_type: 'auto',
         type: 'authenticated',
         folder,
+        public_id: uniqueName,
         use_filename: false,
-        unique_filename: true,
+        unique_filename: false,
+      },
+      (error, result) => {
+        if (error) return reject(error);
+        resolve(result);
+      }
+    );
+    uploadStream.end(fileBuffer);
+  });
+}
+
+/**
+ * Upload a public (non-medical) image to Cloudinary.
+ * Used for event images, blog images, team photos etc.
+ * Files are served via Cloudinary's standard CDN — no signing required.
+ * @param {Buffer} fileBuffer
+ * @param {string} folder  e.g. 'events', 'team', 'blog'
+ * @returns {Promise<object>} Cloudinary upload result
+ */
+export function uploadPublicImage(fileBuffer, folder) {
+  const uniqueName = `img_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
+
+  if (!isConfigured) {
+    console.log(`\n--- [MOCK CLOUDINARY PUBLIC UPLOAD] ---`);
+    console.log(`Folder: ${folder}, Name: ${uniqueName}`);
+    console.log(`Buffer Size: ${fileBuffer.length} bytes`);
+    console.log(`---------------------------------------\n`);
+    // Return a placeholder image URL for local development
+    return Promise.resolve({
+      public_id: `${folder}/${uniqueName}`,
+      secure_url: `https://picsum.photos/seed/${uniqueName}/800/600`,
+      resource_type: 'image',
+      format: 'jpg',
+      width: 800,
+      height: 600,
+    });
+  }
+
+  return new Promise((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        resource_type: 'image',
+        type: 'upload',            // public CDN delivery — no signing needed
+        folder,
+        public_id: uniqueName,
+        use_filename: false,
+        unique_filename: false,
+        overwrite: false,
+        invalidate: true,
       },
       (error, result) => {
         if (error) return reject(error);
