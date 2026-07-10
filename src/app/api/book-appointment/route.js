@@ -1,5 +1,6 @@
-import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { connectDB } from '../../../lib/db';
+import FormSubmission from '../../../models/FormSubmission';
 
 // ─── Brand constants ───────────────────────────────────────────────────────────
 const LOGO_URL      = 'https://msthealthcare.com/images/mst_logo.png';
@@ -139,6 +140,28 @@ export async function POST(request) {
         'Please fill in all required fields (Name, Phone, Service).',
         { status: 400 }
       );
+    }
+
+    try {
+      await connectDB();
+      // Split name into first and last name if possible
+      const parts = name.split(/\s+/);
+      const firstName = parts[0] || '';
+      const lastName = parts.slice(1).join(' ') || '';
+
+      await FormSubmission.create({
+        formType: 'book_appointment',
+        status: 'new',
+        firstName,
+        lastName,
+        phone,
+        email,
+        message,
+        service: getServiceName(service),
+        ipAddress: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown',
+      });
+    } catch (dbErr) {
+      console.error('Failed to save appointment booking to MongoDB:', dbErr);
     }
 
     const serviceName   = getServiceName(service);

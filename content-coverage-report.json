@@ -1,0 +1,7751 @@
+[
+  {
+    "key": "aboutPage.approach.ctaButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.ctaText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.items.compassion.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.items.compassion.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.items.integrity.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.items.integrity.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.approach.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.emergencyCall",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.emergencyPhone",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.items.generalMedicine.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.items.generalMedicine.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.items.homeVisit.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.items.homeVisit.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.expertise.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.authorName",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.authorTagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.contactButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.imageTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.mission.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.mission.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.reviewCount",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.vision.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.hero.vision.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.bookButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.emergencyCall",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.emergencyPhone",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.ambulance",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.communityCamps",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.ecgLab",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.homeElder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.opdClinic",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.listItems.physiotherapy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "aboutPage.whatWeDo.yearsExperience",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post1.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post1.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post2.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post2.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post3.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post3.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post4.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post4.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post5.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post5.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post6.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.posts.post6.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogPage.readMore",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.author",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.li1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.li2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.li3",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.li4",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.li5",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.p1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.p2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.p3",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.p4",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.p5",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.body.subHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.date",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.tags.healthTips",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.tags.medicalCare",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.tags.wellnessGuide",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "blogSinglePage.tagsLabel",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "bookAppointmentPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "bookAppointmentPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "bookAppointmentPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "bookAppointmentPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "bookAppointmentPage.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs1.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs1.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs2.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs2.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs3.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs3.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs4.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs4.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs5.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs5.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs6.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.items.cs6.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudyPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudySinglePage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudySinglePage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudySinglePage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "caseStudySinglePage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.emailPlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.fullNamePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.messagePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.phoneNumberPlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.sectionHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.sectionSubTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.selectServicePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.ambulance",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.clinicServices",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.ecg",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.elderscare",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.homeVisit",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.laboratoryServices",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.nebulizerServices",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.opd",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.physiotherapy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.services.specialistChannelling",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.appointmentForm.submitButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.contactButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.advancedDiagnostic",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.emergencySupport",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.experiencedProfessionals",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.fastAccurate",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.modernFacilities",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.personalizedCare",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.qualityTreatment",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.items.safeEnvironment",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.coreFeatures.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.ctaButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.scheduleHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.scheduleHours",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.scheduleLabel",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.emergencySupport.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.emergencySupport.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.emergencySupport.label",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.medicalDepartments.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.medicalDepartments.label",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.professionalTeam.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.professionalTeam.label",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.servicesFooter",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.factStatistics.trustedUsers",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.ctaButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.ctaDescription",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.ctaHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.faqSection.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "common.reviewBadge",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.address",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.callUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.emailPlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.firstNamePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.formDescription",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.lastNamePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.messagePlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.phoneNumberPlaceholder",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactForm.submitButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.contactInfoHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.email",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.emailUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.locationLabel",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.mapSubTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.phones.phone1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.phones.phone2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.phones.phone3",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "contactPage.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.appointment.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.emergency.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.general.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.payments.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q1.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q1.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q2.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q2.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q3.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q3.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q4.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q4.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q5.answer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sections.services.items.q5.question",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.bookButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.categories.appointment",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.categories.emergency",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.categories.general",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.categories.payments",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.categories.services",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.scheduleHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.scheduleHours",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "faqsPage.sidebar.scheduleLabel",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.address",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.contactInfo.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.contactInfo.phone1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.contactInfo.phone2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.copyright",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.getInTouch",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.letsTalk",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.medicalServices.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.medicalServices.homeVisit",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.medicalServices.laboratory",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.medicalServices.opd",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.medicalServices.physiotherapy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.quickLinks.aboutUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.quickLinks.contactUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.quickLinks.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.quickLinks.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "footer.quickLinks.ourServices",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.author.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.author.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.imageTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.items.patientFocused.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.items.patientFocused.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.items.qualityTreatment.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.items.qualityTreatment.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.learnMoreButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.reviewCount",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.about.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post1.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post1.readMore",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post1.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post2.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post2.readMore",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post2.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post3.category",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post3.readMore",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.posts.post3.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.blog.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.footerText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.elderscare.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.elderscare.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.heartHealth.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.heartHealth.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.opd.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.items.opd.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.caseStudy.viewAllLink",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.bookAppointmentButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.contactButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.reviewCount",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.hero.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.ctaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.footerText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.clinicServices.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.clinicServices.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.clinicServices.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.ecg.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.ecg.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.ecg.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.opd.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.opd.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.items.opd.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.services.trustedUsers",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.contactFooterLink",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.footerText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.arulanandem.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.arulanandem.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.murugamoorthy.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.murugamoorthy.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.raj.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.raj.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.shobana.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.shobana.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.sivaselvan.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.sivaselvan.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.sujikala.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.members.sujikala.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.team.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.footerText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial1.authorName",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial1.authorRole",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial1.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial2.authorName",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial2.authorRole",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial2.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial3.authorName",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial3.authorRole",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial3.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial4.authorName",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial4.authorRole",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.items.testimonial4.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.testimonials.viewAllLink",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.emergencySupport",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.medicalDepartments",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "homePage.whyChooseUs.yearsExperience",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "imageGalleryPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "imageGalleryPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "imageGalleryPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "imageGalleryPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.aboutUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.blog",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.bookAppointment",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.contactUs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.blogDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.caseStudy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.caseStudyDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.error404",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.faqs",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.imageGallery",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.label",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.ourTeam",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.serviceDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.teamDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.testimonials",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.pages.videoGallery",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.ambulance",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.clinic",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.ecg",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.elderscare",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.homeVisit",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.label",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.laboratory",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.nebulizer",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.opd",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.physiotherapy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "nav.services.specialist",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.backButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "notFoundPage.subHeading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.benefitItems.cancel",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.benefitItems.noHiddenFee",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.benefitItems.trial",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.choosePlan",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.perMonth",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.features[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.features[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.features[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.features[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.advanced.price",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.features[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.features[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.features[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.features[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.basic.price",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.features[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.features[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.features[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.features[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "pricingPage.plans.premium.price",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.benefitsDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.benefitsTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.bookAppointment",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.discoverServices",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.faqTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.patients",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.processDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.processSuffix",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.scheduleVisit",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ambulance.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.clinic.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.ecg.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.elders.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.homevisit.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.laboratory.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.nebulizer.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.opd.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.physiotherapy.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.benefits[0]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.benefits[1]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.benefits[2]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.benefits[3]",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.desc1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.desc2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[0].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[0].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[1].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[1].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[2].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[2].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[3].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[3].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[4].a",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.faqs[4].q",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[0].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[0].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[0].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[1].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[1].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[1].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[2].desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[2].step",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.process[2].title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.tagline",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.whyDesc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.whyPoint1",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.whyPoint2",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.services.specialist.whyTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.trustedBy",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.whyChoosePoint1Desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "serviceSinglePage.whyChoosePoint2Desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.ctaButton",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.ctaText",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.item1Desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.item1Title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.item2Desc",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.item2Title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.reviewBadge",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.approach.subTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ambulance.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ambulance.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ambulance.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.clinic.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.clinic.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.clinic.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ecg.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ecg.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.ecg.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.elders.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.elders.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.elders.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.homevisit.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.homevisit.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.homevisit.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.laboratory.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.laboratory.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.laboratory.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.nebulizer.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.nebulizer.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.nebulizer.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.opd.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.opd.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.opd.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.physiotherapy.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.physiotherapy.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.physiotherapy.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.specialist.description",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.specialist.title",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.items.specialist.viewDetails",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "servicesPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.arulanandem.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.arulanandem.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.murugamoorthy.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.murugamoorthy.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.raj.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.raj.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.shobana.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.shobana.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.sivaselvan.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.sivaselvan.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.sujikala.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.members.sujikala.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamSinglePage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamSinglePage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamSinglePage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "teamSinglePage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t1.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t1.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t1.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t2.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t2.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t2.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t3.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t3.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t3.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t4.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t4.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t4.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t5.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t5.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t5.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t6.name",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t6.quote",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.items.t6.role",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "testimonialsPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "videoGalleryPage.breadcrumb.current",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "videoGalleryPage.breadcrumb.home",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "videoGalleryPage.heading",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  },
+  {
+    "key": "videoGalleryPage.metaTitle",
+    "type": "string",
+    "inEn": true,
+    "inTa": true,
+    "migrated": true,
+    "editableInUi": true,
+    "status": "OK"
+  }
+]

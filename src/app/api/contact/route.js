@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+import { connectDB } from '../../../lib/db';
+import FormSubmission from '../../../models/FormSubmission';
+
 // Absolute public URL for the logo (used as <img src> in email clients)
 const LOGO_URL = 'https://msthealthcare.com/images/mst_logo.png';
 
@@ -127,6 +130,22 @@ export async function POST(request) {
         'Please fill in all required fields (First Name, Phone, Email).',
         { status: 400 }
       );
+    }
+
+    try {
+      await connectDB();
+      await FormSubmission.create({
+        formType: 'contact',
+        status: 'new',
+        firstName: fname,
+        lastName: lname,
+        phone,
+        email,
+        message,
+        ipAddress: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown',
+      });
+    } catch (dbErr) {
+      console.error('Failed to save contact form submission to MongoDB:', dbErr);
     }
 
     const transporter = nodemailer.createTransport({
