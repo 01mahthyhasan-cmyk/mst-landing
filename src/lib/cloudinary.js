@@ -27,36 +27,44 @@ if (isConfigured) {
 
 /**
  * Upload a medical report file buffer to Cloudinary with 'authenticated' delivery.
- * PDFs → resource_type 'raw'  (stored as-is, served as a file, URL uses /raw/)
- * Images → resource_type 'image' (processed by Cloudinary pipeline, URL uses /image/)
- * Using explicit types instead of 'auto' prevents non-deterministic storage behaviour.
+ *
+ * KEY RULE for raw resources (PDFs):
+ *   The file extension MUST be part of the stored public_id literal — e.g. 'report_xxx.pdf'.
+ *   Cloudinary raw resources have no separate format metadata the way image/video do.
+ *   If the extension is missing from the public_id, the URL has no MIME type; if it is
+ *   appended only at read time, the signed URL points to a non-existent asset → 404.
+ *
  * @param {Buffer} fileBuffer
- * @param {string} folder   - Cloudinary folder path (must NOT contain '+' or special chars)
- * @param {'pdf'|'image'}  fileType
+ * @param {string} folder    - Cloudinary folder path (no '+' or special chars)
+ * @param {'pdf'|'image'} fileType
  * @returns {Promise<object>} Cloudinary upload result
  */
 export function uploadToCloudinary(fileBuffer, folder, fileType = 'image') {
-  const uniqueName = `report_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
-  // PDFs are stored as 'raw' (file delivery). Images are stored as 'image'.
-  const resourceType = fileType === 'pdf' ? 'raw' : 'image';
+  const isPdf = fileType === 'pdf';
+  const resourceType = isPdf ? 'raw' : 'image';
+  const base = `report_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
+  // For raw resources, bake the extension into the public_id at upload time.
+  // The stored asset path will literally be  <folder>/<base>.pdf  in Cloudinary.
+  // For image resources, no extension — Cloudinary manages format separately.
+  const publicId = isPdf ? `${base}.pdf` : base;
 
   if (!isConfigured) {
     // DEV ONLY mock — never reached in production (throws above)
-    console.warn(`[DEV MOCK] Cloudinary upload skipped. public_id: ${folder}/${uniqueName}`);
+    console.warn(`[DEV MOCK] Cloudinary upload skipped. public_id: ${folder}/${publicId}`);
     return Promise.resolve({
-      public_id: `${folder}/${uniqueName}`,
+      public_id: `${folder}/${publicId}`,
       resource_type: resourceType,
-      format: fileType === 'pdf' ? 'pdf' : 'jpg',
+      format: isPdf ? 'pdf' : 'jpg',
     });
   }
 
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
       {
-        resource_type: resourceType,   // explicit — never 'auto'
+        resource_type: resourceType,  // explicit — never 'auto'
         type: 'authenticated',
         folder,
-        public_id: uniqueName,
+        public_id: publicId,          // e.g. 'report_xxx.pdf' for PDFs
         use_filename: false,
         unique_filename: false,
       },
@@ -127,15 +135,10 @@ export function generateSignedUrl(report) {
     return `https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf`;
   }
 
-  // For 'raw' resources (PDFs): append the extension directly to the public_id
-  // so the URL path ends in .pdf. Passing format as an SDK option appends .pdf
-  // as a Cloudinary transformation which is unsupported for raw → 404.
-  // For 'image' resources: format is a normal delivery transformation — pass as option.
-  const publicIdForUrl = report.cloudinaryResourceType === 'raw'
-    ? `${report.cloudinaryPublicId}.${report.cloudinaryFormat}`
-    : report.cloudinaryPublicId;
-
-  return cloudinary.url(publicIdForUrl, {
+  // cloudinaryPublicId already contains the extension for raw resources
+  // (e.g. 'reports/94769074027/report_xxx.pdf') — use it verbatim.
+  // For image resources, pass format as a delivery option (standard Cloudinary behaviour).
+  return cloudinary.url(report.cloudinaryPublicId, {
     resource_type: report.cloudinaryResourceType,
     type: 'authenticated',
     sign_url: true,
