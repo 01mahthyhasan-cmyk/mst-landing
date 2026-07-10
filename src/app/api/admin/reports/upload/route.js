@@ -99,6 +99,7 @@ export async function POST(request) {
       phone: normalizedPhone,
       title,
       cloudinaryPublicId: cloudinaryResult.public_id,
+      cloudinaryVersion: cloudinaryResult.version || null,  // e.g. 1752345678
       cloudinaryResourceType: resourceType,
       cloudinaryFormat: format,
       uploadedBy: session.sub,

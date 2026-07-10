@@ -15,8 +15,12 @@ const ReportSchema = new mongoose.Schema(
     cloudinaryPublicId: {
       type: String,
       required: true,
-      unique: true,   // DB-level safeguard: prevents two reports ever pointing at the same asset
+      unique: true,
       index: true,
+    },
+    cloudinaryVersion: {
+      type: Number,  // Unix timestamp returned by Cloudinary e.g. 1752345678
+      default: null,
     },
     cloudinaryResourceType: {
       type: String,
