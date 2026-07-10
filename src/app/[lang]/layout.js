@@ -5,6 +5,8 @@ import ScriptsLoader from "../../components/ScriptsLoader";
 import LanguageToggle from "../../components/LanguageToggle";
 import { getDictionary } from "../../lib/getDictionary";
 import Script from "next/script";
+import { headers } from "next/headers";
+
 
 export const metadata = {
   title: "MST Health Care | Compassion. Care. Comfort.",
@@ -15,6 +17,8 @@ export const metadata = {
 export default async function LocaleLayout({ children, params }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  const headerList = await headers();
+  const isReportRoute = headerList.get("x-is-report-route") === "true";
 
   return (
     <html lang={lang}>
@@ -84,13 +88,13 @@ export default async function LocaleLayout({ children, params }) {
         </div>
         {/* Preloader End */}
 
-        <LanguageToggle currentLocale={lang} />
+        {!isReportRoute && <LanguageToggle currentLocale={lang} />}
 
-        <Header dict={dict} locale={lang} />
+        {!isReportRoute && <Header dict={dict} locale={lang} />}
         
         {children}
         
-        <Footer dict={dict} locale={lang} />
+        {!isReportRoute && <Footer dict={dict} locale={lang} />}
         
         <ScriptsLoader />
       </body>

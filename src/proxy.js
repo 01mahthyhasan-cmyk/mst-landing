@@ -122,6 +122,10 @@ function handlePublicRoute(request) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-locale', locale);
 
+  if (pathname.includes('/reports')) {
+    requestHeaders.set('x-is-report-route', 'true');
+  }
+
   if (isEnglish) {
     const response = NextResponse.next({ request: { headers: requestHeaders } });
     response.cookies.set(LOCALE_COOKIE, 'en', { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' });
@@ -144,7 +148,6 @@ function handlePublicRoute(request) {
 }
 
 // ─── Main Proxy ─────────────────────────────────────────────────────────────
-
 export async function proxy(request) {
   const { pathname } = request.nextUrl;
 
@@ -153,9 +156,13 @@ export async function proxy(request) {
     return handleAdminRoute(request);
   }
 
+  // Bypass public API routes so they don't get rewritten with locale prefix
+  if (pathname.startsWith('/api/')) {
+    return NextResponse.next();
+  }
+
   return handlePublicRoute(request);
 }
-
 export const config = {
   matcher: [
     '/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|otf|css|js|map)$).*)',
