@@ -1,56 +1,47 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
+import { useCallback } from 'react';
 
 const LOCALE_COOKIE = 'mst_locale';
 
 /**
  * LanguageToggle — fixed pill-style switcher matching the site's CSS theme.
  *
- * Sits in the top-right corner of every page.
- * Reads locale from the URL path (no prop needed once mounted).
- * On switch: navigates, sets cookie, and sets localStorage.
+ * On switch: performs a FULL page reload via window.location.href so the
+ * Next.js middleware (proxy.js) runs on the server and correctly handles
+ * locale routing / cookie setting. Client-side router.push() bypasses
+ * middleware, which is why the language only applied after a manual refresh.
  */
 export default function LanguageToggle({ currentLocale }) {
-  const router = useRouter();
   const pathname = usePathname();
-
-  // Persist to localStorage whenever locale changes
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(LOCALE_COOKIE, currentLocale);
-    }
-  }, [currentLocale]);
 
   const switchLocale = useCallback(
     (targetLocale) => {
       if (targetLocale === currentLocale) return;
 
-      // usePathname() returns the internal rewritten path, e.g. /ta/contact.
       // Strip any leading locale segment (/ta or /en) to get the canonical path.
       const canonicalPath = pathname.replace(/^\/(ta|en)(?=\/|$)/, '') || '/';
 
       let nextPath;
       if (targetLocale === 'en') {
-        // Tamil → English: prepend /en to canonical path
+        // Tamil → English: navigate to /en/<canonical>
         nextPath = '/en' + (canonicalPath === '/' ? '' : canonicalPath);
       } else {
-        // English → Tamil: canonical path is already correct (proxy rewrites to /ta/*)
+        // English → Tamil: navigate to canonical path — middleware rewrites to /ta/*
         nextPath = canonicalPath;
       }
 
-      // Set cookie (backup for proxy on next full navigation)
-      if (typeof document !== 'undefined') {
-        const maxAge = 60 * 60 * 24 * 365;
-        document.cookie = `${LOCALE_COOKIE}=${targetLocale};path=/;max-age=${maxAge};samesite=lax`;
-        localStorage.setItem(LOCALE_COOKIE, targetLocale);
-      }
+      // Set cookie eagerly so the middleware receives it immediately
+      const maxAge = 60 * 60 * 24 * 365;
+      document.cookie = `${LOCALE_COOKIE}=${targetLocale};path=/;max-age=${maxAge};samesite=lax`;
 
-      // Navigate without scroll reset
-      router.push(nextPath, { scroll: false });
+      // Full page reload — this goes through the server middleware (proxy.js)
+      // which handles locale rewrites correctly. router.push() is client-side
+      // only and bypasses middleware, so the language never updated without a refresh.
+      window.location.href = nextPath;
     },
-    [currentLocale, pathname, router]
+    [currentLocale, pathname]
   );
 
   const isTamil = currentLocale === 'ta';
