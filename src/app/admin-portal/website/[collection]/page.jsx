@@ -86,6 +86,22 @@ const COLLECTION_CONFIGS = {
       { name: 'quote', label: 'Patient Testimonial Quote', type: 'localized_textarea', required: true },
       { name: 'status', label: 'Workflow Status', type: 'select', options: ['draft', 'published'] }
     ]
+  },
+  'events': {
+    title: 'Recent Events',
+    subtitle: 'Manage community health events, medical camps, and clinic announcements.',
+    apiPath: '/api/admin/events',
+    labelField: 'title',
+    hasSlug: true,
+    fields: [
+      { name: 'title', label: 'Event Title', type: 'localized', required: true },
+      { name: 'subtitle', label: 'Event Subtitle', type: 'localized', required: true },
+      { name: 'slug', label: 'URL Slug', type: 'text', required: true, placeholder: 'my-event-name' },
+      { name: 'postedDate', label: 'Posted Date (YYYY-MM-DD)', type: 'text', placeholder: '2025-01-15' },
+      { name: 'mainImage', label: 'Main Image', type: 'image_upload' },
+      { name: 'description', label: 'Event Description', type: 'localized_textarea' },
+      { name: 'status', label: 'Workflow Status', type: 'select', options: ['draft', 'published'] }
+    ]
   }
 };
 
@@ -184,6 +200,32 @@ export default function GenericCollectionPage({ params: paramsPromise }) {
     });
   };
 
+  // ── Image Upload handler (reuses existing /api/admin/media/upload) ──
+  const [uploadingField, setUploadingField] = useState(null);
+  const handleImageUpload = async (fieldName, file) => {
+    if (!file) return;
+    setUploadingField(fieldName);
+    setError('');
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      fd.append('altEn', '');
+      fd.append('altTa', '');
+      const res = await fetch('/api/admin/media/upload', {
+        method: 'POST',
+        headers: { 'x-csrf-token': getCsrfToken() },
+        body: fd,
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Upload failed');
+      handleFormChange(fieldName, data.media.url);
+    } catch (err) {
+      setError(`Image upload failed: ${err.message}`);
+    } finally {
+      setUploadingField(null);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -191,7 +233,7 @@ export default function GenericCollectionPage({ params: paramsPromise }) {
 
     const isNew = activeItem._isNew;
     const url = isNew ? config.apiPath : `${config.apiPath}/${activeItem._id}`;
-    const method = isNew ? 'POST' : 'PUT';
+    const method = isNew ? 'POST' : 'PATCH';
 
     try {
       const res = await fetch(url, {
@@ -343,6 +385,66 @@ export default function GenericCollectionPage({ params: paramsPromise }) {
                         <option key={opt} value={opt}>{opt.toUpperCase()}</option>
                       ))}
                     </select>
+                  </div>
+                );
+              }
+              if (f.type === 'image_upload') {
+                const currentUrl = formData[f.name] || '';
+                const isUploading = uploadingField === f.name;
+                return (
+                  <div key={f.name} className="form-group">
+                    <label>{f.label}</label>
+                    {/* Preview */}
+                    {currentUrl && (
+                      <div style={{ marginBottom: 10, position: 'relative', display: 'inline-block' }}>
+                        <img
+                          src={currentUrl}
+                          alt="Preview"
+                          style={{ maxWidth: 220, maxHeight: 140, borderRadius: 8, border: '1px solid #e2e8f0', objectFit: 'cover', display: 'block' }}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => handleFormChange(f.name, '')}
+                          style={{ position: 'absolute', top: 4, right: 4, background: '#ef4444', color: '#fff', border: 'none', borderRadius: 4, padding: '2px 7px', cursor: 'pointer', fontSize: 12 }}
+                        >✕ Remove</button>
+                      </div>
+                    )}
+                    {/* Upload zone */}
+                    <label
+                      htmlFor={`img-upload-${f.name}`}
+                      style={{
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        gap: 8, padding: '20px 16px', borderRadius: 8, cursor: isUploading ? 'wait' : 'pointer',
+                        border: '2px dashed #94a3b8', background: '#f8fafc', color: '#64748b',
+                        fontSize: 14, transition: 'border-color 0.2s',
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.borderColor = '#0a6c74'}
+                      onMouseLeave={e => e.currentTarget.style.borderColor = '#94a3b8'}
+                    >
+                      {isUploading
+                        ? <><span style={{ fontSize: 24 }}>⏳</span> Uploading…</>
+                        : <><span style={{ fontSize: 28 }}>🖼️</span> {currentUrl ? 'Replace Image' : 'Click to Upload Image'}<br /><small style={{ opacity: 0.7 }}>JPG, PNG, WebP, GIF • max 10 MB</small></>}
+                    </label>
+                    <input
+                      id={`img-upload-${f.name}`}
+                      type="file"
+                      accept="image/*"
+                      style={{ display: 'none' }}
+                      disabled={isUploading}
+                      onChange={e => {
+                        const file = e.target.files?.[0];
+                        if (file) handleImageUpload(f.name, file);
+                        e.target.value = ''; // reset so same file can be re-selected
+                      }}
+                    />
+                    {/* Also allow manual URL entry as fallback */}
+                    <input
+                      type="text"
+                      value={currentUrl}
+                      onChange={e => handleFormChange(f.name, e.target.value)}
+                      placeholder="…or paste a URL directly"
+                      style={{ marginTop: 8, fontSize: 12, color: '#94a3b8' }}
+                    />
                   </div>
                 );
               }

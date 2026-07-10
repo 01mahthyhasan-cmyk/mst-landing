@@ -69,6 +69,7 @@ export async function getDictionary(locale) {
     const { default: TeamMember } = await import('../models/TeamMember');
     const { default: CaseStudy } = await import('../models/CaseStudy');
     const { default: Testimonial } = await import('../models/Testimonial');
+    const { default: Event } = await import('../models/Event');
 
     // Load data
     const [settings, pages, services, blogs, team, cases, testimonials] = await Promise.all([

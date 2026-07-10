@@ -28,6 +28,75 @@ export default async function Page({ params }) {
   const trustedUsersText = fs.trustedUsers.replace('{{count}}', '58,900+');
   const servicesTrustedText = t.services.trustedUsers.replace('{{count}}', '58,900+');
 
+  // ── Recent Events: fetch latest 6 published events for homepage section ──
+  // getDictionary() above already called connectDB(), so we just query directly.
+  let recentEvents = [];
+  try {
+    const { default: Event } = await import('../../models/Event');
+    recentEvents = await Event.find({ status: 'published' })
+      .sort('-postedDate').limit(6)
+      .select('title subtitle slug postedDate mainImage likes views').lean();
+  } catch { /* fail silently — section simply hidden if DB unreachable */ }
+
+
+  const eventsHeading  = lang === 'ta' ? 'சமீபத்திய நிகழ்வுகள்' : 'Recent Events';
+  const eventsSubTitle = lang === 'ta' ? 'சமூக நிகழ்வுகள்' : 'Community Events';
+  const eventsViewAll  = lang === 'ta' ? 'அனைத்தையும் காண்க' : 'View All Events';
+  const readMoreLabel  = lang === 'ta' ? 'மேலும் படிக்க' : 'Read More';
+
+  const recentEventsSection = recentEvents.length === 0 ? '' : `
+    <!-- Recent Events Section Start -->
+    <div class="our-case-study bg-section">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp">${eventsSubTitle}</span>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">${eventsHeading}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                ${recentEvents.map((ev, idx) => {
+                  const evTitle    = lang === 'ta' ? (ev.title?.ta    || ev.title?.en)    : ev.title?.en;
+                  const evSubtitle = lang === 'ta' ? (ev.subtitle?.ta || ev.subtitle?.en) : ev.subtitle?.en;
+                  const delay      = idx === 0 ? '' : ` data-wow-delay="${idx * 0.15}s"`;
+                  const img        = ev.mainImage || '/images/post-1.jpg';
+                  const date       = ev.postedDate
+                    ? new Date(ev.postedDate).toLocaleDateString(lang === 'ta' ? 'ta-IN' : 'en-GB', { year: 'numeric', month: 'short', day: 'numeric' })
+                    : '';
+                  return `
+                <div class="col-xl-4 col-md-6">
+                    <div class="post-item wow fadeInUp"${delay}>
+                        <div class="post-featured-image">
+                            <a href="${p}/events/${ev.slug}" data-cursor-text="View">
+                                <figure class="image-anime"><img src="${img}" alt="${evTitle}" style="aspect-ratio:16/9;object-fit:cover;width:100%;"></figure>
+                            </a>
+                            <div class="post-item-tags" style="display:flex;gap:10px;">
+                                <span style="font-size:12px;color:#fff;opacity:0.85;">❤️ ${ev.likes ?? 0} &nbsp;👁 ${ev.views ?? 0}</span>
+                            </div>
+                        </div>
+                        <div class="post-item-body">
+                            <div class="post-item-content">
+                                ${date ? `<p style="font-size:12px;color:#94a3b8;margin-bottom:4px;">📅 ${date}</p>` : ''}
+                                <h2><a href="${p}/events/${ev.slug}">${evTitle}</a></h2>
+                                ${evSubtitle ? `<p style="font-size:13px;color:#64748b;margin-top:4px;">${evSubtitle}</p>` : ''}
+                            </div>
+                            <div class="post-item-btn">
+                                <a href="${p}/events/${ev.slug}" class="readmore-btn">${readMoreLabel}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                }).join('')}
+                <div class="col-lg-12" style="text-align:center;margin-top:24px;">
+                    <a href="${p}/events" class="btn-default">${eventsViewAll}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Events Section End -->`;
+
   return (
     <HtmlContent html={`<!-- Hero Section Start -->
     <div class="hero dark-section parallaxie">
@@ -91,6 +160,8 @@ export default async function Page({ params }) {
         </div>
     </div>
     <!-- Hero Section End -->
+
+    ${recentEventsSection}
 
     <!-- About Us Section Start -->
     <div class="about-us">

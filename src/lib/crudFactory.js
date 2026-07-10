@@ -45,9 +45,15 @@ export function makeListCreateHandlers(Model, collectionName, opts = {}) {
     const { body, error: parseErr } = await parseBody(request);
     if (parseErr) return parseErr;
 
+    const requestedStatus = body.status || 'draft';
+    if (requestedStatus === 'published') {
+      const pubCheck = await adminGuard(request, 'publish');
+      if (pubCheck.error) return pubCheck.error;
+    }
+
     await connectDB();
     try {
-      const item = await Model.create({ ...body, createdBy: session.sub, updatedBy: session.sub, status: 'draft' });
+      const item = await Model.create({ ...body, createdBy: session.sub, updatedBy: session.sub, status: requestedStatus });
       await writeAuditLog({
         userId: session.sub, userEmail: session.email,
         action: 'content_create', targetCollection: collectionName,
