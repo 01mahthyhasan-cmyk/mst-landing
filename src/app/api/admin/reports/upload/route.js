@@ -71,10 +71,17 @@ export async function POST(request) {
       return apiError(`Cloudinary upload failed: ${uploadErr.message || uploadErr}`, 500);
     }
 
-    // Determine type and format
+    // Determine type and format using Cloudinary's actual upload result with guess fallbacks
     const isPdf = file.type === 'application/pdf';
-    const resourceType = isPdf ? 'raw' : 'image';
-    const format = isPdf ? 'pdf' : (file.type === 'image/png' ? 'png' : 'jpg');
+    const resourceType = cloudinaryResult.resource_type || (isPdf ? 'raw' : 'image');
+    const format = cloudinaryResult.format || (isPdf ? 'pdf' : (file.type === 'image/png' ? 'png' : 'jpg'));
+
+    // Safeguard: Assert uniqueness of Cloudinary Public ID in database to prevent overwriting/serving wrong files
+    const existingReport = await Report.findOne({ cloudinaryPublicId: cloudinaryResult.public_id });
+    if (existingReport) {
+      console.error(`[CRITICAL SECURITY WARNING]: Cloudinary Public ID collision detected! ID: ${cloudinaryResult.public_id}`);
+      return apiError('Critical Error: Document identifier collision detected. Upload aborted to prevent patient data mix-up.', 500);
+    }
 
     // 4. Create Document
     const linkToken = crypto.randomBytes(32).toString('hex');

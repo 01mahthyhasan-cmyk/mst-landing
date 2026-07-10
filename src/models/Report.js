@@ -15,11 +15,13 @@ const ReportSchema = new mongoose.Schema(
     cloudinaryPublicId: {
       type: String,
       required: true,
+      unique: true,   // DB-level safeguard: prevents two reports ever pointing at the same asset
+      index: true,
     },
     cloudinaryResourceType: {
       type: String,
       required: true,
-      enum: ['image', 'raw'],
+      enum: ['image', 'raw', 'video', 'auto'],  // include all types Cloudinary may return
     },
     cloudinaryFormat: {
       type: String,
