@@ -7,16 +7,26 @@ const isConfigured = !!(
   process.env.CLOUDINARY_API_SECRET
 );
 
+const isDev = process.env.NODE_ENV === 'development';
+
 if (isConfigured) {
   cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET,
+    secure: true,
   });
+} else if (!isDev) {
+  // In production/preview, missing credentials is a hard error — not a silent mock.
+  // Patients would receive random placeholder images otherwise.
+  throw new Error(
+    '[Cloudinary] CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_API_SECRET ' +
+    'must be set as environment variables. Add them in Vercel → Project Settings → Environment Variables.'
+  );
 }
 
 /**
- * Upload a file buffer to Cloudinary with 'authenticated' type.
+ * Upload a file buffer to Cloudinary with 'authenticated' type (medical reports).
  * @param {Buffer} fileBuffer
  * @param {string} folder
  * @returns {Promise<object>} Cloudinary upload result
@@ -25,13 +35,8 @@ export function uploadToCloudinary(fileBuffer, folder) {
   const uniqueName = `report_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
 
   if (!isConfigured) {
-    console.log(`\n--- [MOCK CLOUDINARY UPLOAD] ---`);
-    console.log(`Folder: ${folder}`);
-    console.log(`Public ID Name: ${uniqueName}`);
-    console.log(`Buffer Size: ${fileBuffer.length} bytes`);
-    console.log(`---------------------------------\n`);
-    
-    // Simulate a successful Cloudinary response
+    // DEV ONLY mock — never reached in production (throws above)
+    console.warn(`[DEV MOCK] Cloudinary upload skipped. Returning fake public_id: ${folder}/${uniqueName}`);
     return Promise.resolve({
       public_id: `${folder}/${uniqueName}`,
       resource_type: 'raw',
@@ -70,18 +75,13 @@ export function uploadPublicImage(fileBuffer, folder) {
   const uniqueName = `img_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
 
   if (!isConfigured) {
-    console.log(`\n--- [MOCK CLOUDINARY PUBLIC UPLOAD] ---`);
-    console.log(`Folder: ${folder}, Name: ${uniqueName}`);
-    console.log(`Buffer Size: ${fileBuffer.length} bytes`);
-    console.log(`---------------------------------------\n`);
-    // Return a placeholder image URL for local development
+    // DEV ONLY mock — never reached in production (throws above)
+    console.warn(`[DEV MOCK] Cloudinary public upload skipped. Returning picsum placeholder.`);
     return Promise.resolve({
       public_id: `${folder}/${uniqueName}`,
       secure_url: `https://picsum.photos/seed/${uniqueName}/800/600`,
       resource_type: 'image',
       format: 'jpg',
-      width: 800,
-      height: 600,
     });
   }
 
@@ -113,13 +113,8 @@ export function uploadPublicImage(fileBuffer, folder) {
  */
 export function generateSignedUrl(report) {
   if (!isConfigured) {
-    console.log(`\n--- [MOCK CLOUDINARY SIGNED URL] ---`);
-    console.log(`Public ID: ${report.cloudinaryPublicId}`);
-    console.log(`Resource Type: ${report.cloudinaryResourceType}`);
-    console.log(`Format: ${report.cloudinaryFormat}`);
-    console.log(`-------------------------------------\n`);
-    
-    // In dev mock mode, return a placeholder PDF/image that can be viewed
+    // DEV ONLY mock — never reached in production (throws above)
+    console.warn(`[DEV MOCK] generateSignedUrl returning placeholder for: ${report.cloudinaryPublicId}`);
     if (report.cloudinaryResourceType === 'image') {
       return `https://picsum.photos/800/1000`;
     }
