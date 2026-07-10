@@ -48,6 +48,12 @@ export async function POST(request) {
 
     const normalizedPhone = normalizeToE164(phoneInput);
     const maskedPhone = maskPhone(normalizedPhone);
+    const isPdf = file.type === 'application/pdf';
+    // Strip leading '+' from E.164 phone for folder path — '+' in Cloudinary public IDs
+    // can cause URL-encoding mismatches (%2B vs +) depending on SDK version.
+    // The DB phone field still keeps the full E.164 format (+94...).
+    const folderPhone = normalizedPhone.replace(/^\+/, '');
+    const folder = `reports/${folderPhone}`;
 
     // 2. Check SMS Rate limit
     const rateCheck = await checkSmsRateLimit(normalizedPhone, 'report');
@@ -58,23 +64,23 @@ export async function POST(request) {
     // 3. Process File Upload
     const arrayBuffer = await file.arrayBuffer();
     const fileBuffer = Buffer.from(arrayBuffer);
-    
+
     await connectDB();
 
-    // Upload to Cloudinary as 'authenticated'
-    const folder = `reports/${normalizedPhone}`;
+    // Upload to Cloudinary — explicit resource_type prevents 'auto' ambiguity.
+    // PDFs  → resource_type 'raw'   → URL path /raw/authenticated/
+    // Images → resource_type 'image' → URL path /image/authenticated/
     let cloudinaryResult;
     try {
-      cloudinaryResult = await uploadToCloudinary(fileBuffer, folder);
+      cloudinaryResult = await uploadToCloudinary(fileBuffer, folder, isPdf ? 'pdf' : 'image');
     } catch (uploadErr) {
       console.error('[Cloudinary Upload Error]:', uploadErr);
       return apiError(`Cloudinary upload failed: ${uploadErr.message || uploadErr}`, 500);
     }
 
-    // Determine type and format using Cloudinary's actual upload result with guess fallbacks
-    const isPdf = file.type === 'application/pdf';
-    const resourceType = cloudinaryResult.resource_type || (isPdf ? 'raw' : 'image');
-    const format = cloudinaryResult.format || (isPdf ? 'pdf' : (file.type === 'image/png' ? 'png' : 'jpg'));
+    // Trust Cloudinary's response for resource_type and format (matches what was stored).
+    const resourceType = cloudinaryResult.resource_type;
+    const format = cloudinaryResult.format || (isPdf ? 'pdf' : 'jpg');
 
     // Safeguard: Assert uniqueness of Cloudinary Public ID in database to prevent overwriting/serving wrong files
     const existingReport = await Report.findOne({ cloudinaryPublicId: cloudinaryResult.public_id });
