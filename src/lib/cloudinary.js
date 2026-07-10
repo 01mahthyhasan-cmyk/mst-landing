@@ -131,10 +131,11 @@ export function generateSignedUrl(report) {
     resource_type: report.cloudinaryResourceType,
     type: 'authenticated',
     sign_url: true,
-    // Include the exact version returned at upload time so Cloudinary can locate
-    // the asset. Without this, the SDK defaults to v1 which does not exist → 404.
     ...(report.cloudinaryVersion ? { version: report.cloudinaryVersion } : {}),
-    format: report.cloudinaryFormat,
+    // For 'raw' resources, DO NOT pass format — Cloudinary raw assets have no
+    // extension in their public_id. Appending .pdf creates a non-existent path → 404.
+    // For 'image' resources, format IS needed (it's a delivery transformation).
+    ...(report.cloudinaryResourceType !== 'raw' ? { format: report.cloudinaryFormat } : {}),
     expires_at: Math.floor(Date.now() / 1000) + 600, // 10-minute window
   });
 }
