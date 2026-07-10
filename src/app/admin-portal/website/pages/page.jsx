@@ -34,10 +34,136 @@ function isLongField(path) {
   const p = path.toLowerCase();
   return p.includes('desc') || p.includes('overview') || p.includes('bio') ||
     p.includes('quote') || p.includes('answer') || p.includes('content') ||
-    p.includes('address') || p.includes('copyright') || p.includes('hours');
+    p.includes('address') || p.includes('copyright') || p.includes('hours') ||
+    p.includes('heading') || p.includes('caption');
 }
 
-// Stable RepeaterField component — must live outside parent
+// Collapsible nested section component for depth > 0
+function CollapsibleSubSection({ label, children, depth }) {
+  const [expanded, setExpanded] = useState(true);
+
+  return (
+    <div className="sub-section-group" style={{
+      borderLeft: `3px solid rgba(0, 168, 188, ${Math.max(0.2, 1 - depth * 0.15)})`,
+      paddingLeft: '12px',
+      marginLeft: `${depth > 1 ? 8 : 0}px`,
+      marginBottom: '12px'
+    }}>
+      <div className="sub-section-header" onClick={() => setExpanded(!expanded)} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none' }}>
+        <h4 className="sub-section-title" style={{ margin: 0, fontSize: '13px', fontWeight: '800', color: '#00A8BC', textTransform: 'uppercase' }}>{label}</h4>
+        <span className="collapse-chevron" style={{ fontSize: '10px', color: '#64748B' }}>{expanded ? '▼' : '▶'}</span>
+      </div>
+      {expanded && <div className="sub-section-body" style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>{children}</div>}
+    </div>
+  );
+}
+
+// Collapsible top-level section container for Pages Editor
+function CollapsibleSection({ title, children }) {
+  const [expanded, setExpanded] = useState(true);
+
+  return (
+    <section className={`form-section-card card-panel ${expanded ? 'is-expanded' : 'is-collapsed'}`}>
+      <div className="section-header-row" onClick={() => setExpanded(!expanded)} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', userSelect: 'none' }}>
+        <h3 className="section-title-header" style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span className="section-title-text">{title}</span>
+        </h3>
+        <span className="collapse-chevron" style={{ fontSize: '14px', color: '#64748B' }}>{expanded ? '▼' : '▲'}</span>
+      </div>
+      {expanded && (
+        <div className="section-fields-container" style={{ marginTop: '16px' }}>
+          {children}
+        </div>
+      )}
+    </section>
+  );
+}
+
+// Collapsible RepeaterCard with Drag and Drop capabilities
+function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, totalItems }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const getSummary = () => {
+    if (!item) return `Item #${index + 1}`;
+    const labelVal = item.label || item.title || item.name || item.heading;
+    let labelText = '';
+    if (typeof labelVal === 'object' && labelVal !== null) {
+      labelText = labelVal.en || labelVal.ta || '';
+    } else if (typeof labelVal === 'string') {
+      labelText = labelVal;
+    }
+    const hrefVal = item.href || item.link || item.url || '';
+    let summary = labelText ? `"${labelText}"` : `Item #${index + 1}`;
+    if (hrefVal) {
+      summary += ` ➔ ${hrefVal}`;
+    }
+    return summary;
+  };
+
+  const hrefVal = item?.href || item?.link || item?.url || '';
+
+  return (
+    <div 
+      className={`repeater-card ${isExpanded ? 'is-expanded' : 'is-collapsed'}`}
+      draggable
+      onDragStart={(e) => {
+        e.dataTransfer.setData('text/plain', String(index));
+        e.dataTransfer.effectAllowed = 'move';
+      }}
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={(e) => {
+        const fromIndex = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        if (!isNaN(fromIndex) && fromIndex !== index) {
+          onMove(fromIndex, index);
+        }
+      }}
+      style={{
+        border: '1px solid #E2E8F0',
+        borderRadius: '8px',
+        marginBottom: '8px',
+        backgroundColor: '#ffffff'
+      }}
+    >
+      <div className="repeater-card-header" style={{ display: 'flex', alignItems: 'center', padding: '10px 14px', backgroundColor: '#F8FAFC', borderBottom: isExpanded ? '1px solid #E2E8F0' : 'none', borderRadius: isExpanded ? '8px 8px 0 0' : '8px' }}>
+        <div className="drag-handle" title="Drag to reorder" style={{ cursor: 'grab', marginRight: '10px', color: '#94A3B8', fontSize: '16px', userSelect: 'none' }}>☰</div>
+        <div className="summary-text" onClick={() => setIsExpanded(!isExpanded)} style={{ flex: 1, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', userSelect: 'none' }}>
+          <span className="index-badge" style={{ fontSize: '11px', fontWeight: '800', backgroundColor: '#EDF9FC', color: '#00A8BC', padding: '2px 6px', borderRadius: '4px' }}>#{index + 1}</span>
+          <span className="summary-label" style={{ fontSize: '13px', fontWeight: '600', color: '#334155' }}>{getSummary()}</span>
+        </div>
+        <div className="repeater-actions" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {hrefVal && typeof hrefVal === 'string' && (
+            <a 
+              href={hrefVal.startsWith('http') ? hrefVal : `https://${hrefVal}`} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-visit-link" 
+              title="Visit Link"
+              style={{ textDecoration: 'none', padding: '4px 6px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '12px' }}
+            >
+              🔗
+            </a>
+          )}
+          <button type="button" onClick={() => setIsExpanded(!isExpanded)} className="btn-expand-card" style={{ padding: '4px 8px', border: '1px solid #CBD5E1', borderRadius: '4px', backgroundColor: '#ffffff', fontSize: '11px', fontWeight: '700', cursor: 'pointer' }}>
+            {isExpanded ? 'Collapse' : 'Expand'}
+          </button>
+          <button type="button" onClick={onDuplicate} className="btn-duplicate-card" title="Duplicate" style={{ padding: '4px 8px', border: '1px solid #CBD5E1', borderRadius: '4px', backgroundColor: '#ffffff', fontSize: '11px', fontWeight: '700', cursor: 'pointer', color: '#0F172A' }}>
+            👯 Duplicate
+          </button>
+          <button type="button" onClick={onRemove} className="btn-remove-card" title="Delete" style={{ padding: '4px 8px', border: '1px solid #FCA5A5', borderRadius: '4px', backgroundColor: '#FFF5F5', fontSize: '11px', fontWeight: '700', cursor: 'pointer', color: '#EF4444' }}>
+            ❌ Remove
+          </button>
+        </div>
+      </div>
+      {isExpanded && (
+        <div className="repeater-card-body" style={{ padding: '14px' }}>
+          <FormNode path="" value={item} onChange={onChange} depth={0} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Stable RepeaterField component
 function RepeaterField({ label, value, onChange }) {
   const items = Array.isArray(value) ? value : [];
 
@@ -55,41 +181,65 @@ function RepeaterField({ label, value, onChange }) {
       };
       onChange([...items, clearValues(JSON.parse(JSON.stringify(items[0])))]);
     } else {
-      onChange([...items, { en: '', ta: '' }]);
+      if (label.toLowerCase().includes('link') || label.toLowerCase().includes('nav') || label.toLowerCase().includes('social')) {
+        onChange([...items, { label: { en: 'New Link', ta: 'புதிய இணைப்பு' }, href: '/' }]);
+      } else {
+        onChange([...items, { en: '', ta: '' }]);
+      }
     }
   };
 
   const handleRemove = (i) => onChange(items.filter((_, idx) => idx !== i));
-  const handleChange = (i, v) => { const u = [...items]; u[i] = v; onChange(u); };
+  
+  const handleDuplicate = (i) => {
+    const newItems = [...items];
+    const duplicated = JSON.parse(JSON.stringify(items[i]));
+    newItems.splice(i + 1, 0, duplicated);
+    onChange(newItems);
+  };
+
+  const handleChange = (i, v) => {
+    const u = [...items];
+    u[i] = v;
+    onChange(u);
+  };
+
+  const handleMove = (fromIndex, toIndex) => {
+    const newItems = [...items];
+    const [dragged] = newItems.splice(fromIndex, 1);
+    newItems.splice(toIndex, 0, dragged);
+    onChange(newItems);
+  };
 
   return (
     <div className="repeater-field-container">
       <div className="repeater-header">
         <span className="repeater-title">{label}</span>
-        <button type="button" onClick={handleAdd} className="btn-add-item">+ Add Item</button>
+        <button type="button" onClick={handleAdd} className="btn-add-item">+ Add Entry</button>
       </div>
       <div className="repeater-list">
         {items.map((item, idx) => (
-          <div key={idx} className="repeater-card">
-            <div className="repeater-item-header">
-              <span className="repeater-item-index">Item #{idx + 1}</span>
-              <button type="button" onClick={() => handleRemove(idx)} className="btn-remove-item">Remove</button>
-            </div>
-            <div className="repeater-item-body">
-              <FormNode path="" value={item} onChange={(v) => handleChange(idx, v)} />
-            </div>
-          </div>
+          <RepeaterCard
+            key={idx}
+            item={item}
+            index={idx}
+            onRemove={() => handleRemove(idx)}
+            onDuplicate={() => handleDuplicate(idx)}
+            onChange={(v) => handleChange(idx, v)}
+            onMove={handleMove}
+            totalItems={items.length}
+          />
         ))}
         {items.length === 0 && (
-          <div className="repeater-empty-state">No items yet. Click "Add Item" to begin.</div>
+          <div className="repeater-empty-state">No items yet. Click "Add Entry" to begin.</div>
         )}
       </div>
     </div>
   );
 }
 
-// Stable FormNode component — must live outside parent to prevent re-mounting on keypress
-function FormNode({ path, value, onChange }) {
+// Stable FormNode component
+function FormNode({ path, value, onChange, depth = 0 }) {
   if (value === null || value === undefined) return null;
 
   // ── A. Object node ─────────────────────────────────────────────────────────
@@ -120,6 +270,7 @@ function FormNode({ path, value, onChange }) {
                     en: { ...(enVal || {}), [fk]: newFVal.en },
                     ta: { ...(taVal || {}), [fk]: newFVal.ta },
                   })}
+                  depth={depth}
                 />
               );
             })}
@@ -130,9 +281,18 @@ function FormNode({ path, value, onChange }) {
       // A2. Localized arrays: {en: [...], ta: [...]}
       if (Array.isArray(enVal)) {
         const label = formatLabel(path);
+        const enMissing = !enVal || enVal.length === 0;
+        const taMissing = !taVal || taVal.length === 0;
         return (
           <div className="form-group localized-group">
-            {label && <label className="field-label">{label}</label>}
+            <div className="field-label-row">
+              {label && <label className="field-label">{label}</label>}
+              {(enMissing || taMissing) && (
+                <span className="missing-badge">
+                  ⚠️ Missing {enMissing && taMissing ? 'EN & TA' : enMissing ? 'EN' : 'TA'}
+                </span>
+              )}
+            </div>
             <div className="locale-fields-grid">
               <div className="locale-input-wrapper">
                 <span className="locale-badge en-badge">EN</span>
@@ -153,12 +313,21 @@ function FormNode({ path, value, onChange }) {
 
       // A3. Primitive localized leaf: {en: "string", ta: "string"}
       const label = formatLabel(path);
+      const enMissing = !enVal;
+      const taMissing = !taVal;
       const long = isLongField(path) ||
         (typeof enVal === 'string' && enVal.length > 80) ||
         (typeof taVal === 'string' && taVal.length > 80);
       return (
         <div className="form-group localized-group">
-          {label && <label className="field-label">{label}</label>}
+          <div className="field-label-row">
+            {label && <label className="field-label">{label}</label>}
+            {(enMissing || taMissing) && (
+              <span className="missing-badge">
+                ⚠️ Missing {enMissing && taMissing ? 'EN & TA' : enMissing ? 'EN' : 'TA'}
+              </span>
+            )}
+          </div>
           <div className="locale-fields-grid">
             <div className="locale-input-wrapper">
               <span className="locale-badge en-badge">EN</span>
@@ -186,30 +355,28 @@ function FormNode({ path, value, onChange }) {
     }
 
     // ── A4. Regular nested object ──────────────────────────────────────────
-    const depth = path ? path.split('.').length : 0;
     const children = keys.map(k => (
       <FormNode
         key={k}
         path={path ? `${path}.${k}` : k}
         value={value[k]}
         onChange={(nv) => onChange({ ...value, [k]: nv })}
+        depth={depth + 1}
       />
     ));
 
     if (depth === 0) return <div className="nested-fields-wrapper">{children}</div>;
     if (depth === 1) {
       return (
-        <div className="form-section-card card-panel">
-          <h3 className="section-title-header">{formatLabel(path)}</h3>
-          <div className="section-fields-container">{children}</div>
-        </div>
+        <CollapsibleSection title={formatLabel(path)}>
+          {children}
+        </CollapsibleSection>
       );
     }
     return (
-      <div className="sub-section-group">
-        <h4 className="sub-section-title">{formatLabel(path)}</h4>
-        <div className="sub-section-body">{children}</div>
-      </div>
+      <CollapsibleSubSection label={formatLabel(path)} depth={depth}>
+        {children}
+      </CollapsibleSubSection>
     );
   }
 
@@ -660,29 +827,29 @@ export default function PagesManagementPage() {
         )}
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         .pages-container {
           max-width: 100%;
           margin: 0 auto;
           padding: 0 10px;
         }
-        .page-header-banner {
+        .pages-container .page-header-banner {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-bottom: 24px;
         }
-        .page-title {
+        .pages-container .page-title {
           font-size: 24px;
           font-weight: 800;
           color: #0F172A;
         }
-        .page-subtitle {
+        .pages-container .page-subtitle {
           font-size: 14px;
           color: #64748B;
           margin-top: 4px;
         }
-        .btn-preview-toggle {
+        .pages-container .btn-preview-toggle {
           background-color: #F1F5F9;
           color: #334155;
           border: 1px solid #CBD5E1;
@@ -693,29 +860,29 @@ export default function PagesManagementPage() {
           cursor: pointer;
           transition: all 0.2s;
         }
-        .btn-preview-toggle:hover {
+        .pages-container .btn-preview-toggle:hover {
           background-color: #E2E8F0;
         }
-        .btn-preview-toggle.active {
+        .pages-container .btn-preview-toggle.active {
           background-color: #EDF9FC;
           color: #00A8BC;
           border-color: #B2E5EE;
         }
-        .pages-layout-grid {
+        .pages-container .pages-layout-grid {
           display: grid;
           grid-template-columns: 240px 1fr;
           gap: 20px;
           align-items: start;
         }
-        .pages-layout-grid.preview-active {
+        .pages-container .pages-layout-grid.preview-active {
           grid-template-columns: 200px 1fr 1fr;
         }
-        .slugs-list {
+        .pages-container .slugs-list {
           display: flex;
           flex-direction: column;
           gap: 6px;
         }
-        .slug-btn {
+        .pages-container .slug-btn {
           text-align: left;
           background: transparent;
           border: none;
@@ -727,21 +894,21 @@ export default function PagesManagementPage() {
           cursor: pointer;
           transition: all 0.2s;
         }
-        .slug-btn:hover {
+        .pages-container .slug-btn:hover {
           background-color: #F1F5F9;
           color: #00A8BC;
         }
-        .slug-btn.active {
+        .pages-container .slug-btn.active {
           background-color: #EDF9FC;
           color: #00A8BC;
         }
-        .editor-tabs {
+        .pages-container .editor-tabs {
           display: flex;
           border-bottom: 1px solid #E2E8F0;
           margin-bottom: 24px;
           gap: 16px;
         }
-        .tab-btn {
+        .pages-container .tab-btn {
           background: transparent;
           border: none;
           padding: 10px 4px;
@@ -752,49 +919,49 @@ export default function PagesManagementPage() {
           cursor: pointer;
           transition: all 0.2s;
         }
-        .tab-btn:hover {
+        .pages-container .tab-btn:hover {
           color: #0F172A;
         }
-        .tab-btn.active {
+        .pages-container .tab-btn.active {
           color: #00A8BC;
           border-bottom-color: #00A8BC;
         }
-        .alert {
+        .pages-container .alert {
           padding: 12px 16px;
           border-radius: 8px;
           margin-bottom: 20px;
           font-size: 14px;
           font-weight: 500;
         }
-        .alert-error {
+        .pages-container .alert-error {
           background-color: #FEE2E2;
           color: #991B1B;
           border: 1px solid #FCA5A5;
         }
-        .alert-success {
+        .pages-container .alert-success {
           background-color: #DCFCE7;
           color: #15803D;
           border: 1px solid #86EFAC;
         }
-        .loading-state {
+        .pages-container .loading-state {
           text-align: center;
           padding: 60px;
           color: #64748B;
           font-weight: 500;
         }
-        .page-form {
+        .pages-container .page-form {
           display: flex;
           flex-direction: column;
           gap: 24px;
         }
-        .form-section-card {
+        .pages-container .form-section-card {
           margin-bottom: 20px;
           padding: 20px;
           border: 1px solid #E2E8F0;
           border-radius: 12px;
           background-color: #ffffff;
         }
-        .section-title-header {
+        .pages-container .section-title-header {
           font-size: 14px;
           font-weight: 800;
           color: #0F172A;
@@ -804,26 +971,41 @@ export default function PagesManagementPage() {
           padding-bottom: 8px;
           border-bottom: 1px solid #F1F5F9;
         }
-        .form-row {
+        .pages-container .form-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 16px;
           margin-bottom: 16px;
         }
-        .form-group {
+        .pages-container .form-group {
           display: flex;
           flex-direction: column;
           gap: 6px;
           margin-bottom: 14px;
         }
-        .field-label {
+        .pages-container .field-label-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 4px;
+        }
+        .pages-container .field-label {
           font-size: 12px;
           font-weight: 700;
           color: #475569;
           text-transform: uppercase;
           letter-spacing: 0.2px;
         }
-        .form-group input, .form-group textarea {
+        .pages-container .missing-badge {
+          font-size: 10px;
+          font-weight: 700;
+          background-color: #FFF5F5;
+          color: #E53E3E;
+          border: 1px solid #FEB2B2;
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+        .pages-container .form-group input, .pages-container .form-group textarea {
           padding: 10px 12px;
           border: 1px solid #CBD5E1;
           border-radius: 8px;
@@ -832,55 +1014,62 @@ export default function PagesManagementPage() {
           background-color: #ffffff;
           transition: all 0.2s;
         }
-        .form-group input:focus, .form-group textarea:focus {
+        .pages-container .form-group input:focus, .pages-container .form-group textarea:focus {
           outline: none;
           border-color: #00A8BC;
           box-shadow: 0 0 0 3px rgba(0, 168, 188, 0.1);
         }
-        .localized-group {
+        .pages-container .localized-group {
           background-color: #F8FAFC;
           padding: 14px;
           border-radius: 10px;
           border: 1px solid #E2E8F0;
           margin-bottom: 12px;
         }
-        .locale-bucket-group {
+        .pages-container .locale-bucket-group {
           display: flex;
           flex-direction: column;
           gap: 10px;
         }
-        .sub-section-group {
+        .pages-container .sub-section-group {
           margin-bottom: 16px;
           padding: 14px;
           background-color: #FAFAFA;
           border: 1px solid #E2E8F0;
           border-radius: 10px;
-          border-left: 3px solid #00A8BC;
         }
-        .sub-section-title {
+        .pages-container .sub-section-header {
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          user-select: none;
+          padding-bottom: 6px;
+          border-bottom: 1px solid #F1F5F9;
+        }
+        .pages-container .sub-section-title {
           font-size: 12px;
           font-weight: 800;
           color: #00A8BC;
           text-transform: uppercase;
           letter-spacing: 0.5px;
-          margin-bottom: 12px;
         }
-        .sub-section-body {
+        .pages-container .sub-section-body {
           display: flex;
           flex-direction: column;
           gap: 8px;
         }
-        .locale-fields-grid {
+        .pages-container .locale-fields-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 12px;
         }
-        .locale-input-wrapper {
+        .pages-container .locale-input-wrapper {
           position: relative;
           display: flex;
           align-items: stretch;
         }
-        .locale-badge {
+        .pages-container .locale-badge {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -893,17 +1082,17 @@ export default function PagesManagementPage() {
           border-bottom-left-radius: 8px;
           user-select: none;
         }
-        .en-badge {
+        .pages-container .en-badge {
           background-color: #EFF6FF;
           color: #1D4ED8;
           border-color: #BFDBFE;
         }
-        .ta-badge {
+        .pages-container .ta-badge {
           background-color: #F0FDF4;
           color: #15803D;
           border-color: #BBF7D0;
         }
-        .locale-input-wrapper input, .locale-input-wrapper textarea {
+        .pages-container .locale-input-wrapper input, .pages-container .locale-input-wrapper textarea {
           flex: 1;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
@@ -911,10 +1100,10 @@ export default function PagesManagementPage() {
           border: 1px solid #CBD5E1;
           font-size: 14px;
         }
-        .locale-input-wrapper textarea {
+        .pages-container .locale-input-wrapper textarea {
           resize: vertical;
         }
-        .json-textarea {
+        .pages-container .json-textarea {
           font-family: 'Fira Code', 'Courier New', Courier, monospace;
           font-size: 13px;
           line-height: 1.6;
@@ -923,26 +1112,27 @@ export default function PagesManagementPage() {
           border-color: #1E293B !important;
           border-radius: 8px;
         }
-        .repeater-field-container {
+        .pages-container .repeater-field-container {
           background-color: #F1F5F9;
           padding: 16px;
           border-radius: 12px;
           border: 1px dashed #CBD5E1;
           margin-bottom: 20px;
         }
-        .repeater-header {
+        .pages-container .repeater-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-bottom: 12px;
         }
-        .repeater-title {
+        .pages-container .repeater-title {
           font-size: 13px;
           font-weight: 800;
           color: #334155;
           text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
-        .btn-add-item {
+        .pages-container .btn-add-item {
           background-color: #ffffff;
           color: #00A8BC;
           border: 1px solid #00A8BC;
@@ -953,48 +1143,28 @@ export default function PagesManagementPage() {
           cursor: pointer;
           transition: all 0.2s;
         }
-        .btn-add-item:hover {
+        .pages-container .btn-add-item:hover {
           background-color: #EDF9FC;
         }
-        .repeater-card {
+        .pages-container .repeater-card {
           background-color: #ffffff;
-          padding: 14px;
-          border-radius: 8px;
           margin-bottom: 12px;
-          border: 1px solid #E2E8F0;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-        .repeater-item-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 10px;
-          padding-bottom: 6px;
-          border-bottom: 1px solid #F1F5F9;
+        .pages-container .repeater-card:active {
+          cursor: grabbing;
+          transform: scale(0.99);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
-        .repeater-item-index {
-          font-size: 12px;
-          font-weight: 800;
-          color: #64748B;
-        }
-        .btn-remove-item {
-          background: transparent;
-          border: none;
-          color: #EF4444;
-          font-size: 11px;
-          font-weight: 700;
-          cursor: pointer;
-        }
-        .btn-remove-item:hover {
-          text-decoration: underline;
-        }
-        .repeater-empty-state {
+        .pages-container .repeater-empty-state {
           text-align: center;
           padding: 20px;
           color: #64748B;
           font-size: 13px;
           font-style: italic;
         }
-        .form-submit-bar {
+        .pages-container .form-submit-bar {
           position: sticky;
           bottom: 0;
           background: rgba(255, 255, 255, 0.95);
@@ -1005,7 +1175,7 @@ export default function PagesManagementPage() {
           justify-content: flex-end;
           z-index: 10;
         }
-        .btn-save-action {
+        .pages-container .btn-save-action {
           padding: 12px 24px;
           font-size: 14px;
           font-weight: 800;
@@ -1017,12 +1187,12 @@ export default function PagesManagementPage() {
           transition: all 0.2s;
           box-shadow: 0 4px 6px -1px rgba(0, 168, 188, 0.25);
         }
-        .btn-save-action:hover {
+        .pages-container .btn-save-action:hover {
           background-color: #008E9F;
         }
 
         /* Live Preview Styles */
-        .preview-simulator-panel {
+        .pages-container .preview-simulator-panel {
           border-left: 1px solid #E2E8F0;
           display: flex;
           flex-direction: column;
@@ -1032,7 +1202,7 @@ export default function PagesManagementPage() {
           padding: 14px;
           background-color: #F8FAFC;
         }
-        .preview-header-bar {
+        .pages-container .preview-header-bar {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -1040,7 +1210,7 @@ export default function PagesManagementPage() {
           border-bottom: 1px solid #E2E8F0;
           margin-bottom: 12px;
         }
-        .preview-indicator-dot {
+        .pages-container .preview-indicator-dot {
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -1048,17 +1218,17 @@ export default function PagesManagementPage() {
           display: inline-block;
           margin-right: 6px;
         }
-        .preview-title {
+        .pages-container .preview-title {
           font-size: 14px;
           font-weight: 800;
           color: #0F172A;
           flex: 1;
         }
-        .device-size-selector {
+        .pages-container .device-size-selector {
           display: flex;
           gap: 6px;
         }
-        .device-btn {
+        .pages-container .device-btn {
           background: #ffffff;
           border: 1px solid #CBD5E1;
           padding: 4px 8px;
@@ -1067,12 +1237,12 @@ export default function PagesManagementPage() {
           border-radius: 4px;
           cursor: pointer;
         }
-        .device-btn.active {
+        .pages-container .device-btn.active {
           background: #00A8BC;
           color: #ffffff;
           border-color: #00A8BC;
         }
-        .simulator-viewport-container {
+        .pages-container .simulator-viewport-container {
           flex: 1;
           display: flex;
           justify-content: center;
@@ -1082,22 +1252,22 @@ export default function PagesManagementPage() {
           border-radius: 8px;
           padding: 10px;
         }
-        .simulator-frame-wrapper {
+        .pages-container .simulator-frame-wrapper {
           height: 100%;
           transition: all 0.3s ease;
           background: #ffffff;
           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        .simulator-frame-wrapper.desktop {
+        .pages-container .simulator-frame-wrapper.desktop {
           width: 100%;
         }
-        .simulator-frame-wrapper.tablet {
+        .pages-container .simulator-frame-wrapper.tablet {
           width: 768px;
           max-width: 100%;
           border-radius: 12px;
           border: 8px solid #334155;
         }
-        .simulator-frame-wrapper.mobile {
+        .pages-container .simulator-frame-wrapper.mobile {
           width: 375px;
           max-width: 100%;
           height: 85%;
