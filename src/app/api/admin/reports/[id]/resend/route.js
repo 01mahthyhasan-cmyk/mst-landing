@@ -4,7 +4,7 @@ import Report from '@/models/Report';
 import { adminGuard, apiOk, apiError } from '@/lib/apiHelpers';
 import { writeAuditLog } from '@/lib/auditLog';
 import { sendSms, checkSmsRateLimit, recordSmsSend } from '@/lib/sms';
-import { maskPhone } from '../upload/route';
+import { maskPhone } from '@/app/api/admin/reports/upload/route';
 
 // POST /api/admin/reports/:id/resend
 export async function POST(request, { params }) {
