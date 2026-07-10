@@ -26,28 +26,34 @@ if (isConfigured) {
 }
 
 /**
- * Upload a file buffer to Cloudinary with 'authenticated' type (medical reports).
+ * Upload a medical report file buffer to Cloudinary with 'authenticated' delivery.
+ * PDFs → resource_type 'raw'  (stored as-is, served as a file, URL uses /raw/)
+ * Images → resource_type 'image' (processed by Cloudinary pipeline, URL uses /image/)
+ * Using explicit types instead of 'auto' prevents non-deterministic storage behaviour.
  * @param {Buffer} fileBuffer
- * @param {string} folder
+ * @param {string} folder   - Cloudinary folder path (must NOT contain '+' or special chars)
+ * @param {'pdf'|'image'}  fileType
  * @returns {Promise<object>} Cloudinary upload result
  */
-export function uploadToCloudinary(fileBuffer, folder) {
+export function uploadToCloudinary(fileBuffer, folder, fileType = 'image') {
   const uniqueName = `report_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`;
+  // PDFs are stored as 'raw' (file delivery). Images are stored as 'image'.
+  const resourceType = fileType === 'pdf' ? 'raw' : 'image';
 
   if (!isConfigured) {
     // DEV ONLY mock — never reached in production (throws above)
-    console.warn(`[DEV MOCK] Cloudinary upload skipped. Returning fake public_id: ${folder}/${uniqueName}`);
+    console.warn(`[DEV MOCK] Cloudinary upload skipped. public_id: ${folder}/${uniqueName}`);
     return Promise.resolve({
       public_id: `${folder}/${uniqueName}`,
-      resource_type: 'raw',
-      format: 'pdf',
+      resource_type: resourceType,
+      format: fileType === 'pdf' ? 'pdf' : 'jpg',
     });
   }
 
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
       {
-        resource_type: 'auto',
+        resource_type: resourceType,   // explicit — never 'auto'
         type: 'authenticated',
         folder,
         public_id: uniqueName,
