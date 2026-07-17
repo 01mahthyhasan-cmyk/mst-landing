@@ -1,6 +1,7 @@
 import { connectDB } from '@/lib/db';
 import { adminGuard, apiOk, apiError, parseBody } from '@/lib/apiHelpers';
 import { writeAuditLog } from '@/lib/auditLog';
+import { revalidatePath } from 'next/cache';
 
 /**
  * Creates standard GET (list) + POST (create) handlers for a collection.
@@ -59,6 +60,7 @@ export function makeListCreateHandlers(Model, collectionName, opts = {}) {
         action: 'content_create', targetCollection: collectionName,
         targetId: item._id.toString(), ipAddress: ip,
       });
+      revalidatePath('/', 'layout');
       return apiOk({ item }, 201);
     } catch (err) {
       if (err.code === 11000) return apiError('A document with this slug already exists', 409);
@@ -116,6 +118,7 @@ export function makeItemHandlers(Model, collectionName) {
         targetId: id, ipAddress: ip,
       });
 
+      revalidatePath('/', 'layout');
       return apiOk({ item });
     } catch (err) {
       if (err.code === 11000) return apiError('Slug conflict', 409);
@@ -138,6 +141,7 @@ export function makeItemHandlers(Model, collectionName) {
       targetId: id, ipAddress: ip,
     });
 
+    revalidatePath('/', 'layout');
     return apiOk({ message: 'Deleted' });
   }
 

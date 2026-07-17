@@ -60,6 +60,7 @@ export async function getDictionary(locale) {
   try {
     const { connectDB } = await import('./db');
     await connectDB();
+    console.log(`[getDictionary] Fetching dynamic DB content for locale: ${locale}`);
 
     // Import models dynamically to avoid circular references/build issues
     const { default: SiteSettings } = await import('../models/SiteSettings');
@@ -87,6 +88,7 @@ export async function getDictionary(locale) {
     try {
       const { cookies } = await import('next/headers');
       const cookieStore = await cookies();
+      const token = cookieStore.get('mst_preview_token')?.value;
       if (token) {
         // Decode token using our jose-based helper
         const { verifyPreviewToken } = await import('./auth.js');
@@ -207,8 +209,8 @@ export async function getDictionary(locale) {
       const projected = projectLocale(pageData, locale);
       if (projected.metaTitle) dict[prefix].metaTitle = projected.metaTitle;
       if (projected.metaDescription) {
-        if (dict[prefix].hero) dict[prefix].hero.description = projected.metaDescription;
-        else dict[prefix].description = projected.metaDescription;
+        // Store as the canonical metaDescription field used by generateMetadata()
+        dict[prefix].metaDescription = projected.metaDescription;
       }
       if (projected.breadcrumb) {
         dict[prefix].breadcrumb = {
@@ -221,6 +223,7 @@ export async function getDictionary(locale) {
         dict[prefix] = deepMerge(dict[prefix], projected.content);
       }
     });
+    console.log(`[getDictionary] Merged Pages. Home metaTitle is: "${dict.homePage?.metaTitle}"`);
 
     // Special override mapping for services, blog, case-study, team single page sub-blocks
     const singlePages = [

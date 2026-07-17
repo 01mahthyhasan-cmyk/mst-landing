@@ -2,6 +2,7 @@ import { connectDB } from '@/lib/db';
 import SiteSettings from '@/models/SiteSettings';
 import { adminGuard, apiOk, apiError, parseBody } from '@/lib/apiHelpers';
 import { writeAuditLog } from '@/lib/auditLog';
+import { revalidatePath } from 'next/cache';
 
 export async function GET(request) {
   const { error } = await adminGuard(request, 'read');
@@ -30,6 +31,8 @@ export async function PUT(request) {
     action: 'settings_update', targetCollection: 'site_settings',
     targetId: 'singleton', ipAddress: ip,
   });
+
+  revalidatePath('/', 'layout');
 
   return apiOk({ settings });
 }

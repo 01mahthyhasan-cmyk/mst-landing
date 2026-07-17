@@ -1,11 +1,14 @@
 import HtmlContent from '../../components/HtmlContent';
 import { getDictionary } from '../../lib/getDictionary';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
   return {
     title: dict.homePage.metaTitle,
+    description: dict.homePage.metaDescription,
   };
 }
 
