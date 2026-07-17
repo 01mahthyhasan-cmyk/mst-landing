@@ -19,15 +19,74 @@ const PAGES = [
   { slug: '404', label: '404 Error Page' }
 ];
 
+// [ignoring loop detection]
 // ─── Module-level helpers (stable references = no focus loss on re-render) ────
+
+const LABEL_DICTIONARY = {
+  // Sections
+  'hero': 'Hero Banner',
+  'about': 'About Us Section',
+  'services': 'Services Section',
+  'whyChooseUs': 'Why Choose Us',
+  'testimonials': 'Testimonials Section',
+  'team': 'Our Team Section',
+  'caseStudy': 'Case Studies Section',
+  'blog': 'Blog Posts Section',
+  'pricing': 'Pricing Plans',
+  'faqs': 'Frequently Asked Questions',
+  'contact': 'Contact Details',
+  
+  // Sub-keys / Fields
+  'heading': 'Main Heading',
+  'subTitle': 'Sub Title',
+  'description': 'Description',
+  'author': 'Author / Doctor Info',
+  'name': 'Name',
+  'role': 'Role / Job Title',
+  'quote': 'Quote',
+  'items': 'List Items',
+  'members': 'Team Members',
+  'posts': 'Blog Posts',
+  'ctaButton': 'Call-To-Action Button Text',
+  'ctaText': 'Call-To-Action Text',
+  'learnMoreButton': 'Learn More Button Text',
+  'bookAppointmentButton': 'Book Appointment Button Text',
+  'contactButton': 'Contact Button Text',
+  'reviewCount': 'Reviews Subtitle',
+  'imageTitle': 'Image Badge Label',
+  
+  // Specific blocks
+  'emergencySupport': 'Emergency Support Info',
+  'medicalDepartments': 'Medical Departments Badge',
+  'yearsExperience': 'Years of Experience Counter',
+  'viewAllLink': 'View All Button Text',
+  'footerText': 'Footer Tagline / Text',
+};
+
+function getReadableLabel(key) {
+  if (!key) return '';
+  if (!isNaN(key)) {
+    return `Item #${parseInt(key, 10) + 1}`;
+  }
+  if (LABEL_DICTIONARY[key]) {
+    return LABEL_DICTIONARY[key];
+  }
+  return key
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/[_-]/g, ' ')
+    .trim()
+    .replace(/^\w/, c => c.toUpperCase());
+}
+
+function getReadableBreadcrumb(path) {
+  if (!path) return '';
+  return path.split('.').map(getReadableLabel).join(' ➔ ');
+}
 
 function formatLabel(key) {
   if (!key) return '';
   const last = key.split('.').pop() || key;
-  return last
-    .replace(/([A-Z])/g, ' $1')
-    .replace(/^./, s => s.toUpperCase())
-    .trim();
+  return getReadableLabel(last);
 }
 
 function isLongField(path) {
@@ -38,9 +97,59 @@ function isLongField(path) {
     p.includes('heading') || p.includes('caption');
 }
 
+function nodeMatchesSearch(path, value, query) {
+  if (!query) return true;
+  const q = query.toLowerCase();
+
+  // Check if raw path or readable breadcrumb matches
+  if (path.toLowerCase().includes(q) || getReadableBreadcrumb(path).toLowerCase().includes(q)) {
+    return true;
+  }
+
+  // If value is object, check if any of its children match
+  if (typeof value === 'object' && value !== null) {
+    return Object.keys(value).some(key => {
+      const childPath = path ? `${path}.${key}` : key;
+      return nodeMatchesSearch(childPath, value[key], query);
+    });
+  }
+
+  return false;
+}
+
 // Collapsible nested section component for depth > 0
-function CollapsibleSubSection({ label, children, depth }) {
+function CollapsibleSubSection({ label, path, children, depth, searchQuery, value }) {
   const [expanded, setExpanded] = useState(true);
+  const [prevSearchQuery, setPrevSearchQuery] = useState('');
+  const [savedExpanded, setSavedExpanded] = useState(true);
+
+  // Sync with search auto-expansion
+  useEffect(() => {
+    if (searchQuery) {
+      if (!prevSearchQuery) {
+        setSavedExpanded(expanded);
+      }
+      const hasMatch = nodeMatchesSearch(path, value, searchQuery);
+      if (hasMatch) {
+        setExpanded(true);
+      }
+    } else if (prevSearchQuery && !searchQuery) {
+      setExpanded(savedExpanded);
+    }
+    setPrevSearchQuery(searchQuery);
+  }, [searchQuery, path, value]);
+
+  // Click-to-edit listener
+  useEffect(() => {
+    const handleExpand = (e) => {
+      const targetPath = e.detail?.path;
+      if (targetPath && path && (targetPath === path || targetPath.startsWith(path + '.'))) {
+        setExpanded(true);
+      }
+    };
+    window.addEventListener('cms-expand-path', handleExpand);
+    return () => window.removeEventListener('cms-expand-path', handleExpand);
+  }, [path]);
 
   return (
     <div className="sub-section-group" style={{
@@ -59,8 +168,38 @@ function CollapsibleSubSection({ label, children, depth }) {
 }
 
 // Collapsible top-level section container for Pages Editor
-function CollapsibleSection({ title, children }) {
+function CollapsibleSection({ title, path, children, searchQuery, value }) {
   const [expanded, setExpanded] = useState(true);
+  const [prevSearchQuery, setPrevSearchQuery] = useState('');
+  const [savedExpanded, setSavedExpanded] = useState(true);
+
+  // Sync with search auto-expansion
+  useEffect(() => {
+    if (searchQuery) {
+      if (!prevSearchQuery) {
+        setSavedExpanded(expanded);
+      }
+      const hasMatch = nodeMatchesSearch(path, value, searchQuery);
+      if (hasMatch) {
+        setExpanded(true);
+      }
+    } else if (prevSearchQuery && !searchQuery) {
+      setExpanded(savedExpanded);
+    }
+    setPrevSearchQuery(searchQuery);
+  }, [searchQuery, path, value]);
+
+  // Click-to-edit listener
+  useEffect(() => {
+    const handleExpand = (e) => {
+      const targetPath = e.detail?.path;
+      if (targetPath && path && (targetPath === path || targetPath.startsWith(path + '.'))) {
+        setExpanded(true);
+      }
+    };
+    window.addEventListener('cms-expand-path', handleExpand);
+    return () => window.removeEventListener('cms-expand-path', handleExpand);
+  }, [path]);
 
   return (
     <section className={`form-section-card card-panel ${expanded ? 'is-expanded' : 'is-collapsed'}`}>
@@ -80,8 +219,10 @@ function CollapsibleSection({ title, children }) {
 }
 
 // Collapsible RepeaterCard with Drag and Drop capabilities
-function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, totalItems }) {
+function RepeaterCard({ item, index, cardPath, onRemove, onDuplicate, onChange, onMove, totalItems, searchQuery, depth }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [prevSearchQuery, setPrevSearchQuery] = useState('');
+  const [savedExpanded, setSavedExpanded] = useState(false);
 
   const getSummary = () => {
     if (!item) return `Item #${index + 1}`;
@@ -99,6 +240,34 @@ function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, to
     }
     return summary;
   };
+
+  // Sync with search auto-expansion
+  useEffect(() => {
+    if (searchQuery) {
+      if (!prevSearchQuery) {
+        setSavedExpanded(isExpanded);
+      }
+      const hasMatch = nodeMatchesSearch(cardPath, item, searchQuery);
+      if (hasMatch) {
+        setIsExpanded(true);
+      }
+    } else if (prevSearchQuery && !searchQuery) {
+      setIsExpanded(savedExpanded);
+    }
+    setPrevSearchQuery(searchQuery);
+  }, [searchQuery, cardPath, item]);
+
+  // Click-to-edit listener
+  useEffect(() => {
+    const handleExpand = (e) => {
+      const targetPath = e.detail?.path;
+      if (targetPath && cardPath && (targetPath === cardPath || targetPath.startsWith(cardPath + '.'))) {
+        setIsExpanded(true);
+      }
+    };
+    window.addEventListener('cms-expand-path', handleExpand);
+    return () => window.removeEventListener('cms-expand-path', handleExpand);
+  }, [cardPath]);
 
   const hrefVal = item?.href || item?.link || item?.url || '';
 
@@ -156,7 +325,7 @@ function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, to
       </div>
       {isExpanded && (
         <div className="repeater-card-body" style={{ padding: '14px' }}>
-          <FormNode path="" value={item} onChange={onChange} depth={0} />
+          <FormNode path={cardPath} value={item} onChange={onChange} depth={depth + 1} searchQuery={searchQuery} />
         </div>
       )}
     </div>
@@ -164,7 +333,7 @@ function RepeaterCard({ item, index, onRemove, onDuplicate, onChange, onMove, to
 }
 
 // Stable RepeaterField component
-function RepeaterField({ label, value, onChange }) {
+function RepeaterField({ label, path, value, onChange, searchQuery, depth }) {
   const items = Array.isArray(value) ? value : [];
 
   const handleAdd = () => {
@@ -218,18 +387,28 @@ function RepeaterField({ label, value, onChange }) {
         <button type="button" onClick={handleAdd} className="btn-add-item">+ Add Entry</button>
       </div>
       <div className="repeater-list">
-        {items.map((item, idx) => (
-          <RepeaterCard
-            key={idx}
-            item={item}
-            index={idx}
-            onRemove={() => handleRemove(idx)}
-            onDuplicate={() => handleDuplicate(idx)}
-            onChange={(v) => handleChange(idx, v)}
-            onMove={handleMove}
-            totalItems={items.length}
-          />
-        ))}
+        {items.map((item, idx) => {
+          const cardPath = path ? `${path}.${idx}` : `${idx}`;
+          // Filter individual cards within a list if query active
+          if (searchQuery && !nodeMatchesSearch(cardPath, item, searchQuery)) {
+            return null;
+          }
+          return (
+            <RepeaterCard
+              key={idx}
+              item={item}
+              index={idx}
+              cardPath={cardPath}
+              onRemove={() => handleRemove(idx)}
+              onDuplicate={() => handleDuplicate(idx)}
+              onChange={(v) => handleChange(idx, v)}
+              onMove={handleMove}
+              totalItems={items.length}
+              searchQuery={searchQuery}
+              depth={depth}
+            />
+          );
+        })}
         {items.length === 0 && (
           <div className="repeater-empty-state">No items yet. Click "Add Entry" to begin.</div>
         )}
@@ -239,8 +418,13 @@ function RepeaterField({ label, value, onChange }) {
 }
 
 // Stable FormNode component
-function FormNode({ path, value, onChange, depth = 0 }) {
+function FormNode({ path, value, onChange, depth = 0, searchQuery }) {
   if (value === null || value === undefined) return null;
+
+  // Filter check
+  if (searchQuery && !nodeMatchesSearch(path, value, searchQuery)) {
+    return null;
+  }
 
   // ── A. Object node ─────────────────────────────────────────────────────────
   if (typeof value === 'object' && !Array.isArray(value)) {
@@ -261,16 +445,18 @@ function FormNode({ path, value, onChange, depth = 0 }) {
           <div className="locale-bucket-group">
             {fieldKeys.map(fk => {
               const fVal = { en: enVal?.[fk], ta: taVal?.[fk] };
+              const childPath = path ? `${path}.${fk}` : fk;
               return (
                 <FormNode
                   key={fk}
-                  path={path ? `${path}.${fk}` : fk}
+                  path={childPath}
                   value={fVal}
                   onChange={(newFVal) => onChange({
                     en: { ...(enVal || {}), [fk]: newFVal.en },
                     ta: { ...(taVal || {}), [fk]: newFVal.ta },
                   })}
                   depth={depth}
+                  searchQuery={searchQuery}
                 />
               );
             })}
@@ -284,7 +470,12 @@ function FormNode({ path, value, onChange, depth = 0 }) {
         const enMissing = !enVal || enVal.length === 0;
         const taMissing = !taVal || taVal.length === 0;
         return (
-          <div className="form-group localized-group">
+          <div className="form-group localized-group" data-field-path={path}>
+            {path && path.includes('.') && (
+              <div className="field-breadcrumb" style={{ fontSize: '11px', color: '#94A3B8', marginBottom: '2px', fontWeight: '500' }}>
+                {getReadableBreadcrumb(path)}
+              </div>
+            )}
             <div className="field-label-row">
               {label && <label className="field-label">{label}</label>}
               {(enMissing || taMissing) && (
@@ -294,13 +485,13 @@ function FormNode({ path, value, onChange, depth = 0 }) {
               )}
             </div>
             <div className="locale-fields-grid">
-              <div className="locale-input-wrapper">
+              <div className="locale-input-wrapper" data-field-path={`${path}.en`}>
                 <span className="locale-badge en-badge">EN</span>
                 <textarea rows={3} value={(enVal || []).join('\n')}
                   onChange={e => onChange({ ...value, en: e.target.value.split('\n') })}
                   placeholder="One item per line…" />
               </div>
-              <div className="locale-input-wrapper">
+              <div className="locale-input-wrapper" data-field-path={`${path}.ta`}>
                 <span className="locale-badge ta-badge">TA</span>
                 <textarea rows={3} value={(taVal || []).join('\n')}
                   onChange={e => onChange({ ...value, ta: e.target.value.split('\n') })}
@@ -319,7 +510,12 @@ function FormNode({ path, value, onChange, depth = 0 }) {
         (typeof enVal === 'string' && enVal.length > 80) ||
         (typeof taVal === 'string' && taVal.length > 80);
       return (
-        <div className="form-group localized-group">
+        <div className="form-group localized-group" data-field-path={path}>
+          {path && path.includes('.') && (
+            <div className="field-breadcrumb" style={{ fontSize: '11px', color: '#94A3B8', marginBottom: '2px', fontWeight: '500' }}>
+              {getReadableBreadcrumb(path)}
+            </div>
+          )}
           <div className="field-label-row">
             {label && <label className="field-label">{label}</label>}
             {(enMissing || taMissing) && (
@@ -329,7 +525,7 @@ function FormNode({ path, value, onChange, depth = 0 }) {
             )}
           </div>
           <div className="locale-fields-grid">
-            <div className="locale-input-wrapper">
+            <div className="locale-input-wrapper" data-field-path={`${path}.en`}>
               <span className="locale-badge en-badge">EN</span>
               {long
                 ? <textarea rows={3} value={typeof enVal === 'string' ? enVal : ''}
@@ -339,7 +535,7 @@ function FormNode({ path, value, onChange, depth = 0 }) {
                     onChange={e => onChange({ ...value, en: e.target.value })}
                     placeholder="English…" />}
             </div>
-            <div className="locale-input-wrapper">
+            <div className="locale-input-wrapper" data-field-path={`${path}.ta`}>
               <span className="locale-badge ta-badge">TA</span>
               {long
                 ? <textarea rows={3} value={typeof taVal === 'string' ? taVal : ''}
@@ -362,19 +558,20 @@ function FormNode({ path, value, onChange, depth = 0 }) {
         value={value[k]}
         onChange={(nv) => onChange({ ...value, [k]: nv })}
         depth={depth + 1}
+        searchQuery={searchQuery}
       />
     ));
 
     if (depth === 0) return <div className="nested-fields-wrapper">{children}</div>;
     if (depth === 1) {
       return (
-        <CollapsibleSection title={formatLabel(path)}>
+        <CollapsibleSection title={formatLabel(path)} path={path} searchQuery={searchQuery} value={value}>
           {children}
         </CollapsibleSection>
       );
     }
     return (
-      <CollapsibleSubSection label={formatLabel(path)} depth={depth}>
+      <CollapsibleSubSection label={formatLabel(path)} path={path} depth={depth} searchQuery={searchQuery} value={value}>
         {children}
       </CollapsibleSubSection>
     );
@@ -382,12 +579,17 @@ function FormNode({ path, value, onChange, depth = 0 }) {
 
   // ── B. Array ───────────────────────────────────────────────────────────────
   if (Array.isArray(value)) {
-    return <RepeaterField label={formatLabel(path)} value={value} onChange={onChange} />;
+    return <RepeaterField label={formatLabel(path)} path={path} value={value} onChange={onChange} searchQuery={searchQuery} depth={depth} />;
   }
 
   // ── C. Scalar ─────────────────────────────────────────────────────────────
   return (
-    <div className="form-group">
+    <div className="form-group" data-field-path={path}>
+      {path && path.includes('.') && (
+        <div className="field-breadcrumb" style={{ fontSize: '11px', color: '#94A3B8', marginBottom: '2px', fontWeight: '500' }}>
+          {getReadableBreadcrumb(path)}
+        </div>
+      )}
       <label className="field-label">{formatLabel(path)}</label>
       <input type="text" value={value !== null ? String(value) : ''}
         onChange={e => onChange(e.target.value)} />
@@ -402,6 +604,59 @@ export default function PagesManagementPage() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+
+  // Search / Filter states
+  const [searchVal, setSearchVal] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearchChange = (val) => {
+    setSearchVal(val);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchQuery(searchVal);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [searchVal]);
+
+  // Click-to-edit message sync listener
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.origin !== window.location.origin) return;
+      if (event.data && event.data.type === 'cms-field-clicked') {
+        const clickedPath = event.data.path;
+        console.log('[CMS Parent] Received field clicked:', clickedPath);
+        
+        // Dispatch event to expand parent sections/repeaters
+        window.dispatchEvent(new CustomEvent('cms-expand-path', { detail: { path: clickedPath } }));
+
+        // Wait for panels to expand, then scroll and highlight
+        setTimeout(() => {
+          const targetEl = document.querySelector(`[data-field-path="${clickedPath}"]`);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetEl.classList.add('cms-field-highlight');
+            setTimeout(() => {
+              targetEl.classList.remove('cms-field-highlight');
+            }, 1500);
+          } else {
+            // Fallback: search for input inside the wrapper
+            const inputEl = document.querySelector(`[data-field-input-path="${clickedPath}"]`);
+            if (inputEl) {
+              inputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              inputEl.classList.add('cms-field-highlight');
+              setTimeout(() => {
+                inputEl.classList.remove('cms-field-highlight');
+              }, 1500);
+            }
+          }
+        }, 150);
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   // Active Tab: 'form' or 'json'
   const [activeTab, setActiveTab] = useState('form');
@@ -656,6 +911,51 @@ export default function PagesManagementPage() {
               <form onSubmit={handleSave} className="page-form">
                 {activeTab === 'form' ? (
                   <div className="form-builder-area">
+                    {/* Sticky Search bar */}
+                    <div className="search-bar-container" style={{
+                      position: 'sticky',
+                      top: '0',
+                      background: '#ffffff',
+                      zIndex: 100,
+                      padding: '10px 0 16px 0',
+                      borderBottom: '1px solid #E2E8F0',
+                      marginBottom: '20px'
+                    }}>
+                      <div style={{ position: 'relative' }}>
+                        <input
+                          type="text"
+                          placeholder="🔍 Search fields by name or path..."
+                          value={searchVal}
+                          onChange={(e) => handleSearchChange(e.target.value)}
+                          style={{
+                            width: '100%',
+                            padding: '10px 12px 10px 36px',
+                            borderRadius: '8px',
+                            border: '1px solid #CBD5E1',
+                            fontSize: '14px'
+                          }}
+                        />
+                        {searchVal && (
+                          <button
+                            type="button"
+                            onClick={() => handleSearchChange('')}
+                            style={{
+                              position: 'absolute',
+                              right: '10px',
+                              top: '50%',
+                              transform: 'translateY(-50%)',
+                              background: 'transparent',
+                              border: 'none',
+                              color: '#94A3B8',
+                              cursor: 'pointer',
+                              fontSize: '14px'
+                            }}
+                          >
+                            ✖
+                          </button>
+                        )}
+                      </div>
+                    </div>
                     {/* SEO & Meta */}
                     <div className="form-section-card card-panel">
                       <h3 className="section-title-header">Search Engine Optimization (SEO)</h3>
@@ -748,6 +1048,7 @@ export default function PagesManagementPage() {
                         path=""
                         value={pageData?.content || {}}
                         onChange={handleContentChange}
+                        searchQuery={searchQuery}
                       />
                     </div>
                   </div>
@@ -1284,6 +1585,27 @@ export default function PagesManagementPage() {
           color: #64748B;
           font-style: italic;
           font-size: 13px;
+        }
+
+        @keyframes cms-pulse-glow {
+          0% {
+            outline: 3px solid rgba(0, 168, 188, 0.8);
+            box-shadow: 0 0 10px rgba(0, 168, 188, 0.5);
+          }
+          50% {
+            outline: 3px solid rgba(0, 168, 188, 0.2);
+            box-shadow: 0 0 2px rgba(0, 168, 188, 0.1);
+          }
+          100% {
+            outline: 3px solid rgba(0, 168, 188, 0.8);
+            box-shadow: 0 0 10px rgba(0, 168, 188, 0.5);
+          }
+        }
+        .cms-field-highlight {
+          animation: cms-pulse-glow 0.5s ease-in-out 3;
+          position: relative;
+          z-index: 10;
+          border-color: #00A8BC !important;
         }
       `}</style>
     </div>

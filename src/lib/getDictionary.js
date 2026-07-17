@@ -15,23 +15,47 @@ export function hasLocale(locale) {
 }
 
 // Helper to project localized {en, ta} structure to a flat value for the current locale
-function projectLocale(obj, locale) {
+function shouldSkipWrap(path) {
+  if (!path) return true;
+  const p = path.toLowerCase();
+  return p.includes('url') || p.includes('link') || p.includes('href') || 
+         p.includes('src') || p.includes('image') || p.includes('photo') || 
+         p.includes('logo') || p.includes('icon') || p.includes('avatar') || 
+         p.includes('bg') || p.includes('color') || p.includes('class') || 
+         p.includes('style') || p.includes('id') || p.startsWith('metatitle') || 
+         p.startsWith('metadescription') || p.endsWith('.en') || p.endsWith('.ta');
+}
+
+// Helper to project localized {en, ta} structure to a flat value for the current locale
+function projectLocale(obj, locale, path = '', inPreview = false, langSuffix = '') {
   if (obj === null || obj === undefined) return obj;
   if (Array.isArray(obj)) {
-    return obj.map(item => projectLocale(item, locale));
+    return obj.map((item, idx) => projectLocale(item, locale, path ? `${path}.${idx}` : `${idx}`, inPreview, langSuffix));
   }
   if (typeof obj === 'object') {
     const objKeys = Object.keys(obj);
     // Detect localized leaf: has only 'en' and/or 'ta' keys (at least one)
     const isLocalized = objKeys.length > 0 && objKeys.every(k => k === 'en' || k === 'ta') && ('en' in obj || 'ta' in obj);
     if (isLocalized) {
-      return obj[locale] !== undefined ? obj[locale] : (obj.en ?? '');
+      const val = obj[locale] !== undefined ? obj[locale] : (obj.en ?? '');
+      const langCode = obj[locale] !== undefined ? locale : 'en';
+      return projectLocale(val, locale, path, inPreview, langCode);
     }
     const result = {};
     for (const k of objKeys) {
-      result[k] = projectLocale(obj[k], locale);
+      let nextPath = path;
+      if (k === 'content') {
+        nextPath = '';
+      } else {
+        nextPath = path ? `${path}.${k}` : k;
+      }
+      result[k] = projectLocale(obj[k], locale, nextPath, inPreview, langSuffix);
     }
     return result;
+  }
+  if (inPreview && typeof obj === 'string' && obj && path && !shouldSkipWrap(path)) {
+    const fieldPath = langSuffix ? `${path}.${langSuffix}` : path;
+    return `<span class="cms-highlight-target" data-field-path="${fieldPath}">${obj}</span>`;
   }
   return obj;
 }
@@ -206,7 +230,8 @@ export async function getDictionary(locale) {
         pageData = { ...p, ...previewData };
       }
 
-      const projected = projectLocale(pageData, locale);
+      const isPreviewActive = !!(previewData && previewData.pageSlug === p.pageSlug);
+      const projected = projectLocale(pageData, locale, '', isPreviewActive);
       if (projected.metaTitle) dict[prefix].metaTitle = projected.metaTitle;
       if (projected.metaDescription) {
         // Store as the canonical metaDescription field used by generateMetadata()
@@ -240,7 +265,8 @@ export async function getDictionary(locale) {
         if (previewData && previewData.pageSlug === sp.slug) {
           pageData = { ...pageDoc, ...previewData };
         }
-        const projected = projectLocale(pageData, locale);
+        const isPreviewActive = !!(previewData && previewData.pageSlug === sp.slug);
+        const projected = projectLocale(pageData, locale, '', isPreviewActive);
         if (projected.content) {
           // If the keys are nested under the sub-block key name (like content.blogSinglePage), merge them
           if (projected.content[sp.prefix]) {

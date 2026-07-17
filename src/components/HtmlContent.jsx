@@ -57,12 +57,39 @@ export default function HtmlContent({ html }) {
     }
   }, [html, pathname]);
 
+  const [isIframe, setIsIframe] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsIframe(window.self !== window.top);
+    }
+  }, []);
+
   // Intercept clicks on internal anchor tags and use Next.js router.
   // Using React's onClick on the wrapper div (event delegation via bubbling)
   // is more reliable than a native addEventListener since React's synthetic
   // event system is always active regardless of dangerouslySetInnerHTML updates.
   const handleClick = useCallback(
     (e) => {
+      // 1. Check for data-field-path clicks inside CMS Preview iframe
+      const targetWithField = e.target.closest('[data-field-path]');
+      if (targetWithField) {
+        const fieldPath = targetWithField.getAttribute('data-field-path');
+        if (fieldPath && typeof window !== 'undefined' && window.parent !== window) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('[PreviewIframe] Sending field path clicked to parent:', fieldPath);
+          window.parent.postMessage(
+            {
+              type: 'cms-field-clicked',
+              path: fieldPath
+            },
+            window.location.origin
+          );
+          return;
+        }
+      }
+
       const anchor = e.target.closest('a');
       if (!anchor) return;
 
@@ -89,10 +116,25 @@ export default function HtmlContent({ html }) {
   );
 
   return (
-    <div
-      suppressHydrationWarning
-      dangerouslySetInnerHTML={{ __html: processedHtml }}
-      onClick={handleClick}
-    />
+    <>
+      {isIframe && (
+        <style dangerouslySetInnerHTML={{ __html: `
+          [data-field-path] {
+            cursor: pointer !important;
+            transition: outline 0.15s ease-in-out, background-color 0.15s ease-in-out;
+          }
+          [data-field-path]:hover {
+            outline: 2px dashed #00A8BC !important;
+            outline-offset: 2px;
+            background-color: rgba(0, 168, 188, 0.08) !important;
+          }
+        `}} />
+      )}
+      <div
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: processedHtml }}
+        onClick={handleClick}
+      />
+    </>
   );
 }
