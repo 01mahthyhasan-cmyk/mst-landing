@@ -2,6 +2,7 @@ import { connectDB } from '@/lib/db';
 import PageSingleton from '@/models/PageSingleton';
 import { adminGuard, apiOk, apiError, parseBody } from '@/lib/apiHelpers';
 import { writeAuditLog } from '@/lib/auditLog';
+import { revalidatePath } from 'next/cache';
 
 // GET /api/admin/pages/[slug]
 export async function GET(request, { params }) {
@@ -39,6 +40,8 @@ export async function PUT(request, { params }) {
     action: 'content_update', targetCollection: 'pages',
     targetId: slug, ipAddress: ip,
   });
+
+  revalidatePath('/', 'layout');
 
   return apiOk({ page });
 }

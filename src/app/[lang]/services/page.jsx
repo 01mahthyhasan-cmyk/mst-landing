@@ -4,7 +4,7 @@ import { getDictionary } from '../../../lib/getDictionary';
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  return { title: dict.servicesPage.metaTitle };
+  return { title: dict.servicesPage.metaTitle, description: dict.servicesPage.metaDescription };
 }
 
 export default async function Page({ params }) {

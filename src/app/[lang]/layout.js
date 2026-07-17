@@ -8,6 +8,8 @@ import Script from "next/script";
 import { headers } from "next/headers";
 
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "MST Health Care | Compassion. Care. Comfort.",
   description: "MST Health Care provides outpatient consultations, physiotherapy, laboratory services, elder care, home visits, ambulance services, and community healthcare programs in Batticaloa, Sri Lanka.",

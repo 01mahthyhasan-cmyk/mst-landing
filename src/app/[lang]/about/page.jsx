@@ -6,6 +6,7 @@ export async function generateMetadata({ params }) {
   const dict = await getDictionary(lang);
   return {
     title: dict.aboutPage.metaTitle,
+    description: dict.aboutPage.metaDescription,
   };
 }
 

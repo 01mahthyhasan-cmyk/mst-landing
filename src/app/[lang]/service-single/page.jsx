@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  return { title: dict.serviceSinglePage.metaTitle };
+  return { title: dict.serviceSinglePage.metaTitle, description: dict.serviceSinglePage.metaDescription };
 }
 
 export default async function ServiceSinglePage({ params }) {
