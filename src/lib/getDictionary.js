@@ -118,8 +118,9 @@ export async function getDictionary(locale) {
         const { verifyPreviewToken } = await import('./auth.js');
         const { valid, payload } = await verifyPreviewToken(token);
         if (valid && payload && payload.slug) {
-          const globalStore = global.previewStore || {};
-          previewData = globalStore[payload.slug];
+          const { default: PreviewStore } = await import('../models/PreviewStore');
+          const doc = await PreviewStore.findOne({ slug: payload.slug }).lean();
+          previewData = doc ? doc.pageData : null;
         }
       }
     } catch (e) {

@@ -1,6 +1,6 @@
 import { adminGuard, apiOk, parseBody } from '@/lib/apiHelpers';
-
-global.previewStore = global.previewStore || {};
+import { connectDB } from '@/lib/db';
+import PreviewStore from '@/models/PreviewStore';
 
 export async function POST(request) {
   const { error } = await adminGuard(request, 'write');
@@ -14,10 +14,16 @@ export async function POST(request) {
     return Response.json({ message: 'Slug and pageData are required' }, { status: 400 });
   }
 
-  // Save to global in-memory store
-  global.previewStore[slug] = pageData;
+  await connectDB();
 
-  console.log(`[PreviewStore] Updated draft for slug: ${slug}`);
+  // Save to persistent DB store with updatedAt touch (for TTL index)
+  await PreviewStore.findOneAndUpdate(
+    { slug },
+    { pageData, updatedAt: new Date() },
+    { upsert: true, new: true }
+  );
+
+  console.log(`[PreviewStore] Updated persistent draft for slug: ${slug}`);
 
   return apiOk({ success: true });
 }
