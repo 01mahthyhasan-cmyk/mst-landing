@@ -31,6 +31,7 @@ function loadPlatformScript(platform) {
     script.src = 'https://www.tiktok.com/embed.js';
     script.async = true;
     script.defer = true;
+    script.onload = () => triggerPlatformParse('tiktok');
     document.body.appendChild(script);
   } else if (platform === 'facebook') {
     const script = document.createElement('script');
@@ -49,6 +50,15 @@ function triggerPlatformParse(platform) {
       window.instgrm.Embeds.process();
     } else if (platform === 'facebook' && window.FB) {
       window.FB.XFBML.parse();
+    } else if (platform === 'tiktok' && window.tiktokEmbed) {
+      try {
+        const elements = document.querySelectorAll('blockquote.tiktok-embed');
+        if (elements.length > 0) {
+          window.tiktokEmbed.lib.render(Array.from(elements));
+        }
+      } catch (err) {
+        console.error('TikTok dynamic parse failed:', err);
+      }
     }
   }, 100);
 }
