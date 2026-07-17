@@ -34,9 +34,16 @@ export function autoDetectPlatform(url) {
 }
 
 export async function getEmbedForPlatform(url, platform) {
-  if (!validateSocialUrl(url, platform)) {
+  // Strip tracking query parameters (e.g. ?_r=1&_t=...) before validation
+  // TikTok/Facebook embed.js scripts fail to extract video IDs if the URL has query params
+  const cleanUrl = url.split('?')[0];
+
+  if (!validateSocialUrl(cleanUrl, platform)) {
     throw new Error(`Invalid URL pattern for platform: ${platform}`);
   }
+
+  // Use the clean URL going forward — this is what gets stored in the DB
+  url = cleanUrl;
 
   const result = {
     platform,

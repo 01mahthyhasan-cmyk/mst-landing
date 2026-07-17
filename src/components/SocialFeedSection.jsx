@@ -64,7 +64,11 @@ function triggerPlatformParse(platform) {
 }
 function cleanEmbedHtml(html) {
   if (!html) return '';
-  return html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  // 1. Strip script tags to comply with React 19 / Next.js strategy rules
+  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  // 2. Strip tracking query parameters from cite/href attributes so TikTok/Facebook scripts can extract post IDs
+  cleaned = cleaned.replace(/(cite|href)=(['"])([^'"]+?)\?([^'"]+?)\2/g, '$1=$2$3$2');
+  return cleaned;
 }
 
 export default function SocialFeedSection({ initialPosts = [], lang }) {
