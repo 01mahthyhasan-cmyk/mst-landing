@@ -113,6 +113,7 @@ export default function WebsiteLayout({ children }) {
     { label: 'Case Studies', href: '/admin-portal/website/case-studies', icon: '📊', show: true },
     { label: 'Testimonials', href: '/admin-portal/website/testimonials', icon: '💬', show: true },
     { label: 'Recent Events', href: '/admin-portal/website/events', icon: '📅', show: true },
+    { label: 'Social Media Posts', href: '/admin-portal/website/social-posts', icon: '📱', show: true },
     { label: 'Media Library', href: '/admin-portal/website/media', icon: '🖼️', show: true },
     { label: 'Content Health', href: '/admin-portal/website/health', icon: '🩺', show: true },
     { label: 'My Security Profile', href: '/admin-portal/website/profile', icon: '🔐', show: true },
