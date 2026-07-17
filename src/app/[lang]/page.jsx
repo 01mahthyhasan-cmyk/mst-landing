@@ -42,6 +42,22 @@ export default async function Page({ params }) {
       .select('title subtitle slug postedDate mainImage likes views').lean();
   } catch { /* fail silently — section simply hidden if DB unreachable */ }
 
+  let socialPosts = [];
+  try {
+    const { default: SocialPost } = await import('../../models/SocialPost');
+    const postsRaw = await SocialPost.find({ status: 'published' })
+      .sort('displayOrder -createdAt').lean();
+    socialPosts = postsRaw.map(post => ({
+      ...post,
+      _id: post._id.toString(),
+      createdBy: post.createdBy ? post.createdBy.toString() : null,
+      updatedBy: post.updatedBy ? post.updatedBy.toString() : null,
+      createdAt: post.createdAt ? post.createdAt.toISOString() : null,
+      updatedAt: post.updatedAt ? post.updatedAt.toISOString() : null
+    }));
+  } catch (err) {
+    console.error('Failed to query social posts on server:', err);
+  }
 
   const eventsHeading  = lang === 'ta' ? 'சமீபத்திய நிகழ்வுகள்' : 'Recent Events';
   const eventsSubTitle = lang === 'ta' ? 'சமூக நிகழ்வுகள்' : 'Community Events';
@@ -1452,7 +1468,7 @@ export default async function Page({ params }) {
         </div>
     </div>
     <!-- Our FAQs Section End -->`.replace(/\r\n/g, '\n')} />
-    <SocialFeedSection lang={lang} />
+    <SocialFeedSection initialPosts={socialPosts} lang={lang} />
     </>
   );
 }

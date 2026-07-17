@@ -52,13 +52,21 @@ function triggerPlatformParse(platform) {
     }
   }, 100);
 }
+function cleanEmbedHtml(html) {
+  if (!html) return '';
+  return html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+}
 
-export default function SocialFeedSection({ lang }) {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function SocialFeedSection({ initialPosts = [], lang }) {
+  const [posts, setPosts] = useState(initialPosts);
   const [visibleCount, setVisibleCount] = useState(6);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const sectionRef = useRef(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Multilingual content labels
   const isTa = lang === 'ta';
@@ -69,31 +77,6 @@ export default function SocialFeedSection({ lang }) {
     loadMore: isTa ? 'மேலும் காட்டுக' : 'Load More',
     fallbackText: isTa ? 'பதிவை நேரடியாக பார்க்க கீழே உள்ள பொத்தானை கிளிக் செய்யவும்' : 'To view this post directly on the platform, click the button below.',
   };
-
-  // Fetch posts from database
-  useEffect(() => {
-    async function fetchPublishedPosts() {
-      try {
-        const res = await fetch('/api/admin/social-posts?status=published&limit=100');
-        if (!res.ok) throw new Error();
-        const data = await res.json();
-        
-        // Sort: displayOrder asc, then createdAt desc
-        const sorted = (data.items || []).sort((a, b) => {
-          if (a.displayOrder !== b.displayOrder) {
-            return a.displayOrder - b.displayOrder;
-          }
-          return new Date(b.createdAt) - new Date(a.createdAt);
-        });
-        setPosts(sorted);
-      } catch (err) {
-        console.error('Failed to fetch social feeds:', err);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchPublishedPosts();
-  }, []);
 
   // IntersectionObserver to lazy load embeds
   useEffect(() => {
@@ -134,7 +117,7 @@ export default function SocialFeedSection({ lang }) {
     }
   }, [sectionVisible, visibleCount, posts]);
 
-  if (loading) return null;
+  if (!mounted) return null;
   if (posts.length === 0) return null;
 
   const displayedPosts = posts.slice(0, visibleCount);
@@ -208,7 +191,7 @@ export default function SocialFeedSection({ lang }) {
                     <div 
                       className="native-embed-container"
                       style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center' }}
-                      dangerouslySetInnerHTML={{ __html: post.embedHtml }}
+                      dangerouslySetInnerHTML={{ __html: cleanEmbedHtml(post.embedHtml) }}
                     />
                   ) : (
                     // Graceful Fallback Card if embed fails/is blocked

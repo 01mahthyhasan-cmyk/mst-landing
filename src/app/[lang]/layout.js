@@ -57,8 +57,6 @@ export default async function LocaleLayout({ children, params }) {
         <link rel="stylesheet" href="/css/magnific-popup.css" />
         <link rel="stylesheet" href="/css/mousecursor.css" />
         <link href="/css/custom.css" rel="stylesheet" media="screen" />
-      </head>
-      <body>
         {/* JS scripts served sequentially using next/script */}
         <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
         <Script src="/js/circle-progress.min.js" strategy="beforeInteractive" />
@@ -78,7 +76,8 @@ export default async function LocaleLayout({ children, params }) {
         <Script src="/js/jquery.mb.YTPlayer.min.js" strategy="beforeInteractive" />
         <Script src="/js/wow.min.js" strategy="beforeInteractive" />
         <Script src="/js/function.js" strategy="beforeInteractive" />
-
+      </head>
+      <body>
         {/* Preloader Start */}
         <div className="preloader">
           <div className="loading-container">
