@@ -1,5 +1,6 @@
 import HtmlContent from '../../components/HtmlContent';
 import { getDictionary } from '../../lib/getDictionary';
+import SocialFeedSection from '../../components/SocialFeedSection';
 
 export const dynamic = 'force-dynamic';
 
@@ -101,6 +102,7 @@ export default async function Page({ params }) {
     <!-- Recent Events Section End -->`;
 
   return (
+    <>
     <HtmlContent html={`<!-- Hero Section Start -->
     <div class="hero dark-section parallaxie">
         <div class="container">
@@ -1450,5 +1452,7 @@ export default async function Page({ params }) {
         </div>
     </div>
     <!-- Our FAQs Section End -->`.replace(/\r\n/g, '\n')} />
+    <SocialFeedSection lang={lang} />
+    </>
   );
 }
