@@ -15,13 +15,20 @@ export default function MedicalReports() {
   const [pages, setPages] = useState(1);
   const [loadingReports, setLoadingReports] = useState(false);
   const [phoneFilter, setPhoneFilter] = useState('');
-  
+
   // Upload form states
   const [phoneInput, setPhoneInput] = useState('');
   const [titleInput, setTitleInput] = useState('');
   const [fileInput, setFileInput] = useState(null);
   const [uploading, setUploading] = useState(false);
-  
+
+  // Per-row action states (keyed by report _id)
+  const [viewingId, setViewingId] = useState(null);
+  const [deletingId, setDeletingId] = useState(null);
+
+  // Image lightbox modal
+  const [imageModal, setImageModal] = useState(null); // { url, title } | null
+
   // Feedback states
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -164,6 +171,66 @@ export default function MedicalReports() {
     }
   };
 
+  // 5. Handle View
+  const handleView = async (reportId) => {
+    setError('');
+    setSuccess('');
+    setViewingId(reportId);
+    try {
+      const res = await fetch(`/api/admin/reports/${reportId}/view`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Failed to generate view link');
+
+      if (data.resourceType === 'image') {
+        // Show in lightbox modal
+        setImageModal({ url: data.signedUrl, title: data.title });
+      } else {
+        // PDF or any raw type — open in new tab
+        window.open(data.signedUrl, '_blank', 'noopener,noreferrer');
+      }
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setViewingId(null);
+    }
+  };
+
+  // 6. Handle Delete
+  const handleDelete = async (reportId, title) => {
+    if (
+      !confirm(
+        `Permanently delete "${title}"? This cannot be undone and will remove the file from storage.`
+      )
+    ) {
+      return;
+    }
+
+    setError('');
+    setSuccess('');
+    setDeletingId(reportId);
+    try {
+      const res = await fetch(`/api/admin/reports/${reportId}`, {
+        method: 'DELETE',
+        headers: {
+          'x-csrf-token': getCsrfToken(),
+        },
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Delete failed');
+
+      setSuccess(`"${title}" has been permanently deleted.`);
+
+      // If last item on a page beyond page 1, step back
+      const targetPage = reports.length === 1 && page > 1 ? page - 1 : page;
+      setPage(targetPage);
+      fetchReports(targetPage);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setDeletingId(null);
+    }
+  };
+
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     setPage(1);
@@ -211,6 +278,32 @@ export default function MedicalReports() {
 
   return (
     <div className="module-layout">
+      {/* Image Lightbox Modal */}
+      {imageModal && (
+        <div className="modal-backdrop" onClick={() => setImageModal(null)}>
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <span className="modal-title">{imageModal.title}</span>
+              <div className="modal-actions">
+                <a
+                  href={imageModal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-modal-download"
+                >
+                  ↓ Open / Download
+                </a>
+                <button className="btn-modal-close" onClick={() => setImageModal(null)}>
+                  ✕
+                </button>
+              </div>
+            </div>
+            <div className="modal-body">
+              <img src={imageModal.url} alt={imageModal.title} className="modal-image" />
+            </div>
+          </div>
+        </div>
+      )}
       <header className="header">
         <div className="brand" onClick={() => router.push('/admin-portal/dashboard')} style={{ cursor: 'pointer' }}>
           <img src="/images/mst_logo.png" alt="MST Logo" className="logo" />
@@ -314,7 +407,7 @@ export default function MedicalReports() {
                         <th>Uploaded By</th>
                         <th>Uploaded At</th>
                         <th>SMS Dispatched</th>
-                        <th>Actions</th>
+                        <th className="th-actions">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -344,13 +437,32 @@ export default function MedicalReports() {
                             )}
                           </td>
                           <td className="col-actions">
-                            <button
-                              onClick={() => handleResend(report._id)}
-                              className="btn-resend"
-                              title="Regenerate link token and resend SMS"
-                            >
-                              Resend SMS
-                            </button>
+                            <div className="actions-group">
+                              <button
+                                onClick={() => handleView(report._id)}
+                                className="btn-view"
+                                disabled={viewingId === report._id || deletingId === report._id}
+                                title="View report"
+                              >
+                                {viewingId === report._id ? '…' : '👁 View'}
+                              </button>
+                              <button
+                                onClick={() => handleResend(report._id)}
+                                className="btn-resend"
+                                disabled={deletingId === report._id}
+                                title="Regenerate link token and resend SMS"
+                              >
+                                Resend SMS
+                              </button>
+                              <button
+                                onClick={() => handleDelete(report._id, report.title)}
+                                className="btn-delete"
+                                disabled={deletingId === report._id || viewingId === report._id}
+                                title="Permanently delete this report"
+                              >
+                                {deletingId === report._id ? '…' : '🗑 Delete'}
+                              </button>
+                            </div>
                           </td>
                         </tr>
                       ))}
@@ -658,6 +770,38 @@ export default function MedicalReports() {
           color: #D97706;
           font-weight: 600;
         }
+        /* Actions group */
+        .actions-group {
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .th-actions {
+          min-width: 220px;
+        }
+        /* View button */
+        .btn-view {
+          background-color: #EFF6FF;
+          color: #1D4ED8;
+          border: 1px solid #BFDBFE;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
+        }
+        .btn-view:hover:not(:disabled) {
+          background-color: #1D4ED8;
+          color: #ffffff;
+        }
+        .btn-view:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        /* Resend button */
         .btn-resend {
           background-color: #F0F7F8;
           color: #08363B;
@@ -668,10 +812,126 @@ export default function MedicalReports() {
           font-weight: 600;
           cursor: pointer;
           transition: all 0.2s;
+          white-space: nowrap;
         }
-        .btn-resend:hover {
+        .btn-resend:hover:not(:disabled) {
           background-color: #08363B;
           color: #ffffff;
+        }
+        .btn-resend:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        /* Delete button */
+        .btn-delete {
+          background-color: #FEF2F2;
+          color: #B91C1C;
+          border: 1px solid #FECACA;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 12px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
+        }
+        .btn-delete:hover:not(:disabled) {
+          background-color: #B91C1C;
+          color: #ffffff;
+        }
+        .btn-delete:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        /* Image lightbox modal */
+        .modal-backdrop {
+          position: fixed;
+          inset: 0;
+          background-color: rgba(0, 0, 0, 0.75);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+          padding: 24px;
+        }
+        .modal-box {
+          background: #ffffff;
+          border-radius: 12px;
+          max-width: 90vw;
+          max-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 20px;
+          border-bottom: 1px solid #E2E8F0;
+          gap: 16px;
+          flex-shrink: 0;
+        }
+        .modal-title {
+          font-size: 15px;
+          font-weight: 700;
+          color: #0F172A;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .modal-actions {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          flex-shrink: 0;
+        }
+        .btn-modal-download {
+          background-color: #08363B;
+          color: #ffffff;
+          border: none;
+          padding: 7px 14px;
+          border-radius: 6px;
+          font-size: 13px;
+          font-weight: 600;
+          cursor: pointer;
+          text-decoration: none;
+          transition: background-color 0.2s;
+        }
+        .btn-modal-download:hover {
+          background-color: #00A8BC;
+        }
+        .btn-modal-close {
+          background: #F1F5F9;
+          border: 1px solid #E2E8F0;
+          color: #475569;
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          font-size: 14px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+        }
+        .btn-modal-close:hover {
+          background-color: #E2E8F0;
+        }
+        .modal-body {
+          overflow: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px;
+          flex: 1;
+        }
+        .modal-image {
+          max-width: 100%;
+          max-height: calc(90vh - 80px);
+          object-fit: contain;
+          border-radius: 4px;
         }
         .pagination {
           display: flex;
